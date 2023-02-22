@@ -109,7 +109,7 @@ position: relative;}
 .content .box:nth-child(2) .img{background: url(imgs/fonts.svg);}
 .content .box:nth-child(3) .img{background: url(imgs/fifa-app.webp);}
 .container .projects .content .box .info{
-    height: 130px;
+    height: 160px;
     background-color: var(--main-color);
     padding-right: 25px;
     padding-left: 25px;
@@ -117,10 +117,13 @@ position: relative;}
 .container .projects .content .box .info h4{
     margin: 0;  
     padding-top: 10px;}
-    @media (max-width: 768px) {
 .container .projects .content .box .info p{
-            overflow: scroll;
-            height: calc(120px / 3);} }  
+    height: calc(160px / 3);
+        overflow: scroll;}
+    @media (max-width: 768px) {
+.container .projects .content .box .info{height: 130px;}
+.container .projects .content .box .info p{
+overflow: scroll;height: calc(120px / 3);} }  
 .container .projects .content .box .info button{
     border: none;
     border-radius: var(--main-radius);

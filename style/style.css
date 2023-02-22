@@ -104,8 +104,6 @@ position: relative;}
     background-size: cover;
     background-position: center;}
 .content .box:nth-child(1) .img{background: url(imgs/quran.svg);}
-@media (min-width: 760px) {
-.content .box:nth-child(1) .img{background: url(imgs/quran-D.svg);}}
 .content .box:nth-child(2) .img{background: url(imgs/fonts.svg);}
 .content .box:nth-child(3) .img{background: url(imgs/fifa-app.webp);}
 .container .projects .content .box .info{

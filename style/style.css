@@ -1,0 +1,207 @@
+@font-face {
+    font-family:Along ;
+    src: url(Along-Sans-Medium.otf);}
+body{
+    background: linear-gradient(182.49deg, #5D6771 0%, #1E1E2A 100%);
+    font-family: 'Tajawal', sans-serif;
+    scroll-behavior: smooth;
+    background-repeat: no-repeat;
+    direction: rtl;}
+:root{--main-color:#272733;
+    --main-radius:15px;
+    --main-margin: 100px auto;}
+a{text-decoration: none;}
+::-webkit-scrollbar{width: 0;}
+.title-box{
+    font-family: Along;
+    background: var(--main-color);
+    border-radius: 0 0 25px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;}
+.title-box h1{
+    margin: 0;
+    padding: 0px 10px;
+    line-height: 45px;
+    background: linear-gradient(90deg, #1E9BFF 0%, #9CF47E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;}
+ .container .sections{
+    width: 90%;
+    margin:55px auto 10% auto;
+    display: flex;
+    justify-content: space-evenly;}
+ .container .sections button{
+    background-color: #272733;
+    color: white;
+    border-radius:var(--main-radius);
+    width: 70px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;}
+.container .skills{margin: var(--main-margin);}
+.container .skills h3{
+    background-color: var(--main-color);
+    width: fit-content;
+    margin: auto;
+    padding: 8px 20px;
+    border-radius: var(--main-radius);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;}
+.container .skills h3::after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(90deg, #1E9BFF 0%, #9CF47E 100%);
+    width: calc(100% + 3px);
+    height: 100%;
+    border-radius: inherit;
+    z-index: -1;}
+.container .skills .box{
+    background-color: white;
+    color: var(--main-color);
+    margin:30px auto;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: var(--main-radius);
+    padding: 8px 20px;
+    max-width: 80%;
+    box-shadow: 0px 4px 4px 0px #000000;}
+.container .skills .box span{font-weight: bold;}
+.container .projects{margin: var(--main-margin);}
+.container .projects h3{color: white;
+    text-align: center;}
+.container .projects .content{
+color: white;
+overflow-x: scroll;
+padding: 0px 10px;
+display: grid;
+grid-template-columns: repeat(3,calc(100% - 20px));
+gap: 10px;
+position: relative;}
+@media (min-width: 768px) {
+    .container .projects .content{
+        grid-template-columns: repeat(4,1fr);}}
+.container .projects .content .box{
+    width: 100%;
+    border-radius: var(--main-radius);
+    overflow: hidden;}
+.container .projects .content .box .img{
+    height: 200px;
+    background-size: cover;
+    background-position: center;}
+.content .box:nth-child(1) .img{background: url(imgs/quran.svg);}
+@media (min-width: 760px) {
+.content .box:nth-child(1) .img{background: url(imgs/quran-D.svg);}}
+.content .box:nth-child(2) .img{background: url(imgs/fonts.svg);}
+.content .box:nth-child(3) .img{background: url(imgs/fifa-app.webp);}
+.container .projects .content .box .info{
+    height: 130px;
+    background-color: var(--main-color);
+    padding-right: 25px;
+    padding-left: 25px;
+    box-shadow: 0px 4px 4px 0px #00000040 inset;}
+.container .projects .content .box .info h4{
+    margin: 0;  
+    padding-top: 10px;}
+    @media (max-width: 768px) {
+.container .projects .content .box .info p{
+            overflow: scroll;
+            height: calc(120px / 3);} }  
+.container .projects .content .box .info button{
+    border: none;
+    border-radius: var(--main-radius);
+    padding: 2px 10px;}
+.github-figma{
+    width: 90%;
+    margin: var(--main-margin);
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;}
+    @media (min-width:768px) {
+.github-figma{grid-template-columns: 1fr 1fr;}}
+.github,.figma{
+    background-color: var(--main-color);
+    border-radius: var(--main-radius);
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: x-large;
+    overflow: hidden;
+    height: 400px;}
+:is(.github,.figma) .img {
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    box-shadow: 0px 4px 4px 0px #00000040 ;}
+.github .img{background-image: url(imgs/github-logo.svg);
+background-position: center;
+background-size: cover;}
+.figma .img{background-image: url(imgs/figma-logo.svg);
+background-position: center;
+background-size: cover;}
+:is(.github,.figma) button{
+    color: white;
+   width: 100%;
+    border: none;
+    background: linear-gradient(90deg, #1E9BFF 0%, #9CF47E 100%);
+    border-radius: var(--main-radius);
+    padding:10px ;
+    font-family: Along;}
+.github-figma a{
+    width: 80%;
+    margin-bottom: 20px;
+    border-radius: var(--main-radius);
+    transition: .5s;}
+.github-figma a:hover{transform: scale(1.1);}
+.fixed{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;}
+.nav-bar{
+    background-color: var(--main-color) ;
+    height: 55px;
+    width: 100%;
+    border-radius: var(--main-radius) var(--main-radius) 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px ;
+    position: relative;
+    font-size: 25px;}
+.nav-bar button{
+background: none;
+padding: 0;
+border: none;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;}
+.nav-bar button:hover{
+    transform: scale(1.5);
+    transition: .5s;}
+.nav-bar::after{
+    content: "";
+    background: linear-gradient(90deg, #1E9BFF 0%, #9CF47E 100%);
+    height: calc(100% + 3px);
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    border-radius:inherit;}
+.nav-bar button img{width: 24px;}
+

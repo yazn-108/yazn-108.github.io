@@ -1,29 +1,69 @@
 @font-face {
-    font-family: Museo;
-    src: url(Museo300-Regular.otf);}
-body{font-family:Museo;
+    font-family: Alkatra;
+    src: url(Alkatra.ttf);}
+*{box-sizing: border-box;}
+body{font-family:Alkatra;
     background-color:#e8eef4;
     scroll-behavior: smooth;
     user-select: none;}
 :root{
-    --main-color:#57D7FF;
+    --main-color:#03B7F9;
     --second-color:#004991;}
 a{text-decoration: none;}
 ::-webkit-scrollbar{width: 0;}
 ::selection{background-color: var(--main-color);}
 button{text-transform: capitalize;}
 .container nav{
+background-color: #e8eef4;
+z-index: 9999;
 height: fit-content;
 width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
+position: relative;
+padding: 0 40px;
 box-shadow: 0px 1px 0px var(--main-color);}
-.container nav .logo img{width: 200px; height:50px;}
+.container nav .logo img{width: 120px; height:50px;}
+@media (max-width: 768px){
+    .container nav{
+        padding: 0 10px;
+        height: 55px;
+        position: fixed;
+        top: 0;}  
+    .container nav .menu-icon{
+        position: relative;
+        width: 36px;
+        height: 24px;
+        display: flex;
+        gap: 2px;
+        align-items: center;
+        flex-direction: column;}
+    .container nav .menu-icon span{
+        transition: .5s;
+        background-color: var(--main-color);
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;}
+.close span{
+    position: absolute;
+    width: 10% !important;}
+   .close span:nth-child(1){
+    transform: rotate(45deg);
+    animation: x .5s 0s ease-in-out 1;}
+    @keyframes x {
+        0%{transform: rotate(0deg);}
+        100%{transform: rotate(45deg);}}
+    .close span:nth-child(2){
+    transform: rotate(-45deg);  
+    animation: x2 .5s 0s ease-in-out 1;}
+    @keyframes x2 {
+        0%{transform: rotate(0deg);}
+        100%{transform: rotate(-45deg);}}
+.close span:nth-child(3){display: none;}}
 .container nav .sections{
     display: flex;
     gap: 50px;
-    margin-right: 40px;
     height: 50%;}
 .container nav .sections button{
     background-color: transparent;
@@ -36,14 +76,32 @@ box-shadow: 0px 1px 0px var(--main-color);}
     transition: 0.3s color;
     cursor: pointer;}
 .container nav .sections button:hover{color: var(--main-color);}
-@media (max-width: 576px) {
-    .container nav{
+@media (max-width: 768px){
+    .container nav .sections{display: none;}
+    .container nav .menu{
         display: flex;
-        justify-content: center;
+        position: absolute;
+        top: 115%;
+        left: 50%;
+        transform: translateX(-50%);
+        /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+        box-shadow: 0 0px 15px var(--main-color) inset;
+        backdrop-filter: blur(5px);
+        width: 90%;
+        height: fit-content;
+        flex-direction: column;
         align-items: center;
-        flex-direction: column;}
-    .container nav .sections{margin: 0 0 10px 0;
-        gap: 25px;}}
+        padding: 20px 0px;
+        border: var(--main-color) solid 1px;
+        border-radius: 10px;
+        animation: menu .5s 0s ease-in-out 1;}
+        @keyframes menu {
+            0%{top: 100%;}
+            100%{top: 115%;}}
+    .container nav .menu button{
+    color: var(--main-color);
+    transition: .3s ease-in-out;}
+    .container nav .menu button:hover{transform: scale(1.4);}}
 .container header{
     margin: 100px auto;
     width: 90%;
@@ -65,19 +123,13 @@ border-radius: 15px;}
     font-size: 20px;}
 .container header .content img{width: 20%;}
 @media (max-width: 768px) {
-    .container header{width: 80%;
-        margin: 50px auto;
-        animation: up 3s 0s infinite ease-in-out;}
-@keyframes up {
-    50% {transform: translateY(-20px);}
-    100%{transform: translateY(0px);}}
-    .container header .content{
-        display: flex;
-        flex-direction: column-reverse;}
-    .container header .content .text-box{
-        width: 100%;
-        text-align: center;}
-    .container header .content img{width: 50%;}}
+.container header{
+    width: 80%;
+    margin: 50px auto;}
+.container header .content .text-box{
+    width: 100%;
+    text-align: center;}
+.container header .content img{display: none;}}
 .contact{
     display: flex;
     flex-direction: column;
@@ -189,7 +241,6 @@ border-radius: 15px;}
     justify-content: center;
     align-items: center;
     font-size: xx-large;
-    box-sizing: border-box;
     transition: .3s background-color , .5s color;}
 .projects .box .img:hover{
     background-color: transparent;
@@ -200,7 +251,7 @@ border-radius: 15px;}
 .projects .box .info{
     background-color: var(--second-color);
     padding: 10px;
-    min-height: 15%;
+    min-height: 25%;
     max-width: 100%;
     position: relative;}
 .projects .box .info .title{font-weight: bold;}
@@ -306,11 +357,7 @@ label{cursor: pointer;}
       rgba(3, 183, 249, 0.4) 75.49%,
        rgba(3, 183, 249, 0.5) 100%);
     height: 100%;
-    width: 100%;
-    transition: .5s ease-in-out;
-    transform: translateY(100%);}
-.plugins > div .content .plugin .img:hover::after{
-    transform: translateY(0%);}
+    width: 100%;}
 .plugins .img img{
         z-index: 1;
         width: 100px;
@@ -319,15 +366,8 @@ label{cursor: pointer;}
     background-color: #1F242D;
     min-height: 15%;
     position: relative;
-    padding: 10px;}
-.plugins > div .content .plugin .info::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #03B7F9;
-    height: 3px;
-    width: 100%;}
+    padding: 10px;
+    border-top: #03B7F9 solid 3px;}
 .plugins .info .title{text-transform: capitalize;}
 .plugins .info p{
     width: 75%; 
@@ -386,3 +426,32 @@ footer .icons button{
     font-size: x-large;
     transition: .3s;}
 footer .icons button:hover{transform: scale(1.2);}
+/*dark mode*/
+.dark-mode{
+    position: absolute;
+    top: 70px;
+    left: 10px;}
+.dark-mode button{
+    position: relative;
+    background-color: transparent;
+    border: none;}
+.dark-mode button::after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f186";
+    font-size: 20px;}
+.dark button::after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f185";
+    font-size: 20px;
+    color: #e8eef4;}
+.dark ~ .container{
+    background-color: #1F242D !important;
+    color: #e8eef4 !important;}
+.dark ~  .container .sections button {
+    color: var(--main-color) !important;}
+.dark ~  .container nav{
+    background-color: #1F242D !important;}
+.dark ~ .container .plugins > div h3{color: var(--main-color);}
+.dark ~ .container .plugins > div .content .plugin .info{
+    border: var(--main-color) solid 2px;
+    border-radius:0 0 25px 25px;}

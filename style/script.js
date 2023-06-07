@@ -43,3 +43,23 @@ projects_links[2].setAttribute("href","https://yazn-108.github.io/Sign-In-page")
 projects_links[3].setAttribute("href","https://yazn-108.github.io/quran");
 projects_links[4].setAttribute("href","https://yazn-108.github.io/fonts");
 projects_links[5].setAttribute("href","https://yazn-108.github.io/FIFA-APP");
+
+let menu_icon = document.querySelector(".menu-icon");
+let sections = document.querySelector(".sections");
+menu_icon.onclick = function(e) {
+    e.stopPropagation();
+    sections.classList.toggle("menu");
+    menu_icon.classList.toggle("close");
+    let menuFun = function(e){
+        let menu = document.querySelector(".menu");
+        if(e.target !== menu){
+            sections.classList.remove("menu");
+            menu_icon.classList.remove("close");
+        };
+    };
+document.addEventListener("click",menuFun);
+document.addEventListener("scroll",menuFun);
+};
+
+let dark = document.querySelector(".dark-mode");
+dark.onclick = function(){dark.classList.toggle("dark");};

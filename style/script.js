@@ -60,6 +60,5 @@ menu_icon.onclick = function(e) {
 document.addEventListener("click",menuFun);
 document.addEventListener("scroll",menuFun);
 };
-
 let dark = document.querySelector(".dark-mode");
 dark.onclick = function(){dark.classList.toggle("dark");};

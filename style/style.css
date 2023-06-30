@@ -452,7 +452,8 @@ footer .icons button:hover{transform: scale(1.2);}
     color: var(--dark-color) !important;}
 .dark ~  .container .sections button {
     color: var(--main-color) !important;}
-.dark ~  .container nav{
+.dark ~  .container nav,
+.dark ~ .container .menu{
     background-color: var(--dark-background) !important;}
 .dark ~ .container .plugins > div h3{color: var(--main-color);}
 .dark ~ .container .plugins > div .content .plugin .info{

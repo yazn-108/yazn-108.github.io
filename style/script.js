@@ -30,11 +30,10 @@ projects_description[3].innerHTML = "A design for a Quran application. I created
 projects_description[4].innerHTML = "A page that brings together a group of Arabic and English fonts, which I think is unique";
 projects_description[5].innerHTML = "Football application design for the Qatar World Cup 2022";
 
-let projects_hide = document.querySelectorAll(".projects .hide");
 let projects_more = document.querySelectorAll(".projects .more");
-for(let i = 0; i < projects_more.length; i++){
-projects_more[i].innerHTML = "more";
-projects_hide[i].innerHTML = "hide";};
+projects_more.forEach(projects => projects.innerHTML = "more");
+let projects_hide = document.querySelectorAll(".projects .hide");
+projects_hide.forEach(projects => projects.innerHTML = "hide");
 
 let projects_links = document.querySelectorAll(".projects a");
 projects_links[0].setAttribute("href","https://yazn-108.github.io/cv-page/");

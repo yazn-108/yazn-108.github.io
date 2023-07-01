@@ -140,6 +140,9 @@ border-radius: 15px;}
     justify-content: center;
     gap: 40px;
     margin: 100px auto;}
+    .contact .icons{
+        display: flex;
+        gap: 40px;}
 .contact button{
     background-color: transparent;
     border: none;
@@ -165,9 +168,6 @@ border-radius: 15px;}
 .contact button:hover::after{
   top: -30px;
   opacity: 1;}
-.contact .icons{
-    display: flex;
-    gap: 40px;}
 @media (max-width: 576px) {
     .contact .icons{gap: 30px;}
     .contact button::after{width: 80%;}}
@@ -188,9 +188,8 @@ border-radius: 15px;}
     gap: 30px;
     border-radius: 10px;
     border: solid #03B7F9 1px ;
-    padding: 10px 10px;
-    position: relative;}
-@media (max-width: 576px) {.skills .box{width: 90%; gap: 10px;}}
+    padding: 10px;}
+@media (max-width: 576px) {.skills .box{padding: 10px 8px; gap: 10px;}}
 .skills .box span{
     position: relative;
     display: flex;

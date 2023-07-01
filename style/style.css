@@ -41,8 +41,8 @@ box-shadow: 0px 1px 0px var(--main-color);}
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.3s color;
-    cursor: pointer;}
+    transition: 0.3s color;}
+@media (min-width:768px) {.sections button{cursor: pointer;}}
 .container nav .sections button:hover{color: var(--main-color);}
 @media (max-width: 768px){
     .container nav{
@@ -146,8 +146,8 @@ border-radius: 15px;}
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;}
+    justify-content: center;}
+@media (min-width:768px) {.contact button{cursor: pointer;}}
 .contact button::after{
     content: var(--icon);
     display: flex;

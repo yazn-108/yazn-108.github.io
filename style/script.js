@@ -6,41 +6,6 @@ skills_img[4].setAttribute("src","imgs/git.svg");
 skills_img[5].setAttribute("src","imgs/javascript.svg");
 skills_img[6].setAttribute("src","imgs/figma.svg");
 
-let projects_img = document.querySelectorAll(".projects .img");
-projects_img[0].innerHTML = "CV page";
-projects_img[1].innerHTML = "changing";
-projects_img[2].innerHTML = "sing in";
-projects_img[3].innerHTML = "quran";
-projects_img[4].innerHTML = "fonts";
-projects_img[5].innerHTML = "fifa app";
-
-let projects_title = document.querySelectorAll(".projects .title");
-projects_title[0].innerHTML = "25/4/2023";
-projects_title[1].innerHTML = "31/3/2023";
-projects_title[2].innerHTML = "13/3/2023";
-projects_title[3].innerHTML = "13/2/2023";
-projects_title[4].innerHTML = "20/12/2022";
-projects_title[5].innerHTML = "1/12/2022";
-
-let projects_description = document.querySelectorAll(".projects .description");
-projects_description[0].innerHTML = "CV view web page, I rebuilt the page with a few special touches added";
-projects_description[1].innerHTML = "A software challenge that consists of two interfaces, save and delete";
-projects_description[2].innerHTML = "A software challenge is a simple login page";
-projects_description[3].innerHTML = "A design for a Quran application. I created the design during my learning journey with the figma design tool";
-projects_description[4].innerHTML = "A page that brings together a group of Arabic and English fonts, which I think is unique";
-projects_description[5].innerHTML = "Football application design for the Qatar World Cup 2022";
-
-document.querySelectorAll(".projects .more").forEach(projects => projects.innerHTML = "more");
-document.querySelectorAll(".projects .hide").forEach(projects => projects.innerHTML = "hide");
-
-let projects_links = document.querySelectorAll(".projects a");
-projects_links[0].setAttribute("href","https://yazn-108.github.io/cv-page/");
-projects_links[1].setAttribute("href","https://yazn-108.github.io/changing");
-projects_links[2].setAttribute("href","https://yazn-108.github.io/Sign-In-page");
-projects_links[3].setAttribute("href","https://yazn-108.github.io/quran");
-projects_links[4].setAttribute("href","https://yazn-108.github.io/fonts");
-projects_links[5].setAttribute("href","https://yazn-108.github.io/FIFA-APP");
-
 let menu_icon = document.querySelector(".menu-icon");
 let sections = document.querySelector(".sections");
 menu_icon.onclick = function(e) {
@@ -59,3 +24,54 @@ document.addEventListener("scroll",menuFun);
 };
 let dark = document.querySelector(".dark-mode");
 dark.onclick = function(){dark.classList.toggle("dark");};
+
+fetch("https://api.github.com/users/yazn-108/repos").then(response => response.json())
+    .then(data => {
+        for(const loop in data){
+            if(data[loop].has_pages === true &&  data[loop].description) {
+                let container = document.querySelector(".projects .boxes");
+                let box = document.createElement("div");
+                box.className = "box";
+                let repoName = data[loop].name.replace(/[^a-zA-Z0-9\s]/g, " ").toLowerCase();
+                let description = document.createElement("div");
+                description.className = "description";
+                description.textContent = repoName;
+                let info = document.createElement("div");
+                info.className = "info";
+                let repoLink = data[loop].html_url;
+                const sourceLink = document.createElement("a");
+                sourceLink.setAttribute("href",repoLink);
+                sourceLink.setAttribute("target","_blank");
+                const sourceButton = document.createElement("button");
+                sourceButton.textContent = "source";
+                sourceLink.appendChild(sourceButton);
+                let siteLink = data[loop].homepage;
+                const browsingLink = document.createElement("a");
+                browsingLink.setAttribute("href",siteLink);
+                browsingLink.setAttribute("target","_blank");
+                const browseButton = document.createElement("button");
+                browseButton.className = "browse-button"
+                browseButton.textContent = "browse";
+                browsingLink.appendChild(browseButton);
+                box.appendChild(description);
+                box.appendChild(info);
+                info.appendChild(sourceLink);
+                info.appendChild(browsingLink);
+                container.appendChild(box);
+                description.addEventListener("mouseover", function(){
+                    description.textContent = data[loop].description;
+                    description.style.textAlign = "center";
+                    description.style.fontSize = "x-large";
+                    description.style.padding = "0px 50px";});
+                description.addEventListener("mouseleave", function(){
+                    description.textContent = repoName;
+                    description.style.fontSize = "xx-large";});
+            };
+        };
+    });
+
+
+
+
+
+

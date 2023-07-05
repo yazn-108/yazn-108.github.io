@@ -1,3 +1,4 @@
+"use strict";
 let skills_img = document.querySelectorAll(".skills img");
 skills_img[1].setAttribute("src","imgs/github.svg");
 skills_img[2].setAttribute("src","imgs/html.svg");
@@ -51,7 +52,7 @@ fetch("https://api.github.com/users/yazn-108/repos").then(response => response.j
                 browsingLink.setAttribute("href",siteLink);
                 browsingLink.setAttribute("target","_blank");
                 const browseButton = document.createElement("button");
-                browseButton.className = "browse-button"
+                browseButton.className = "browse-button";
                 browseButton.textContent = "browse";
                 browsingLink.appendChild(browseButton);
                 box.appendChild(description);

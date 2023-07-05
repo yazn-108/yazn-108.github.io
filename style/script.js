@@ -84,9 +84,3 @@ fetch("https://api.github.com/users/yazn-108/repos").then(response => response.j
         reloadButton.textContent = "Reload the page";
         reloadPage.appendChild(reloadButton);
         container.appendChild(errorBox);});
-
-
-
-
-
-

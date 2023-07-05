@@ -259,6 +259,16 @@ border-radius: 15px;}
 .projects .box:nth-child(3n-2) .browse-button{background-color: #6c63ff;}
 .projects .box:nth-child(3n-1) .browse-button{background-color: #33a9dc;}
 .projects .box:nth-child(3n+0) .browse-button{background-color: #f1662a;}
+.projects .errorBox{
+    font-size: large;
+    color: var(--main-color); 
+    text-align: center;}
+.projects .errorBox p{margin: 10px;}
+.projects .errorBox button{
+    background-color: var(--main-color);
+    color: #e8eef4;
+    border:none;
+    border-radius: 15px;}
 .plugins{
     margin: 300px auto;
     width: 90%;

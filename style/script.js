@@ -26,7 +26,7 @@ document.addEventListener("scroll",menuFun);
 let dark = document.querySelector(".dark-mode");
 dark.onclick = () => {dark.classList.toggle("dark");};
 
-fetch("https://api.github.com/users/yazn-108/reposz").then(response => response.json())
+fetch("https://api.github.com/users/yazn-108/repos").then(response => response.json())
     .then(data => {
     data.sort((a, b) => {return new Date(b.created_at) - new Date(a.created_at);});
         for(const loop in data){

@@ -23,12 +23,13 @@ document.addEventListener("click",menuFun);
 document.addEventListener("scroll",menuFun);
 };
 let dark = document.querySelector(".dark-mode");
-dark.onclick = function(){dark.classList.toggle("dark");};
+dark.onclick = () => {dark.classList.toggle("dark");};
 
 fetch("https://api.github.com/users/yazn-108/repos").then(response => response.json())
     .then(data => {
+    data.sort((a, b) => {return new Date(b.created_at) - new Date(a.created_at);});
         for(const loop in data){
-            if(data[loop].has_pages === true &&  data[loop].description) {
+            if(data[loop].has_pages === true && data[loop].description) {
                 let container = document.querySelector(".projects .boxes");
                 let box = document.createElement("div");
                 box.className = "box";
@@ -58,12 +59,12 @@ fetch("https://api.github.com/users/yazn-108/repos").then(response => response.j
                 info.appendChild(sourceLink);
                 info.appendChild(browsingLink);
                 container.appendChild(box);
-                description.addEventListener("mouseover", function(){
+                description.addEventListener("mouseover",() => {
                     description.textContent = data[loop].description;
                     description.style.textAlign = "center";
                     description.style.fontSize = "x-large";
                     description.style.padding = "0px 50px";});
-                description.addEventListener("mouseleave", function(){
+                description.addEventListener("mouseleave",() => {
                     description.textContent = repoName;
                     description.style.fontSize = "xx-large";});
             };

@@ -26,7 +26,7 @@ document.addEventListener("scroll",menuFun);
 let dark = document.querySelector(".dark-mode");
 dark.onclick = () => {dark.classList.toggle("dark");};
 
-fetch("https://api.github.com/users/yazn-108/repos").then(response => response.json())
+fetch("https://api.github.com/users/yazn-108/reposz").then(response => response.json())
     .then(data => {
     data.sort((a, b) => {return new Date(b.created_at) - new Date(a.created_at);});
         for(const loop in data){
@@ -70,7 +70,20 @@ fetch("https://api.github.com/users/yazn-108/repos").then(response => response.j
                     description.style.fontSize = "xx-large";});
             };
         };
-    });
+    }).catch(() =>{
+        let container = document.querySelector(".projects");
+        const errorBox = document.createElement("div");
+        errorBox.className = "errorBox";
+        let errorMessage = document.createElement("p");
+        errorMessage.textContent = `An error occurred calling projects`;
+        errorBox.appendChild(errorMessage);
+        let reloadPage = document.createElement("a");
+        reloadPage.setAttribute("href","");
+        errorBox.appendChild(reloadPage);
+        let reloadButton = document.createElement("button");
+        reloadButton.textContent = "Reload the page";
+        reloadPage.appendChild(reloadButton);
+        container.appendChild(errorBox);});
 
 
 

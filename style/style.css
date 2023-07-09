@@ -1,6 +1,6 @@
 @font-face {
     font-family: Alkatra;
-    src: url(Alkatra.ttf);}
+    src: url(../fonts/Alkatra.ttf);}
 *{box-sizing: border-box;}
 body{
     font-family:Alkatra;

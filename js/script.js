@@ -26,14 +26,14 @@ document.addEventListener("click",menuFun);
 document.addEventListener("scroll",menuFun);
 };
 
-
+let colorOfDarkMode = getComputedStyle(document.documentElement).getPropertyValue('--dark-background');
 let browserTheme = document.querySelector('meta[name="theme-color"]');
 let dark = document.querySelector(".dark-mode");
 dark.addEventListener("click", () => {
 dark.classList.toggle("dark");
 if(dark.classList.contains("dark")){
     localStorage.setItem("theme_is", "dark");
-    browserTheme.setAttribute("content","#1F242D")
+    browserTheme.setAttribute("content",colorOfDarkMode)
 }else{
     localStorage.setItem("theme_is", "light");
     browserTheme.setAttribute("content","")
@@ -41,9 +41,9 @@ if(dark.classList.contains("dark")){
 });
 if(localStorage.getItem("theme_is") === "dark"){
     dark.classList.add(localStorage.getItem("theme_is"));
-    browserTheme.setAttribute("content","#1F242D")
+    browserTheme.setAttribute("content",colorOfDarkMode)
 };
-    
+
 async function apiProjects(){
     try {
         const api = await fetch("https://api.github.com/users/yazn-108/repos");

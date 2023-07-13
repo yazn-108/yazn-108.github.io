@@ -1,13 +1,12 @@
 "use strict";
-let skillsImg = document.querySelectorAll(".skills .box img");
-let skillsArray = [
-"imgs/github.svg",
-"imgs/html.svg",
-"imgs/css.svg",
-"imgs/git.svg",
-"imgs/javascript.svg",
-"imgs/figma.svg"];
-skillsImg.forEach((img,index) => {img.setAttribute("src",skillsArray[index]);});
+let sectionLinks = document.querySelectorAll("nav .sections button");
+sectionLinks.forEach((section) => {
+    section.addEventListener("click",(e) => {
+        document.querySelector(e.target.dataset.section).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
 
 let menuIcon = document.querySelector(".menu-icon");
 let sections = document.querySelector(".sections");
@@ -26,6 +25,17 @@ document.addEventListener("click",menuFun);
 document.addEventListener("scroll",menuFun);
 };
 
+let skillsImg = document.querySelectorAll(".skills .box img");
+let skillsArray = [
+"imgs/github.svg",
+"imgs/html.svg",
+"imgs/css.svg",
+"imgs/git.svg",
+"imgs/javascript.svg",
+"imgs/figma.svg"];
+skillsImg.forEach((img,index) => {img.setAttribute("src",skillsArray[index]);});
+
+
 let colorOfDarkMode = getComputedStyle(document.documentElement).getPropertyValue('--dark-background');
 let browserTheme = document.querySelector('meta[name="theme-color"]');
 let dark = document.querySelector(".dark-mode");
@@ -34,14 +44,17 @@ dark.classList.toggle("dark");
 if(dark.classList.contains("dark")){
     localStorage.setItem("theme_is", "dark");
     browserTheme.setAttribute("content",colorOfDarkMode)
+    document.body.style.backgroundColor = colorOfDarkMode;
 }else{
     localStorage.setItem("theme_is", "light");
     browserTheme.setAttribute("content","")
+    document.body.style.backgroundColor = "";
 }
 });
 if(localStorage.getItem("theme_is") === "dark"){
     dark.classList.add(localStorage.getItem("theme_is"));
     browserTheme.setAttribute("content",colorOfDarkMode)
+    document.body.style.backgroundColor = colorOfDarkMode;
 };
 
 async function apiProjects(){
@@ -80,7 +93,7 @@ async function apiProjects(){
                 info.appendChild(sourceLink);
                 info.appendChild(browsingLink);
                 container.appendChild(box);
-                description.addEventListener("mouseover",() => {
+                description.addEventListener("mouseenter",() => {
                     description.textContent = data[loop].description;
                     description.style.textAlign = "center";
                     description.style.fontSize = "large";
@@ -108,6 +121,3 @@ async function apiProjects(){
     };
 };    
 apiProjects();
-
-
-

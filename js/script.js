@@ -64,7 +64,7 @@ async function apiProjects(){
     try {
         const api = await fetch("https://api.github.com/users/yazn-108/repos");
         let data = await api.json()
-        data.sort((a, b) => {return new Date(b.created_at) - new Date(a.created_at);});
+        data.sort((a, b) => {return new Date(b.pushed_at) - new Date(a.pushed_at);});
         for(const loop in data){
             if(data[loop].has_pages === true && data[loop].description) {
                 let container = document.querySelector(".projects .boxes");

@@ -32,6 +32,11 @@ position: fixed;
 top: 0;
 padding: 0 40px;
 box-shadow: 0px 1px 0px var(--main-color);}
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;}
+.headroom--pinned {transform: translateY(0%);}
+.headroom--unpinned {transform: translateY(-100%);}
 .container nav .logo img{width: 120px; height:50px;}
 .container nav .sections{
     display: flex;
@@ -94,52 +99,52 @@ box-shadow: 0px 1px 0px var(--main-color);}
 color: var(--main-color);
 transition: .3s ease-in-out;}
 .container nav .menu button:hover{transform: scale(1.4);}}
-.container header{
+.container .about-me{
     margin: auto;
     width: 90%;
     padding:40px 20px;
 border-radius: 15px;}
 @media (min-width: 768px) {
     .container{padding-top:  120px;}
-    .container header{
+    .container .about-me{
     background-image: url(../imgs/split_background.svg) ;
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0px 4px 0px var(--main-color);
     color: white;}}
-.container header .content{
+.container .about-me .content{
     display: flex;
     align-items: center;
     justify-content: space-between;}
-.container header .content .text-box{
+.container .about-me .content .text-box{
     width: 40%;
     font-size: 20px;}
-.container header .content img{width: 20%;}
+.container .about-me .content img{width: 20%;}
 @media (max-width: 768px) {
-.container header{
+.container .about-me{
     width: 80%;
     margin: 50px auto;}
-.container header .content .text-box{
+.container .about-me .content .text-box{
     width: 100%;
     text-align: center;}
-.container header .content img{display: none;}}
-.contact{
+.container .about-me .content img{display: none;}}
+.social-media{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 40px;
     margin: 100px auto;}
-    .contact .icons{
-        display: flex;
-        gap: 40px;}
-.contact button{
+.social-media .icons{
+    display: flex;
+    gap: 40px;}
+.social-media button{
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;}
-@media (min-width:768px) {.contact button{cursor: pointer;}}
-.contact button::after{
+@media (min-width:768px) {.social-media button{cursor: pointer;}}
+.social-media button::after{
     content: var(--icon);
     display: flex;
     align-items: center;
@@ -153,13 +158,13 @@ border-radius: 15px;}
     width: 100%;
     transition: .5s;
     border-radius: 15px;}
-.contact button:hover::after{
+.social-media button:hover::after{
     top: -30px;
     opacity: 1;}
 @media (max-width: 576px) {
-    .contact .icons{gap: 30px;}
-    .contact button::after{width: 80%;}}
-.contact .icons img{width: 40px;}
+    .social-media .icons{gap: 30px;}
+    .social-media button::after{width: 80%;}}
+.social-media .icons img{width: 40px;}
 .skills{
     display: flex;
     flex-direction: column;
@@ -429,3 +434,5 @@ footer .icons button:hover{transform: scale(1.2);}
 .dark ~ .container .plugins > div .content .plugin .info{
     border: var(--main-color) solid 2px;
     border-radius:0 0 25px 25px;}
+
+

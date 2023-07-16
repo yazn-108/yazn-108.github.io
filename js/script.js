@@ -1,4 +1,8 @@
 "use strict";
+const header = document.querySelector(".container nav");
+const headroom = new Headroom(header);
+headroom.init();
+
 let sectionLinks = document.querySelectorAll("nav .sections button");
 sectionLinks.forEach((section) => {
     section.addEventListener("click",(e) => {
@@ -10,7 +14,7 @@ sectionLinks.forEach((section) => {
 
 let menuIcon = document.querySelector(".menu-icon");
 let sections = document.querySelector(".sections");
-menuIcon.onclick = function(e) {
+menuIcon.addEventListener("click", function(e) {
     e.stopPropagation();
     sections.classList.toggle("menu");
     menuIcon.classList.toggle("close");
@@ -23,7 +27,7 @@ menuIcon.onclick = function(e) {
     };
 document.addEventListener("click",menuFun);
 document.addEventListener("scroll",menuFun);
-};
+});
 
 let skillsImg = document.querySelectorAll(".skills .box img");
 let skillsArray = [
@@ -34,7 +38,6 @@ let skillsArray = [
 "imgs/javascript.svg",
 "imgs/figma.svg"];
 skillsImg.forEach((img,index) => {img.setAttribute("src",skillsArray[index]);});
-
 
 let colorOfDarkMode = getComputedStyle(document.documentElement).getPropertyValue('--dark-background');
 let browserTheme = document.querySelector('meta[name="theme-color"]');

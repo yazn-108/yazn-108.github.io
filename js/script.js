@@ -139,7 +139,7 @@ sendButton.addEventListener("click",(e) => {
     if(count === 3){
         formTitle.innerHTML = 'Sending...';
         const serviceID = 'default_service';
-        const templateID = 'template_nl66e67';
+        const templateID = 'template_5ffcrsw';
         emailjs.sendForm(serviceID, templateID, form)
         .then(() => {
             formTitle.innerHTML = 'contact with me';

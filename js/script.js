@@ -127,6 +127,7 @@ apiProjects();
 
 let formTitle = document.querySelector(".contact h3");
 let form = document.querySelector(".contact form");
+let emailInput = document.querySelector(".contact input[type='email']");
 let sendButton = document.querySelector(".contact input[type='submit']");
 let inputs = document.querySelectorAll("form .required");
 sendButton.addEventListener("click",(e) => {
@@ -136,7 +137,7 @@ sendButton.addEventListener("click",(e) => {
         input.value !== ""?count++
         :input.placeholder = 'fill in the field';
     });
-    if(count === 3){
+    if(count === 3 && validator.isEmail(emailInput.value) === true){
         formTitle.innerHTML = 'Sending...';
         const serviceID = 'default_service';
         const templateID = 'template_5ffcrsw';
@@ -158,3 +159,6 @@ emailjs.init('moFv9CUybtNEEmMkC');
 
 let copyright = document.querySelector("footer .copyright .year");
 copyright.innerHTML = new Date().getFullYear()
+
+
+

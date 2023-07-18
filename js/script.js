@@ -124,3 +124,37 @@ async function apiProjects(){
     };
 };    
 apiProjects();
+
+let formTitle = document.querySelector(".contact h3");
+let form = document.querySelector(".contact form");
+let sendButton = document.querySelector(".contact input[type='submit']");
+let inputs = document.querySelectorAll("form .required");
+sendButton.addEventListener("click",(e) => {
+    e.preventDefault();
+    let count = 0
+    inputs.forEach(input => {
+        input.value !== ""?count++
+        :input.placeholder = 'fill in the field';
+    });
+    if(count === 3){
+        formTitle.innerHTML = 'Sending...';
+        const serviceID = 'default_service';
+        const templateID = 'template_nl66e67';
+        emailjs.sendForm(serviceID, templateID, form)
+        .then(() => {
+            formTitle.innerHTML = 'contact with me';
+            inputs[0].value = ""
+            inputs[1].value = ""
+            inputs[2].value = ""
+            inputs[0].placeholder = "your name"
+            inputs[1].placeholder = "your email"
+            inputs[2].placeholder = "your message"
+        }, (err) => {
+            formTitle.innerHTML = 'an error occurred';
+        });
+    }
+});
+emailjs.init('moFv9CUybtNEEmMkC');
+
+let copyright = document.querySelector("footer .copyright .year");
+copyright.innerHTML = new Date().getFullYear()

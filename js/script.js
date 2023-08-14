@@ -52,7 +52,7 @@ if(dark.classList.contains("dark")){
     localStorage.setItem("theme_is", "light");
     browserTheme.setAttribute("content","")
     document.body.style.backgroundColor = "";
-}
+};
 });
 if(localStorage.getItem("theme_is") === "dark"){
     dark.classList.add(localStorage.getItem("theme_is"));
@@ -78,14 +78,14 @@ async function apiProjects(){
                 info.className = "info";
                 let repoLink = data[loop].html_url;
                 const sourceLink = document.createElement("a");
-                sourceLink.setAttribute("href",repoLink);
+                sourceLink.href = repoLink;
                 sourceLink.setAttribute("target","_blank");
                 const sourceButton = document.createElement("button");
                 sourceButton.textContent = "source";
                 sourceLink.appendChild(sourceButton);
                 let siteLink = data[loop].homepage;
                 const browsingLink = document.createElement("a");
-                browsingLink.setAttribute("href",siteLink);
+                browsingLink.href = siteLink;
                 browsingLink.setAttribute("target","_blank");
                 const browseButton = document.createElement("button");
                 browseButton.className = "browse-button";
@@ -115,7 +115,7 @@ async function apiProjects(){
         errorMessage.textContent = `An error occurred calling projects`;
         errorBox.appendChild(errorMessage);
         let reloadPage = document.createElement("a");
-        reloadPage.setAttribute("href","");
+        reloadPage.href = "";
         errorBox.appendChild(reloadPage);
         let reloadButton = document.createElement("button");
         reloadButton.textContent = "Reload the page";
@@ -156,9 +156,5 @@ sendButton.addEventListener("click",(e) => {
     }
 });
 emailjs.init('moFv9CUybtNEEmMkC');
-
 let copyright = document.querySelector("footer .copyright .year");
-copyright.innerHTML = new Date().getFullYear()
-
-
-
+copyright.innerHTML = new Date().getFullYear();

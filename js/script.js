@@ -100,13 +100,14 @@ async function apiProjects(){
                     description.textContent = data[loop].description;
                     description.style.textAlign = "center";
                     description.style.fontSize = "large";
-                    description.style.padding = "0px 50px";});
+                    description.style.padding = "0px 50px";
+                });
                 description.addEventListener("mouseleave",() => {
                     description.textContent = repoName;
-                    description.style.fontSize = "xx-large";});
+                    description.style.fontSize = "xx-large";
+                });
             };
         };
-        
     } catch (error) {
         let container = document.querySelector(".projects");
         const errorBox = document.createElement("div");

@@ -228,11 +228,12 @@ border-radius: 15px;}
     overflow: hidden;
     border-radius: 15px;}
 .projects .box .description{
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: xx-large;
-    border-radius:15px 15px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
     transition: .3s background-color , .5s color;}
 .projects .box:nth-child(3n-2) .description{background-color: #6c63ff;}
 .projects .box:nth-child(3n-1) .description{background-color: #33a9dc;}

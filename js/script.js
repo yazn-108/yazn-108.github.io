@@ -6,6 +6,19 @@ headroom.init();
 let sectionLinks = document.querySelectorAll("nav .sections button");
 sectionLinks.forEach((section) => {
     section.addEventListener("click",(e) => {
+        if (matchMedia("(max-width: 768px)").matches) {
+            sectionLinks.forEach((ele) => {
+                ele.style.textDecoration = "none";
+                e.target.style = `text-decoration: line-through var(--main-color) 2px;`;
+            });
+        }else{
+            sectionLinks.forEach((ele) => {
+                ele.style.color = "";
+                localStorage.getItem("theme_is") === "dark"?
+                e.target.style.color = "var(--body-color)"
+                :e.target.style.color = "var(--main-color)";
+            });
+        };
         document.querySelector(e.target.dataset.section).scrollIntoView({
             behavior: "smooth"
         });
@@ -38,11 +51,11 @@ let skillsArray = [
 "imgs/javascript.svg",
 "imgs/figma.svg"];
 skillsImg.forEach((img,index) => {img.setAttribute("src",skillsArray[index]);});
-
 let colorOfDarkMode = getComputedStyle(document.documentElement).getPropertyValue('--dark-background');
 let browserTheme = document.querySelector('meta[name="theme-color"]');
-let dark = document.querySelector(".dark-mode");
+let dark = document.querySelector(".theme-mode");
 dark.addEventListener("click", () => {
+sectionLinks.forEach(ele => ele.style.color = "");
 dark.classList.toggle("dark");
 if(dark.classList.contains("dark")){
     localStorage.setItem("theme_is", "dark");

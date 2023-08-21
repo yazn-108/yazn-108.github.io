@@ -107,7 +107,7 @@ transition: .3s ease-in-out;}
     padding:40px 20px;
 border-radius: 15px;}
 @media (min-width: 768px) {
-    .container{padding-top:  120px;}
+    .container{padding-top: 120px;}
     .container .about-me{
     background-image: url(../imgs/split_background.svg) ;
     background-repeat: no-repeat;
@@ -121,14 +121,22 @@ border-radius: 15px;}
 .container .about-me .content .text-box{
     width: 40%;
     font-size: 20px;}
+    
+.container .about-me .content .text-box h3{
+    margin: 14px auto;}
+.container .about-me .content .text-box h3::before{
+    background-color: transparent;}
+
 .container .about-me .content img{width: 20%;}
 @media (max-width: 768px) {
 .container .about-me{
-    width: 80%;
+    width: 85%;
     margin: 50px auto;}
 .container .about-me .content .text-box{
     width: 100%;
     text-align: center;}
+.container .about-me .content .text-box h3::before{
+    background: var(--main-color);}
 .container .about-me .content img{display: none;}}
 .social-media{
     display: flex;
@@ -334,13 +342,35 @@ footer .copyright{
 footer .copyright button{padding: 0;
     text-decoration: underline solid;}
 @media (max-width: 768px) {footer .copyright{position: relative;}}
+h3:not(footer .accounts .user-name h3){
+    margin: 23px auto;
+    width: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+h3:not(footer .accounts .user-name h3)::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    border-radius: 15px;
+    background: linear-gradient(0deg,#ffb608,#ffb608) no-repeat;
+    background: var(--main-color);
+    height: 2px;
+    width: 100%;}
+h3:not(footer .accounts .user-name h3):hover::before{
+    animation: underline 1s 0s 1 ease-in-out;}
+@keyframes underline {
+    50%{width: 20%;}
+    100%{width: 100%;}
+}
 /*dark mode*/
-.dark-mode{
+.theme-mode{
     position: absolute;
     top: 70px;
     left: 10px;}
-.dark-mode button{position: relative;}
-.dark-mode button::after{
+.theme-mode button{position: relative;}
+.theme-mode button::after{
     font-family: "Font Awesome 5 Free";
     content: "\f186";
     font-size: 20px;}
@@ -351,7 +381,7 @@ footer .copyright button{padding: 0;
     color: var(--body-color);}    
 .dark ~ .container{color:var(--dark-color) !important;}
 .dark ~  .container .sections button {
-    color: var(--main-color) !important;}
+    color: var(--main-color);}
 .dark ~  .container nav,
 .dark ~ .container .menu{
     background-color: var(--dark-background) !important;}

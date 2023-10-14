@@ -389,3 +389,8 @@ h3:not(footer .accounts .user-name h3):hover::before{
 .dark ~ .container .plugins > div .content .plugin .info{
     border: var(--main-color) solid 2px;
     border-radius:0 0 25px 25px;}
+
+
+
+
+

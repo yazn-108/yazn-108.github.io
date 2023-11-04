@@ -213,17 +213,21 @@ border-radius: 15px;}
 .projects{
     width: 90%;
     margin: 100px auto 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;}
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 610px 50px;
+    transition: .9s ease-in-out;
+    gap: 10px;}
+@media (max-width:768px){.projects{grid-template-rows: 100px 630px 50px;}}
+.projects.open{grid-template-rows: 100px 100% 50px;}
 .projects .boxes{
+    overflow: hidden;
     color: var(--white-color);
     display: grid;
     grid-template-columns: repeat(3,1fr);
     width: 100%;
-    gap: 5px;}
-.projects .boxes.open{max-height: 6000px;}
+    gap: 5px;
+}
 @media (max-width:768px) {
     .projects .boxes{
         grid-template-columns: repeat(1,1fr);
@@ -280,6 +284,25 @@ border-radius: 15px;}
     color: var(--white-color);
     border:none;
     border-radius: 15px;}
+.projects > .moreProjects{
+    width: fit-content;
+    margin: auto;
+    border-radius: 2px;
+    position: relative;
+    display: flex;
+    justify-content: center;}
+.projects > .moreProjects::after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f103";
+    position: absolute;
+    bottom: -20px;
+    font-weight: 800;}
+.projects.open > .moreProjects::after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f102";
+    position: absolute;
+    bottom: -20px;
+    font-weight: 800;}
 footer{
     display: flex;
     flex-direction: column;

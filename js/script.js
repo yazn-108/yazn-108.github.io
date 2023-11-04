@@ -139,6 +139,9 @@ async function apiProjects(){
 };    
 apiProjects();
 
+let moreProjects = document.querySelector(".moreProjects");
+moreProjects.addEventListener("click",(e) => e.currentTarget.parentNode.classList.toggle("open"));
+
 let formTitle = document.querySelector(".contact h3");
 let form = document.querySelector(".contact form");
 let emailInput = document.querySelector(".contact input[type='email']");

@@ -126,7 +126,6 @@ border-radius: 15px;}
     margin: 14px auto;}
 .container .about-me .content .text-box h3::before{
     background-color: transparent;}
-
 .container .about-me .content img{width: 20%;}
 @media (max-width: 768px) {
 .container .about-me{
@@ -184,18 +183,27 @@ border-radius: 15px;}
     width: 200px;
     height: 200px;}
 .skills .box{
+    max-width: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    border-radius: 10px;
-    border: solid #03B7F9 1px ;
-    padding: 10px;}
-@media (max-width: 576px) {.skills .box{padding: 10px 8px; gap: 10px;}}
+    flex-wrap: wrap;
+    gap: 30px;}
+@media (max-width: 576px) {
+    .skills .box{
+    padding-top: 30px;
+    gap: 10px;}
+}
+@media (max-width: 768px) {.skills .box{max-width: 90%;}}
 .skills .box span{
+    border: solid #03B7F9 1px ;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
     position: relative;
     display: flex;
     justify-content: center;}
+@media (max-width: 576px) {.skills .box span{margin-bottom: 25px;}}
 .skills span::after{
     content: var(--skill-name);
     position: absolute;
@@ -215,11 +223,22 @@ border-radius: 15px;}
     margin: 100px auto 200px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 610px 50px;
+    grid-template-rows: auto auto 610px auto;
     transition: .9s ease-in-out;
     gap: 10px;}
-@media (max-width:768px){.projects{grid-template-rows: 100px 630px 50px;}}
-.projects.open{grid-template-rows: 100px 100% 50px;}
+@media (max-width:768px){.projects{grid-template-rows: auto auto 630px auto;}}
+.projects.open{grid-template-rows: auto auto 100% 50px;}
+.projects .categorys{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;}
+.projects .categorys button{
+    color: var(--body-color);
+    background-color: #6c63ff;
+    width: 100px;
+    font-size: xx-large;
+    border-radius: 10px;}
 .projects .boxes{
     overflow: hidden;
     color: var(--white-color);
@@ -285,6 +304,7 @@ border-radius: 15px;}
     border:none;
     border-radius: 15px;}
 .projects > .moreProjects{
+    color: inherit;
     width: fit-content;
     margin: auto;
     border-radius: 2px;
@@ -406,14 +426,6 @@ h3:not(footer .accounts .user-name h3):hover::before{
 .dark ~  .container .sections button {
     color: var(--main-color);}
 .dark ~  .container nav,
-.dark ~ .container .menu{
-    background-color: var(--dark-background) !important;}
-.dark ~ .container .plugins > div h3{color: var(--main-color);}
-.dark ~ .container .plugins > div .content .plugin .info{
-    border: var(--main-color) solid 2px;
-    border-radius:0 0 25px 25px;}
-
-
-
+.dark ~ .container .menu{background-color: var(--dark-background) !important;}
 
 

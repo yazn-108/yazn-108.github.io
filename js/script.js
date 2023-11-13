@@ -77,6 +77,13 @@ if (localStorage.getItem("theme_is") === "dark") {
 
 
 
+
+
+
+
+
+
+
 // let categorys = document.querySelector(".projects .categorys");
 // async function APICategorys() {
 //     try {
@@ -114,6 +121,16 @@ if (localStorage.getItem("theme_is") === "dark") {
 
 
 
+
+
+
+
+
+
+
+
+
+
 async function apiProjects() {
     try {
         const api = await fetch("https://api.github.com/users/yazn-108/repos");
@@ -124,7 +141,7 @@ async function apiProjects() {
                 let container = document.querySelector(".projects .boxes");
                 let box = document.createElement("div");
                 box.className = `box ${data[loop].topics}`;
-                let repoName = data[loop].name.replace(/[^a-zA-Z0-9\s]/g, " ").toLowerCase();
+                let repoName = data[loop].name.replaceAll("-", " ");
                 let description = document.createElement("div");
                 description.className = "description";
                 description.textContent = repoName;

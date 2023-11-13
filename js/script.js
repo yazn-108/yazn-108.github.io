@@ -140,7 +140,9 @@ async function apiProjects() {
             if (data[loop].has_pages === true && data[loop].description && data[loop].name !== "yazn-108.github.io") {
                 let container = document.querySelector(".projects .boxes");
                 let box = document.createElement("div");
-                box.className = `box ${data[loop].topics}`;
+
+                box.className = `box all ${data[loop].topics}`;
+
                 let repoName = data[loop].name.replaceAll("-", " ");
                 let description = document.createElement("div");
                 description.className = "description";

@@ -8,8 +8,7 @@
     --main-color:#03B7F9;
     --second-color:#004991;
     --white-color: white;
-    --dark-background:#1F242D;
-    --dark-color:var(--body-color);}
+    --dark-background:#1F242D;}
 body{
     font-family:Alkatra;
     background-color: var(--body-color);
@@ -188,15 +187,14 @@ border-radius: 15px;}
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;}
-@media (max-width: 576px) {
-    .skills .box{
-    padding-top: 30px;
-    gap: 10px;}
-}
+    gap: 30px;
+    padding-top: 30px;}
+@media (max-width: 576px) {.skills .box{gap: 10px;}}
 @media (max-width: 768px) {.skills .box{max-width: 90%;}}
 .skills .box span{
-    border: solid #03B7F9 1px ;
+    border: solid var(--main-color) 1px ;
+    box-shadow: 4px 4px 6px var(--main-color);
+    background-color: var(--body-color);
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 5px;
@@ -422,10 +420,11 @@ h3:not(footer .accounts .user-name h3):hover::before{
     content: "\f185";
     font-size: 20px;
     color: var(--body-color);}    
-.dark ~ .container{color:var(--dark-color) !important;}
+.dark ~ .container{ color:var(--body-color) !important;}
 .dark ~  .container .sections button {
     color: var(--main-color);}
 .dark ~  .container nav,
 .dark ~ .container .menu{background-color: var(--dark-background) !important;}
-
-
+.dark ~ .container .skills .box span{
+    border-width: 2px;
+    box-shadow: 0px 0px 0px var(--main-color);}

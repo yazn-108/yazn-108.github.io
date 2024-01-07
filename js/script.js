@@ -2,7 +2,6 @@
 const header = document.querySelector(".container nav");
 const headroom = new Headroom(header);
 headroom.init();
-
 let sectionLinks = document.querySelectorAll("nav .sections button");
 sectionLinks.forEach((section) => {
     section.addEventListener("click", (e) => {
@@ -24,7 +23,6 @@ sectionLinks.forEach((section) => {
         });
     });
 });
-
 let menuIcon = document.querySelector(".menu-icon");
 let sections = document.querySelector(".sections");
 menuIcon.addEventListener("click", function (e) {
@@ -41,7 +39,6 @@ menuIcon.addEventListener("click", function (e) {
     document.addEventListener("click", menuFun);
     document.addEventListener("scroll", menuFun);
 });
-
 let skillsBox = document.querySelector(".skills .box");
 import { skillsData } from './skillsSectionData/Data.js'
 skillsData.map(info => {
@@ -52,7 +49,6 @@ skillsData.map(info => {
     span.appendChild(img);
     skillsBox.appendChild(span);
 });
-
 let colorOfDarkMode = getComputedStyle(document.documentElement).getPropertyValue('--dark-background');
 let browserTheme = document.querySelector('meta[name="theme-color"]');
 let dark = document.querySelector(".theme-mode");
@@ -74,63 +70,6 @@ if (localStorage.getItem("theme_is") === "dark") {
     browserTheme.setAttribute("content", colorOfDarkMode)
     document.body.style.backgroundColor = colorOfDarkMode;
 };
-
-
-
-
-
-
-
-
-
-
-// let categorys = document.querySelector(".projects .categorys");
-// async function APICategorys() {
-//     try {
-//         const api = await fetch("https://api.github.com/users/yazn-108/repos");
-//         let data = await api.json();
-//         let categorysArray = [];
-//         data.forEach(e => categorysArray.push(e.topics));
-
-//         categorysArray.flat(Infinity).forEach(items => {
-//             let category = document.createElement("button");
-//             category.dataset.class = items
-//             category.textContent = items;
-//             categorys.appendChild(category);
-//         });
-
-//         let buttons = categorys.querySelectorAll("button")
-//         buttons.forEach(button => {
-//             button.addEventListener("click", (e) => {
-//                 let projects = document.querySelectorAll(".projects .box");
-//                 projects.forEach(e => e.style.display = "none");
-
-//                 document.querySelectorAll(`.${e.target.dataset.class}`).forEach(e => e.style.display = "block");
-
-//             });
-//         });
-
-
-
-//     } catch {
-
-//     };
-// };
-// APICategorys();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 async function apiProjects() {
     try {
         const api = await fetch("https://api.github.com/users/yazn-108/repos");
@@ -140,9 +79,7 @@ async function apiProjects() {
             if (data[loop].has_pages === true && data[loop].description && data[loop].name !== "yazn-108.github.io") {
                 let container = document.querySelector(".projects .boxes");
                 let box = document.createElement("div");
-
-                box.className = `box all ${data[loop].topics}`;
-
+                box.className = "box";
                 let repoName = data[loop].name.replaceAll("-", " ");
                 let description = document.createElement("div");
                 description.className = "description";
@@ -198,10 +135,8 @@ async function apiProjects() {
     };
 };
 apiProjects();
-
 let moreProjects = document.querySelector(".moreProjects");
 moreProjects.addEventListener("click", (e) => e.currentTarget.parentNode.classList.toggle("open"));
-
 let formTitle = document.querySelector(".contact h3");
 let form = document.querySelector(".contact form");
 let emailInput = document.querySelector(".contact input[type='email']");

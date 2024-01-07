@@ -29,4 +29,9 @@ export const skillsData = [
         languageIcon: "../js/skillsSectionData/figma.svg",
         languageColor: "#6C63FF"
     },
+    {
+        languageName: "react",
+        languageIcon: "../js/skillsSectionData/React-icon.svg",
+        languageColor: "#61dafb"
+    },
 ]

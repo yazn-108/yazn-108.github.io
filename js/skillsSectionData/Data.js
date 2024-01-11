@@ -34,4 +34,14 @@ export const skillsData = [
         languageIcon: "../js/skillsSectionData/React-icon.svg",
         languageColor: "#61dafb"
     },
+    {
+        languageName: "vite",
+        languageIcon: "../js/skillsSectionData/vite.svg",
+        languageColor: "#ffb50d"
+    },
+    {
+        languageName: "redux",
+        languageIcon: "../js/skillsSectionData/redux.svg",
+        languageColor: "#764ABC"
+    },
 ]

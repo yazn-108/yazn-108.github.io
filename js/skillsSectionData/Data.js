@@ -40,7 +40,7 @@ export const skillsData = [
         languageColor: "#ffb50d"
     },
     {
-        languageName: "redux",
+        languageName: "redux/toolkit",
         languageIcon: "../js/skillsSectionData/redux.svg",
         languageColor: "#764ABC"
     },

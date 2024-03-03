@@ -46,6 +46,7 @@ skillsData.map(info => {
     span.style = `--skill-name:'${info.languageName}'; --skill-color:${info.languageColor};`
     const img = document.createElement("img");
     img.src = info.languageIcon
+    img.alt = info.languageName
     span.appendChild(img);
     skillsBox.appendChild(span);
 });

@@ -272,12 +272,12 @@ button {
 }
 @media (max-width: 576px) {
   .skills .box {
-    gap: 10px;
+    gap: 18px;
   }
 }
 @media (max-width: 768px) {
   .skills .box {
-    max-width: 90%;
+    max-width: 95%;
   }
 }
 .skills .box span {
@@ -286,31 +286,21 @@ button {
   background-color: var(--body-color);
   padding: 10px;
   border-radius: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
   position: relative;
   display: flex;
   justify-content: center;
 }
-@media (max-width: 576px) {
-  .skills .box span {
-    margin-bottom: 25px;
-  }
-}
 .skills span::after {
   content: var(--skill-name);
   position: absolute;
-  bottom: -20px;
+  bottom: -35px;
   color: var(--white-color);
   background-color: var(--skill-color);
   font-size: large;
   padding: 0px 10px;
   border-radius: 25px;
   transition: 0.5s;
-  opacity: 0;
-}
-.skills span:hover::after {
-  opacity: 1;
-  bottom: -35px;
 }
 .skills .box span img {
   width: 45px;

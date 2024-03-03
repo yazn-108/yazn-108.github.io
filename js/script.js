@@ -76,7 +76,7 @@ async function apiProjects() {
         let data = await api.json()
         data.sort((a, b) => { return new Date(b.pushed_at) - new Date(a.pushed_at); });
         for (const loop in data) {
-            if (data[loop].has_pages === true && data[loop].description && data[loop].name !== "yazn-108.github.io") {
+            if (data[loop].homepage && data[loop].description && data[loop].name !== "yazn-108.github.io") {
                 let container = document.querySelector(".projects .boxes");
                 let box = document.createElement("div");
                 box.className = "box";

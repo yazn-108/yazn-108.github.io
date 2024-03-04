@@ -1,3 +1,4 @@
+"use strict";
 const header = document.querySelector(".container nav");
 const headroom = new Headroom(header);
 headroom.init();

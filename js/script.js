@@ -1,4 +1,3 @@
-"use strict";
 const header = document.querySelector(".container nav");
 const headroom = new Headroom(header);
 headroom.init();
@@ -150,7 +149,7 @@ sendButton.addEventListener("click", (e) => {
         input.value !== "" ? count++
             : input.placeholder = 'fill in the field';
     });
-    if (count === 3 && validator.isEmail(emailInput.value) === true) {
+    if (count === 3 && validator.isEmail(emailInput.value)) {
         formTitle.innerHTML = 'Sending...';
         const serviceID = 'default_service';
         const templateID = 'template_5ffcrsw';

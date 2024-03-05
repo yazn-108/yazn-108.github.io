@@ -75,7 +75,7 @@ async function apiProjects() {
     try {
         const api = await fetch("https://api.github.com/users/yazn-108/repos");
         let data = await api.json()
-        data.sort((a, b) => { return new Date(b.pushed_at) - new Date(a.pushed_at); });
+        data.sort((a, b) => { return new Date(b.created_at) - new Date(a.created_at); });
         for (const loop in data) {
             if (data[loop].homepage && data[loop].description && data[loop].name !== "yazn-108.github.io") {
                 let container = document.querySelector(".projects .boxes");

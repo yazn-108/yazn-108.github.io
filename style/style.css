@@ -315,30 +315,17 @@ button {
   margin: 100px auto 200px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 610px auto;
+  grid-template-rows: auto 610px auto;
   transition: 0.9s ease-in-out;
   gap: 10px;
 }
 @media (max-width: 768px) {
   .projects {
-    grid-template-rows: auto auto 630px auto;
+    grid-template-rows: auto 630px auto;
   }
 }
 .projects.open {
-  grid-template-rows: auto auto 100% 50px;
-}
-.projects .categorys {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-}
-.projects .categorys button {
-  color: var(--body-color);
-  background-color: #6c63ff;
-  width: 100px;
-  font-size: xx-large;
-  border-radius: 10px;
+  grid-template-rows: auto 100% 50px;
 }
 .projects .boxes {
   overflow: hidden;

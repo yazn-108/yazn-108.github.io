@@ -40,8 +40,23 @@ export const skillsData = [
         languageColor: "#ffb50d"
     },
     {
-        languageName: "redux/toolkit",
+        languageName: "redux",
         languageIcon: "../js/skillsSectionData/redux.svg",
         languageColor: "#764ABC"
+    },
+    {
+        languageName: "toolkit",
+        languageIcon: "../js/skillsSectionData/redux.svg",
+        languageColor: "#764ABC"
+    },
+    {
+        languageName: "next.js",
+        languageIcon: "../js/skillsSectionData/next-js.svg",
+        languageColor: "black"
+    },
+    {
+        languageName: "Tailwind",
+        languageIcon: "../js/skillsSectionData/tailwind.svg",
+        languageColor: "#44a8b3"
     },
 ]

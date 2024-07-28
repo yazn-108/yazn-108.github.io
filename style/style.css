@@ -18,6 +18,9 @@ body {
   font-family: Alkatra, "Trebuchet MS";
   background-color: var(--body-color);
   scroll-behavior: smooth;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 a {
@@ -25,6 +28,9 @@ a {
 }
 ::-webkit-scrollbar {
   width: 0;
+}
+::-moz-selection {
+  background-color: var(--main-color);
 }
 ::selection {
   background-color: var(--main-color);
@@ -42,6 +48,8 @@ button {
 .container nav {
   background-color: var(--body-color);
   z-index: 100;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   width: 100%;
   display: flex;
@@ -51,6 +59,7 @@ button {
   top: 0;
   padding: 0 40px;
   box-shadow: 0px 1px 0px var(--main-color);
+  transition-duration: 0.2s;
 }
 .headroom {
   will-change: transform;
@@ -126,14 +135,26 @@ button {
     top: 115%;
     left: 50%;
     transform: translateX(-50%);
+    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     background-color: var(--body-color);
     width: 95%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     padding: 20px 0px;
     border: var(--main-color) solid 1px;
     border-radius: 10px;
+    -webkit-animation: menu 0.3s 0s ease-in-out 1;
     animation: menu 0.3s 0s ease-in-out 1;
+  }
+  @-webkit-keyframes menu {
+    0% {
+      top: 100%;
+    }
+    100% {
+      top: 115%;
+    }
   }
   @keyframes menu {
     0% {
@@ -420,6 +441,8 @@ button {
 }
 .projects > .moreProjects {
   color: inherit;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: auto;
   border-radius: 2px;
@@ -490,9 +513,209 @@ footer .contact form textarea {
   width: 100%;
   outline: none;
 }
+footer .contact form input::-webkit-input-placeholder,
+footer .contact form textarea::-webkit-input-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input::-moz-placeholder,
+footer .contact form textarea::-moz-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input:-ms-input-placeholder,
+footer .contact form textarea:-ms-input-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input::-ms-input-placeholder,
+footer .contact form textarea::-ms-input-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input::-webkit-input-placeholder,
+footer .contact form textarea::-webkit-input-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input::-moz-placeholder,
+footer .contact form textarea::-moz-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input:-ms-input-placeholder,
+footer .contact form textarea:-ms-input-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input::-ms-input-placeholder,
+footer .contact form textarea::-ms-input-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input::-webkit-input-placeholder,
+footer .contact form textarea::-webkit-input-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input::-moz-placeholder,
+footer .contact form textarea::-moz-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input:-ms-input-placeholder,
+footer .contact form textarea:-ms-input-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input::-ms-input-placeholder,
+footer .contact form textarea::-ms-input-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input::-webkit-input-placeholder,
+footer .contact form textarea::-webkit-input-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input::-moz-placeholder,
+footer .contact form textarea::-moz-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input:-ms-input-placeholder,
+footer .contact form textarea:-ms-input-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input::-ms-input-placeholder,
+footer .contact form textarea::-ms-input-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input::-webkit-input-placeholder,
+footer .contact form textarea::-webkit-input-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input::-moz-placeholder,
+footer .contact form textarea::-moz-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input:-ms-input-placeholder,
+footer .contact form textarea:-ms-input-placeholder {
+  color: var(--white-color);
+}
+footer .contact form input::-ms-input-placeholder,
+footer .contact form textarea::-ms-input-placeholder {
+  color: var(--white-color);
+}
 footer .contact form input::placeholder,
 footer .contact form textarea::placeholder {
   color: var(--white-color);
+}
+footer .contact form input:focus::-webkit-input-placeholder,
+footer .contact form textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus::-moz-placeholder,
+footer .contact form textarea:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus:-ms-input-placeholder,
+footer .contact form textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus::-ms-input-placeholder,
+footer .contact form textarea:focus::-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus::-webkit-input-placeholder,
+footer .contact form textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus::-moz-placeholder,
+footer .contact form textarea:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus:-ms-input-placeholder,
+footer .contact form textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus::-ms-input-placeholder,
+footer .contact form textarea:focus::-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus::-webkit-input-placeholder,
+footer .contact form textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus::-moz-placeholder,
+footer .contact form textarea:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus:-ms-input-placeholder,
+footer .contact form textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus::-ms-input-placeholder,
+footer .contact form textarea:focus::-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus::-webkit-input-placeholder,
+footer .contact form textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus::-moz-placeholder,
+footer .contact form textarea:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus:-ms-input-placeholder,
+footer .contact form textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus::-ms-input-placeholder,
+footer .contact form textarea:focus::-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus::-webkit-input-placeholder,
+footer .contact form textarea:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus::-moz-placeholder,
+footer .contact form textarea:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus:-ms-input-placeholder,
+footer .contact form textarea:focus:-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+footer .contact form input:focus::-ms-input-placeholder,
+footer .contact form textarea:focus::-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
 }
 footer .contact form input:focus::placeholder,
 footer .contact form textarea:focus::placeholder {
@@ -532,6 +755,7 @@ footer .copyright {
 }
 footer .copyright button {
   padding: 0;
+  -webkit-text-decoration: underline solid;
   text-decoration: underline solid;
 }
 @media (max-width: 768px) {
@@ -541,6 +765,8 @@ footer .copyright button {
 }
 h3:not(footer .accounts .user-name h3) {
   margin: 23px auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   position: relative;
   display: flex;
@@ -558,7 +784,16 @@ h3:not(footer .accounts .user-name h3)::before {
   width: 100%;
 }
 h3:not(footer .accounts .user-name h3):hover::before {
+  -webkit-animation: underline 1s 0s 1 ease-in-out;
   animation: underline 1s 0s 1 ease-in-out;
+}
+@-webkit-keyframes underline {
+  50% {
+    width: 20%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 @keyframes underline {
   50% {

@@ -1,7 +1,13 @@
 "use strict";
 const header = document.querySelector(".container nav");
-const headroom = new Headroom(header);
-headroom.init();
+let scrollValue = window.scrollY;
+const HeaderTransform = (element) => () => {
+  window.scrollY > scrollValue
+    ? (element.style.transform = `translateY(-100%)`)
+    : (element.style.transform = `translateY(0%)`);
+  scrollValue = window.scrollY;
+};
+window.addEventListener("scroll", HeaderTransform(header));
 let sectionLinks = document.querySelectorAll("nav .sections button");
 sectionLinks.forEach((section) => {
   section.addEventListener("click", (e) => {

@@ -75,7 +75,7 @@ if (localStorage.getItem("theme_is") === "dark") {
 }
 async function apiProjects() {
   try {
-    const api = await fetch("https://api.github.com/users/yazn-108/repos1233");
+    const api = await fetch("https://api.github.com/users/yazn-108/repos");
     let data = await api.json();
     data.sort((a, b) => {
       return new Date(b.created_at) - new Date(a.created_at);

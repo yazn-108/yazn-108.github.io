@@ -155,14 +155,18 @@ let form = document.querySelector(".contact form");
 let emailInput = document.querySelector(".contact input[type='email']");
 let sendButton = document.querySelector(".contact input[type='submit']");
 let inputs = document.querySelectorAll("form .required");
+const regex = new RegExp(
+  "^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$"
+);
 sendButton.addEventListener("click", (e) => {
   e.preventDefault();
   let count = 0;
   inputs.forEach((input) => {
     input.value !== "" ? count++ : (input.placeholder = "fill in the field");
   });
-  if (count === 3 && validator.isEmail(emailInput.value)) {
+  if (count === 3 && regex.test(emailInput.value)) {
     formTitle.innerHTML = "Sending...";
+    console.log("Sending...");
     const serviceID = "default_service";
     const templateID = "template_5ffcrsw";
     emailjs.sendForm(serviceID, templateID, form).then(

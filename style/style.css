@@ -513,209 +513,9 @@ footer .contact form textarea {
   width: 100%;
   outline: none;
 }
-footer .contact form input::-webkit-input-placeholder,
-footer .contact form textarea::-webkit-input-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input::-moz-placeholder,
-footer .contact form textarea::-moz-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input:-ms-input-placeholder,
-footer .contact form textarea:-ms-input-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input::-ms-input-placeholder,
-footer .contact form textarea::-ms-input-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input::-webkit-input-placeholder,
-footer .contact form textarea::-webkit-input-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input::-moz-placeholder,
-footer .contact form textarea::-moz-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input:-ms-input-placeholder,
-footer .contact form textarea:-ms-input-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input::-ms-input-placeholder,
-footer .contact form textarea::-ms-input-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input::-webkit-input-placeholder,
-footer .contact form textarea::-webkit-input-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input::-moz-placeholder,
-footer .contact form textarea::-moz-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input:-ms-input-placeholder,
-footer .contact form textarea:-ms-input-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input::-ms-input-placeholder,
-footer .contact form textarea::-ms-input-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input::-webkit-input-placeholder,
-footer .contact form textarea::-webkit-input-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input::-moz-placeholder,
-footer .contact form textarea::-moz-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input:-ms-input-placeholder,
-footer .contact form textarea:-ms-input-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input::-ms-input-placeholder,
-footer .contact form textarea::-ms-input-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input::-webkit-input-placeholder,
-footer .contact form textarea::-webkit-input-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input::-moz-placeholder,
-footer .contact form textarea::-moz-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input:-ms-input-placeholder,
-footer .contact form textarea:-ms-input-placeholder {
-  color: var(--white-color);
-}
-footer .contact form input::-ms-input-placeholder,
-footer .contact form textarea::-ms-input-placeholder {
-  color: var(--white-color);
-}
 footer .contact form input::placeholder,
 footer .contact form textarea::placeholder {
   color: var(--white-color);
-}
-footer .contact form input:focus::-webkit-input-placeholder,
-footer .contact form textarea:focus::-webkit-input-placeholder {
-  opacity: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus::-moz-placeholder,
-footer .contact form textarea:focus::-moz-placeholder {
-  opacity: 0;
-  -moz-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus:-ms-input-placeholder,
-footer .contact form textarea:focus:-ms-input-placeholder {
-  opacity: 0;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus::-ms-input-placeholder,
-footer .contact form textarea:focus::-ms-input-placeholder {
-  opacity: 0;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus::-webkit-input-placeholder,
-footer .contact form textarea:focus::-webkit-input-placeholder {
-  opacity: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus::-moz-placeholder,
-footer .contact form textarea:focus::-moz-placeholder {
-  opacity: 0;
-  -moz-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus:-ms-input-placeholder,
-footer .contact form textarea:focus:-ms-input-placeholder {
-  opacity: 0;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus::-ms-input-placeholder,
-footer .contact form textarea:focus::-ms-input-placeholder {
-  opacity: 0;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus::-webkit-input-placeholder,
-footer .contact form textarea:focus::-webkit-input-placeholder {
-  opacity: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus::-moz-placeholder,
-footer .contact form textarea:focus::-moz-placeholder {
-  opacity: 0;
-  -moz-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus:-ms-input-placeholder,
-footer .contact form textarea:focus:-ms-input-placeholder {
-  opacity: 0;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus::-ms-input-placeholder,
-footer .contact form textarea:focus::-ms-input-placeholder {
-  opacity: 0;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus::-webkit-input-placeholder,
-footer .contact form textarea:focus::-webkit-input-placeholder {
-  opacity: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus::-moz-placeholder,
-footer .contact form textarea:focus::-moz-placeholder {
-  opacity: 0;
-  -moz-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus:-ms-input-placeholder,
-footer .contact form textarea:focus:-ms-input-placeholder {
-  opacity: 0;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus::-ms-input-placeholder,
-footer .contact form textarea:focus::-ms-input-placeholder {
-  opacity: 0;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus::-webkit-input-placeholder,
-footer .contact form textarea:focus::-webkit-input-placeholder {
-  opacity: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus::-moz-placeholder,
-footer .contact form textarea:focus::-moz-placeholder {
-  opacity: 0;
-  -moz-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus:-ms-input-placeholder,
-footer .contact form textarea:focus:-ms-input-placeholder {
-  opacity: 0;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
-}
-footer .contact form input:focus::-ms-input-placeholder,
-footer .contact form textarea:focus::-ms-input-placeholder {
-  opacity: 0;
-  -ms-transition: 0.3s;
-  transition: 0.3s;
 }
 footer .contact form input:focus::placeholder,
 footer .contact form textarea:focus::placeholder {
@@ -742,8 +542,12 @@ footer .accounts .icons {
   gap: 6px;
 }
 footer .accounts .icons button {
-  font-size: x-large;
   transition: 0.3s;
+}
+footer .accounts .icons button svg {
+  width: 24px;
+  height: 24px;
+  fill: white !important;
 }
 footer .accounts .icons button:hover {
   transform: scale(1.2);

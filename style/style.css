@@ -617,15 +617,15 @@ h3:not(footer .accounts .user-name h3):hover::before {
   position: relative;
 }
 .theme-mode button::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f186";
-  font-size: 20px;
+  content: "";
+  position: absolute;
+  top: 0;
+  background: url(/imgs/moon.svg) no-repeat;
+  width: 24px;
+  height: 24px;
 }
 .dark button::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f185";
-  font-size: 20px;
-  color: var(--body-color);
+  background: url(/imgs/sun.svg) no-repeat;
 }
 .dark ~ .container {
   color: var(--body-color) !important;

@@ -77,7 +77,7 @@ const translation = async () => {
   }
 };
 languageButton.addEventListener("click", translation);
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   const themeType = localStorage.getItem("theme") === "dark"
     document.body.classList.toggle("dark", themeType);
   document

@@ -45,9 +45,7 @@ theme.addEventListener("click", () => {
     document.body.classList.contains("dark") ? "dark" : ""
   );
 });
-//
 import { translationFile } from "./translation.js";
-//
 const languageButton = document.querySelector(".language");
 const mainContainer = document.querySelector(".container");
 const navOptions = document.querySelector("nav .menu");
@@ -59,8 +57,6 @@ const translation = async () => {
   try {
     const text = document.querySelectorAll("[data-text]");
     languageButton.querySelector("span").classList.toggle("ar");
-    // const translationFile = await fetch("js/translation.json");
-    // const translationData = await translationFile.json();
     languageType = languageType === "en" ? "ar" : "en";
     sessionStorage.setItem("languageType", languageType);
     text.forEach((e) => {
@@ -99,7 +95,7 @@ skillsData.map((info) => {
   allSkills += `
   <div class="flex justify-center items-center flex-col gap-3">
     <div class="border border-primary bg-[#e8eef4] shadow-[4px_4px_6px_var(--primary-color)] p-[10px] rounded-[10px] grid place-items-center">
-        <img class="duration-500 w-[45px] hover:scale-[1.2]" src="${info.languageIcon}" alt="">
+        <img width="45" height="45" class="duration-500 hover:scale-[1.2]" src="${info.languageIcon}" alt="">
     </div>
     <p style="background-color:${info.languageColor};" class="text-white px-[10px] rounded-[25px]">${info.languageName}</p>
   </div>

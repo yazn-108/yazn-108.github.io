@@ -20,7 +20,8 @@
     font-weight: normal;
   }
   [dir="rtl"],
-  [dir="rtl"] form {
+  [dir="rtl"] form,
+  [dir="rtl"] form input::placeholder {
     font-family: "Fustat";
   }
   [dir="ltr"] {

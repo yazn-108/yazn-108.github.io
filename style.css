@@ -474,8 +474,13 @@ video {
   font-weight: normal;
 }
 
+[dir="rtl"] form input::-moz-placeholder {
+  font-family: "Fustat";
+}
+
 [dir="rtl"],
-  [dir="rtl"] form {
+  [dir="rtl"] form,
+  [dir="rtl"] form input::placeholder {
   font-family: "Fustat";
 }
 

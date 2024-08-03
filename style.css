@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Fustat:200,300,regular,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Fustat:regular,700);
 
 /*
 ! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
@@ -704,10 +704,6 @@ video {
   display: none;
 }
 
-.aspect-square{
-  aspect-ratio: 1 / 1;
-}
-
 .h-14{
   height: 3.5rem;
 }
@@ -763,10 +759,6 @@ video {
 
 .w-\[200px\]{
   width: 200px;
-}
-
-.w-\[40px\]{
-  width: 40px;
 }
 
 .w-\[45px\]{

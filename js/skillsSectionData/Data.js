@@ -59,4 +59,9 @@ export const skillsData = [
     languageIcon: "../js/skillsSectionData/tailwind.svg",
     languageColor: "#44a8b3",
   },
+  {
+    languageName: "framer-motion",
+    languageIcon: "../js/skillsSectionData/framer-motion.svg",
+    languageColor: "#00aaff",
+  },
 ];

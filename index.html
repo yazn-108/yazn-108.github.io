@@ -7,15 +7,7 @@
         <meta name="theme-color" content="">
         <title>@yazn_108</title>
         <meta name="description" content="I am Yazn, a front-end web developer from Syria. I seek professionalism in the field of website interface development. This is an exhibition of my work in which I present my new works on an ongoing basis">
-        <link rel="stylesheet" href="style/normalize.css">
-        <link rel="stylesheet" href="style/style.css">
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        >
+        <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/svg" href="favicon.svg">
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://yazn-108.github.io/">
@@ -51,166 +43,247 @@
             }
         </script>
     </head>
-    <body>
-        <div class="theme-mode">
-            <button aria-label="Change mode"></button>
-        </div>
-        <main class="container">
-            <nav>
-                <div class="logo">
-                    <img src="imgs/logo.svg" alt="">
-                </div>
-                <label class="menu-icon">
-                    <svg viewBox="0 0 32 32">
-                        <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
-                        <path class="line" d="M7 16 27 16"></path>
-                    </svg>
-                </label>
-                <div class="sections">
-                    <button data-section=".about-me">about me</button>
-                    <button data-section=".skills">skills</button>
-                    <button data-section=".projects">projects</button>
-                    <button data-section=".contact">contact</button>
-                </div>
-            </nav>
-            <header class="about-me">
-                <div class="content">
-                    <div class="text-box">
-                        <h3>Welcome</h3>
-                        I am Yazn, a front-end web developer from Syria. I seek professionalism in the field of website interface development. This is an exhibition of my work in which I present my new works on an ongoing basis
-                    </div>
-                    <img src="imgs/logo-page.svg" alt="">
+    <body class="bg-bodyColor text-textColor font-Alkatra relative">
+        <nav class="bg-bodyColor transition-transform duration-500 fixed top-0 left-0 z-50 h-14 px-3 md:px-10 flex items-center justify-between border-b border-primary w-screen">
+            <a href="/" class="w-[120px] h-[50px]">
+                <img class="h-full w-full" src="imgs/logo.svg" alt="logo">
+            </a>
+            <label class="menu-icon md:hidden">
+                <svg viewBox="0 0 32 32">
+                    <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                    <path class="line" d="M7 16 27 16"></path>
+                </svg>
+            </label>
+            <div class="menu
+            hidden md:flex gap-10 py-8 md:py-0 max-md:absolute left-2/4 -translate-x-2/4 md:translate-x-0 top-[115%] bg-bodyColor w-[95%] md:w-fit h-fit
+            border md:border-0 border-primary rounded-xl font-bold text-black dark:text-primary
+            ">
+                <button class="capitalize hover:text-primary dark:hover:text-textColor transition-colors" data-text="about me" data-section="#about-me">about me</button>
+                <button class="capitalize hover:text-primary dark:hover:text-textColor transition-colors" data-text="skills" data-section="#skills">skills</button>
+                <button class="capitalize hover:text-primary dark:hover:text-textColor transition-colors" data-text="projects" data-section="#projects">projects</button>
+                <button class="capitalize hover:text-primary dark:hover:text-textColor transition-colors" data-text="contact" data-section="#contact">contact</button>
+            </div>
+        </nav>
+        <button class="language z-40 fixed top-2/4 left-2 flex justify-between items-center flex-col py-2 h-20 w-8 border border-primary bg-[#03b7f9]/20 rounded-md overflow-hidden" aria-label="Change mode">
+            <p>en</p>
+            <span class="
+        after:content-['']
+        after:transition-all
+        after:absolute 
+        after:top-0 
+        after:left-0
+        after:bg-primary
+        after:w-full
+        after:h-2/4
+        after:-z-10
+        after:rounded-sm
+        "></span>
+            <p>ar</p>
+        </button>
+        <button class="theme z-40 fixed top-2/4 right-2 flex justify-between items-center flex-col py-2 h-20 w-8 border border-primary bg-[#03b7f9]/20 rounded-md overflow-hidden" aria-label="Change mode">
+            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill-textColor" d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z"/>
+                <path class="fill-textColor" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z"/>
+            </svg>
+            <span class="
+        after:content-['']
+        after:transition-all
+        after:absolute 
+        after:top-0 
+        after:left-0
+        after:bg-primary
+        after:w-full
+        after:h-2/4
+        after:-z-10
+        after:rounded-sm
+        dark:after:top-2/4
+        "></span>
+            <svg
+                width="16"
+                height="16"
+                class="-rotate-90"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path class="fill-textColor" d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z"/>
+                <path class="fill-textColor" d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z"/>
+            </svg>
+        </button>
+        <main class="capitalize mt-20 container px-4 sm:px-0">
+            <header id="about-me" class="py-10 px-5 h-64 md:h-[21rem] border-b-4 md:border-b-0 md:border-x-4 border-primary rounded-2xl flex justify-center items-center bg-[#03b7f9]/20">
+                <div class="text-center text-xl md:w-3/4 xl:w-2/5 flex justify-center items-center flex-col text-textColor">
+                    <h3 data-text="welcome" class="font-bold title">welcome</h3>
+                    <p data-text="I'm Yazn, a front-end website developer from Syria. I seek professionalism in the field of website interface development. Here I display my latest work on an ongoing basis">I'm Yazn, a front-end website developer from Syria. I seek professionalism in the field of website interface development. Here I display my latest work on an ongoing basis</p>
                 </div>
             </header>
-            <div class="social-media">
-                <h3>social media</h3>
-                <div class="icons">
-                    <!-- <a href="https://www.tiktok.com/@yazn_108" target="_blank" aria-label="tiktok">
-                        <button style="--icon:'tiktok';" aria-label="tiktok">
-                            <img src="imgs/tik-tok.png" alt="tiktok">
+            <div class="grid place-items-center mt-28">
+                <h3 class="title" data-text="Follow me on social media">Follow me on social media</h3>
+                <div class="flex gap-4 rtl:gap-8">
+                    <a
+                        class="group"
+                        href="https://twitter.com/yazn_108"
+                        target="_blank"
+                        aria-label="twitter"
+                    >
+                        <button class="relative flex justify-center items-center flex-col gap-1" aria-label="twitter">
+                            <img class="w-[40px]" src="imgs/twitter.png" alt="twitter">
+                            <p class="
+                            transition-all
+                            group-hover:bg-secondaryColor
+                            group-hover:text-white
+                            group-hover:rounded-md
+                            px-2
+                            " data-text="twitter">twitter</p>
                         </button>
-                    </a> -->
+                    </a>
+                    <a
+                        class="group"
+                        href="https://www.linkedin.com/in/yazn-frontEnd/"
+                        target="_blank"
+                        aria-label="linkedin"
+                    >
+                        <button class="relative flex justify-center items-center flex-col gap-1" aria-label="linkedin">
+                            <img class="w-[40px]" src="imgs/linkedin.png" alt="linkedin">
+                            <p class="
+                            transition-all
+                            group-hover:bg-secondaryColor
+                            group-hover:text-white
+                            group-hover:rounded-md
+                            px-2
+                            " data-text="linkedin">linkedin</p>
+                        </button>
+                    </a>
+                    <a
+                        class="group"
+                        href="https://t.me/yazn_108"
+                        target="_blank"
+                        aria-label="telegram"
+                    >
+                        <button class="relative flex justify-center items-center flex-col gap-1" aria-label="telegram">
+                            <img class="w-[40px]" src="imgs/telegram.png" alt="telegram">
+                            <p class="
+                            transition-all
+                            group-hover:bg-secondaryColor
+                            group-hover:text-white
+                            group-hover:rounded-md
+                            px-2
+                            " data-text="telegram">telegram</p>
+                        </button>
+                    </a>
+                    <a
+                        class="group"
+                        href="https://www.instagram.com/yazn_108/"
+                        target="_blank"
+                        aria-label="instagram"
+                    >
+                        <button class="relative flex justify-center items-center flex-col gap-1" aria-label="instagram">
+                            <img class="w-[40px]" src="imgs/instagram.png" alt="instagram">
+                            <p class="
+                            transition-all
+                            group-hover:bg-secondaryColor
+                            group-hover:text-white
+                            group-hover:rounded-md
+                            px-2
+                            " data-text="instagram">instagram</p>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div id="skills" class="grid place-items-center mt-28">
+                <h3 data-text="my skills" class="title">my skills</h3>
+                <img class="h-[200px] w-[200px]" src="imgs/Launch.svg" alt="skills">
+                <div dir="ltr" class="skillsBox font-Alkatra max-w-lg pt-8 flex flex-wrap justify-center items-center gap-[13px] sm:gap-[30px]"></div>
+            </div>
+            <div id="projects" class="w-full my-28 text-center">
+                <h3 class="text-center title" data-text="my projects">my projects</h3>
+                <!-- info => bg-slate-600 -->
+                <div dir="ltr" class="projectsContainer overflow-hidden h-[616px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-[300px] gap-4 relative"></div>
+                <button class="moreProjects mt-5 bg-[#03b7f9]/20 p-2 rounded-md text-textColor w-fit" data-text="more projects">more projects</button>
+            </div>
+        </main>
+        <footer id="contact" class="capitalize flex flex-col md:flex-row justify-around items-center gap-20 md:gap-0 bg-secondaryColor text-white px-5 md:px-0 py-20 text-center relative">
+            <div class="w-full md:w-[500px]">
+                <h3 class="title mb-3" data-text="contact with me">contact with me</h3>
+                <form class="rtl:font-Alkatra flex flex-col justify-center items-center gap-5 caret-white">
+                    <input
+                        type="text"
+                        name="from_name"
+                        placeholder="your name"
+                        class="input border-2 border-white placeholder:duration-300 focus:placeholder:opacity-0 p-[10px] w-full bg-transparent outline-none placeholder:text-white"
+                    >
+                    <input
+                        type="email"
+                        name="reply_to"
+                        placeholder="your email"
+                        class="input font-Alkatra border-2 border-white placeholder:duration-300 focus:placeholder:opacity-0 p-[10px] w-full bg-transparent outline-none placeholder:text-white"
+                    >
+                    <textarea name="message" placeholder="your message" class="input border-2 border-white placeholder:duration-300 focus:placeholder:opacity-0 p-[10px] w-full bg-transparent outline-none placeholder:text-white"></textarea>
+                    <button data-text="send" class="w-full p-[10px] border-2 border-white placeholder:duration-300 focus:placeholder:opacity-0">send</button>
+                </form>
+            </div>
+            <div dir="ltr" class="accounts flex flex-col justify-center items-center">
+                <h3 class="title">@yazn_108</h3>
+                <div class="icons flex gap-3">
                     <a href="https://twitter.com/yazn_108" target="_blank" aria-label="twitter">
-                        <button style="--icon:'twitter';" aria-label="twitter">
-                            <img src="imgs/twitter.png" alt="twitter">
+                        <button aria-label="twitter" class="duration-300 hover:scale-[1.2]">
+                            <svg class="w-6 h-6 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z"/>
+                            </svg>
                         </button>
                     </a>
-                    <a href="https://www.linkedin.com/in/yazn-frontEnd/" target="_blank" aria-label="linkedin">
-                        <button style="--icon:'linkedin';" aria-label="linkedin">
-                            <img src="imgs/linkedin.png" alt="linkedin">
+                    <a href="https://www.linkedin.com/in/yazn-ahmed-580953286/" target="_blank" aria-label="linkedin">
+                        <button aria-label="linkedin" class="duration-300 hover:scale-[1.2]">
+                            <svg class="w-6 h-6 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/>
+                            </svg>
                         </button>
                     </a>
-                    <a href="https://t.me/yazn_108" target="_blank" aria-label="telegram">
-                        <button style="--icon:'telegram';" aria-label="telegram">
-                            <img src="imgs/telegram.png" alt="telegram">
+                    <a href="https://www.tiktok.com/@yazn_108" target="_blank" aria-label="tiktok">
+                        <button aria-label="tiktok" class="duration-300 hover:scale-[1.2]">
+                            <svg class="w-6 h-6 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/>
+                            </svg>
                         </button>
                     </a>
                     <a href="https://www.instagram.com/yazn_108/" target="_blank" aria-label="instagram">
-                        <button style="--icon:'instagram';" aria-label="instagram">
-                            <img src="imgs/instagram.png" alt="instagram">
+                        <button aria-label="instagram" class="duration-300 hover:scale-[1.2]">
+                            <svg class="w-6 h-6 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                            </svg>
+                        </button>
+                    </a>
+                    <a href="https://t.me/yazn_108" target="_blank" aria-label="telegram">
+                        <button aria-label="telegram" class="duration-300 hover:scale-[1.2]">
+                            <svg class="w-6 h-6 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                <path d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z"/>
+                            </svg>
+                        </button>
+                    </a>
+                    <a href="https://github.com/yazn-108" target="_blank" aria-label="github">
+                        <button aria-label="github" class="duration-300 hover:scale-[1.2]">
+                            <svg class="w-6 h-6 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                                <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+                            </svg>
+                        </button>
+                    </a>
+                    <a href="https://www.figma.com/@yazn_108" target="_blank" aria-label="figma">
+                        <button aria-label="figma" class="duration-300 hover:scale-[1.2]">
+                            <svg class="w-6 h-6 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <path d="M14 95.8C14 42.9 56.9 0 109.8 0H274.2C327.1 0 370 42.9 370 95.8C370 129.3 352.8 158.8 326.7 175.9C352.8 193 370 222.5 370 256C370 308.9 327.1 351.8 274.2 351.8H272.1C247.3 351.8 224.7 342.4 207.7 326.9V415.2C207.7 468.8 163.7 512 110.3 512C57.5 512 14 469.2 14 416.2C14 382.7 31.2 353.2 57.2 336.1C31.2 319 14 289.5 14 256C14 222.5 31.2 193 57.2 175.9C31.2 158.8 14 129.3 14 95.8zM176.3 191.6H109.8C74.2 191.6 45.4 220.4 45.4 256C45.4 291.4 74 320.2 109.4 320.4C109.5 320.4 109.7 320.4 109.8 320.4H176.3V191.6zM207.7 256C207.7 291.6 236.5 320.4 272.1 320.4H274.2C309.7 320.4 338.6 291.6 338.6 256C338.6 220.4 309.7 191.6 274.2 191.6H272.1C236.5 191.6 207.7 220.4 207.7 256zM109.8 351.8C109.7 351.8 109.5 351.8 109.4 351.8C74 352 45.4 380.8 45.4 416.2C45.4 451.7 74.6 480.6 110.3 480.6C146.6 480.6 176.3 451.2 176.3 415.2V351.8H109.8zM109.8 31.4C74.2 31.4 45.4 60.2 45.4 95.8C45.4 131.4 74.2 160.2 109.8 160.2H176.3V31.4H109.8zM207.7 160.2H274.2C309.7 160.2 338.6 131.4 338.6 95.8C338.6 60.2 309.7 31.4 274.2 31.4H207.7V160.2z"/>
+                            </svg>
                         </button>
                     </a>
                 </div>
             </div>
-            <div class="skills">
-                <h3>my skills</h3>
-                <div class="img">
-                    <img src="imgs/Launch.svg" alt="">
-                </div>
-                <div class="box"></div>
-            </div>
-            <div class="projects">
-                <h3>my projects</h3>
-                <div class="boxes"></div>
-                <button class="moreProjects">more</button>
-            </div>
-            <footer>
-                <div class="contact">
-                    <h3>contact with me</h3>
-                    <form action="">
-                        <input
-                            type="text"
-                            name="from_name"
-                            placeholder="your name"
-                            class="required"
-                        >
-                        <input
-                            type="email"
-                            name="reply_to"
-                            placeholder="your email"
-                            class="required"
-                        >
-                        <textarea name="message" placeholder="your message" class="required"></textarea>
-                        <input type="submit" value="send">
-                    </form>
-                </div>
-                <div class="accounts">
-                    <div class="user-name">
-                        <h3>@yazn_108</h3>
-                    </div>
-                    <div class="icons">
-                        <a href="https://twitter.com/yazn_108" target="_blank" aria-label="twitter">
-                            <button aria-label="twitter">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z"/>
-                                </svg>
-                            </button>
-                        </a>
-                        <a href="https://www.linkedin.com/in/yazn-ahmed-580953286/" target="_blank" aria-label="linkedin">
-                            <button aria-label="linkedin">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/>
-                                </svg>
-                            </button>
-                        </a>
-                        <a href="https://www.tiktok.com/@yazn_108" target="_blank" aria-label="tiktok">
-                            <button aria-label="tiktok">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/>
-                                </svg>
-                            </button>
-                        </a>
-                        <a href="https://www.instagram.com/yazn_108/" target="_blank" aria-label="instagram">
-                            <button aria-label="instagram">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
-                                </svg>
-                            </button>
-                        </a>
-                        <a href="https://t.me/yazn_108" target="_blank" aria-label="telegram">
-                            <button aria-label="telegram">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                                    <path d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z"/>
-                                </svg>
-                            </button>
-                        </a>
-                        <a href="https://github.com/yazn-108" target="_blank" aria-label="github">
-                            <button aria-label="github">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
-                                </svg>
-                            </button>
-                        </a>
-                        <a href="https://www.figma.com/@yazn_108" target="_blank" aria-label="figma">
-                            <button aria-label="figma">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                    <path d="M14 95.8C14 42.9 56.9 0 109.8 0H274.2C327.1 0 370 42.9 370 95.8C370 129.3 352.8 158.8 326.7 175.9C352.8 193 370 222.5 370 256C370 308.9 327.1 351.8 274.2 351.8H272.1C247.3 351.8 224.7 342.4 207.7 326.9V415.2C207.7 468.8 163.7 512 110.3 512C57.5 512 14 469.2 14 416.2C14 382.7 31.2 353.2 57.2 336.1C31.2 319 14 289.5 14 256C14 222.5 31.2 193 57.2 175.9C31.2 158.8 14 129.3 14 95.8zM176.3 191.6H109.8C74.2 191.6 45.4 220.4 45.4 256C45.4 291.4 74 320.2 109.4 320.4C109.5 320.4 109.7 320.4 109.8 320.4H176.3V191.6zM207.7 256C207.7 291.6 236.5 320.4 272.1 320.4H274.2C309.7 320.4 338.6 291.6 338.6 256C338.6 220.4 309.7 191.6 274.2 191.6H272.1C236.5 191.6 207.7 220.4 207.7 256zM109.8 351.8C109.7 351.8 109.5 351.8 109.4 351.8C74 352 45.4 380.8 45.4 416.2C45.4 451.7 74.6 480.6 110.3 480.6C146.6 480.6 176.3 451.2 176.3 415.2V351.8H109.8zM109.8 31.4C74.2 31.4 45.4 60.2 45.4 95.8C45.4 131.4 74.2 160.2 109.8 160.2H176.3V31.4H109.8zM207.7 160.2H274.2C309.7 160.2 338.6 131.4 338.6 95.8C338.6 60.2 309.7 31.4 274.2 31.4H207.7V160.2z"/>
-                                </svg>
-                            </button>
-                        </a>
-                    </div>
-                </div>
-                <p class="copyright">
-                    copyright
-                    <span class="year"></span>
-                    by
-                    <a href="https://t.me/yazn_108" target="_blank" aria-label="contact with me">
-                        <button aria-label="contact with me">yazn_108</button>
-                    </a>
-                </p>
-            </footer>
-        </main>
+            <p class="copyright absolute bottom-2">
+                <span data-text="All rights reserved to">All rights reserved to</span>
+                <a href="https://t.me/yazn_108" target="_blank" aria-label="contact with me">
+                    <button aria-label="contact with me" dir="ltr" class="underline">@yazn_108</button>
+                </a>
+                <span class="year" dir="ltr"></span>
+            </p>
+        </footer>
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="js/script.js" type="module"></script>
     </body>
 </html>

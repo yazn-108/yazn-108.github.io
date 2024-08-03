@@ -704,6 +704,10 @@ video {
   display: none;
 }
 
+.aspect-square{
+  aspect-ratio: 1 / 1;
+}
+
 .h-14{
   height: 3.5rem;
 }

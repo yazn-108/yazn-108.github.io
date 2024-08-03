@@ -78,8 +78,8 @@ const translation = async () => {
 };
 languageButton.addEventListener("click", translation);
 window.addEventListener("load", () => {
-  localStorage.getItem("theme") === "dark" &&
-    document.body.classList.add("dark");
+  const themeType = localStorage.getItem("theme") === "dark"
+    document.body.classList.toggle("dark", themeType);
   document
     .querySelector('[name="theme-color"]')
     .setAttribute(

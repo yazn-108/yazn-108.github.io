@@ -457,21 +457,21 @@ video {
 @font-face {
   font-family: "Fustat";
 
-  src: url("/Fustat-Bold.ttf") format("truetype");
-
-  font-display: swap;
-
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Fustat";
-
   src: url("/Fustat-Regular.ttf") format("truetype");
 
   font-display: swap;
 
   font-weight: normal;
+}
+
+@font-face {
+  font-family: "Fustat";
+
+  src: url("/Fustat-Bold.ttf") format("truetype");
+
+  font-display: swap;
+
+  font-weight: bold;
 }
 
 [dir="rtl"] form input::-moz-placeholder {

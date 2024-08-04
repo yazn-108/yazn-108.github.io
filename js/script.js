@@ -78,14 +78,11 @@ const translation = async () => {
 };
 languageButton.addEventListener("click", translation);
 window.addEventListener("DOMContentLoaded", () => {
-  const themeType = localStorage.getItem("theme") === "dark"
-    document.body.classList.toggle("dark", themeType);
+  const themeType = localStorage.getItem("theme") === "dark";
+  document.body.classList.toggle("dark", themeType);
   document
     .querySelector('[name="theme-color"]')
-    .setAttribute(
-      "content",
-      document.body.classList.contains("dark") ? "#1f242d" : ""
-    );
+    .setAttribute("content", themeType ? "#1f242d" : "");
   sessionStorage.getItem("languageType") === "ar" && translation();
 });
 const skillsBox = document.querySelector(".skillsBox");

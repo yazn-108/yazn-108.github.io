@@ -457,8 +457,6 @@ video {
 @font-face {
   font-family: "Fustat";
 
-  font-display: swap;
-
   src: url("/Fustat-Bold.ttf") format("truetype");
 
   font-weight: bold;
@@ -466,8 +464,6 @@ video {
 
 @font-face {
   font-family: "Fustat";
-
-  font-display: swap;
 
   src: url("/Fustat-Regular.ttf") format("truetype");
 

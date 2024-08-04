@@ -459,6 +459,8 @@ video {
 
   src: url("/Fustat-Bold.ttf") format("truetype");
 
+  font-display: swap;
+
   font-weight: bold;
 }
 
@@ -466,6 +468,8 @@ video {
   font-family: "Fustat";
 
   src: url("/Fustat-Regular.ttf") format("truetype");
+
+  font-display: swap;
 
   font-weight: normal;
 }

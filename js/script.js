@@ -95,15 +95,16 @@ skillsData.map((info) => {
 `;
   skillsBox.innerHTML = allSkills;
 });
-async function apiProjects() {
-  let projects = "";
+async function apiProjects({ getAll }) {
   const container = document.querySelector(".projectsContainer");
+  let projects = "";
   try {
-    const api = await fetch("https://api.github.com/users/yazn-108/repos");
+    const api = await fetch(
+      getAll
+        ? `https://api.github.com/users/yazn-108/repos?sort=created`
+        : `https://api.github.com/users/yazn-108/repos?per_page=6&sort=created`
+    );
     const data = await api.json();
-    data.sort((a, b) => {
-      return new Date(b.created_at) - new Date(a.created_at);
-    });
     for (const loop in data) {
       if (
         data[loop].homepage &&
@@ -162,10 +163,14 @@ async function apiProjects() {
         </div>`;
   }
 }
-apiProjects();
+apiProjects({ getAll: false });
+let AllProjectsDisplayed = false;
 const moreProjects = document.querySelector(".moreProjects");
 const projectsContainer = document.querySelector(".projectsContainer");
 moreProjects.addEventListener("click", (e) => {
+  !AllProjectsDisplayed && apiProjects({ getAll: true });
+  AllProjectsDisplayed = true;
+  // const projectsCount = [...projectsContainer.querySelectorAll(".project")].length
   projectsContainer.classList.toggle("open");
   e.currentTarget.innerHTML = projectsContainer.classList.contains("open")
     ? elementsDirection("اخفاء المشاريع", "hide projects")

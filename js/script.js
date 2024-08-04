@@ -53,28 +53,24 @@ const footer = document.querySelector("footer");
 let languageType = "en";
 const elementsDirection = (value, value2) =>
   languageType === "ar" ? value : value2;
-const translation = async () => {
-  try {
-    const text = document.querySelectorAll("[data-text]");
-    languageButton.querySelector("span").classList.toggle("ar");
-    languageType = languageType === "en" ? "ar" : "en";
-    sessionStorage.setItem("languageType", languageType);
-    text.forEach((e) => {
-      e.innerHTML = translationFile[languageType][e.dataset.text];
-    });
-    mainContainer.dir = elementsDirection("rtl", "ltr");
-    navOptions.dir = elementsDirection("rtl", "ltr");
-    footer.dir = elementsDirection("rtl", "ltr");
-    const footerInputs = footer.querySelectorAll("form .input");
-    footerInputs[0].placeholder = elementsDirection("اسمك", "your name");
-    footerInputs[1].placeholder = elementsDirection(
-      "بريدك الالكتروني",
-      "your email"
-    );
-    footerInputs[2].placeholder = elementsDirection("رسالتك", "your message");
-  } catch (error) {
-    console.log(error);
-  }
+const translation = () => {
+  const text = document.querySelectorAll("[data-text]");
+  languageButton.querySelector("span").classList.toggle("ar");
+  languageType = languageType === "en" ? "ar" : "en";
+  sessionStorage.setItem("languageType", languageType);
+  text.forEach((e) => {
+    e.innerHTML = translationFile[languageType][e.dataset.text];
+  });
+  mainContainer.dir = elementsDirection("rtl", "ltr");
+  navOptions.dir = elementsDirection("rtl", "ltr");
+  footer.dir = elementsDirection("rtl", "ltr");
+  const footerInputs = footer.querySelectorAll("form .input");
+  footerInputs[0].placeholder = elementsDirection("اسمك", "your name");
+  footerInputs[1].placeholder = elementsDirection(
+    "بريدك الالكتروني",
+    "your email"
+  );
+  footerInputs[2].placeholder = elementsDirection("رسالتك", "your message");
 };
 languageButton.addEventListener("click", translation);
 window.addEventListener("DOMContentLoaded", () => {

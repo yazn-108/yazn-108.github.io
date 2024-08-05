@@ -95,7 +95,8 @@ skillsData.map((info) => {
 `;
   skillsBox.innerHTML = allSkills;
 });
-async function apiProjects({ getAll }) {
+// console.log(window.innerWidth < 640);
+const apiProjects = async ({ getAll }) => {
   const container = document.querySelector(".projectsContainer");
   let projects = "";
   try {
@@ -162,7 +163,7 @@ async function apiProjects({ getAll }) {
             </a>
         </div>`;
   }
-}
+};
 apiProjects({ getAll: false });
 let AllProjectsDisplayed = false;
 const moreProjects = document.querySelector(".moreProjects");

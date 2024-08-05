@@ -98,6 +98,12 @@ html {
     stroke-dashoffset: -32.42;
   }
 }
-.projectsContainer.open {
+#projects.open .projectsContainer {
   height: 100%;
+}
+#projects.open .moreProjectsButton {
+  display: none;
+}
+#projects.open .hideProjectsButton {
+  display: block;
 }

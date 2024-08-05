@@ -166,16 +166,15 @@ const apiProjects = async ({ getAll }) => {
 };
 apiProjects({ getAll: false });
 let AllProjectsDisplayed = false;
-const moreProjects = document.querySelector(".moreProjects");
-const projectsContainer = document.querySelector(".projectsContainer");
-moreProjects.addEventListener("click", (e) => {
-  !AllProjectsDisplayed && apiProjects({ getAll: true });
-  AllProjectsDisplayed = true;
-  // const projectsCount = [...projectsContainer.querySelectorAll(".project")].length
-  projectsContainer.classList.toggle("open");
-  e.currentTarget.innerHTML = projectsContainer.classList.contains("open")
-    ? elementsDirection("اخفاء المشاريع", "hide projects")
-    : elementsDirection("المزيد من المشاريع", "more projects");
+const moreProjectsButtons = document.querySelectorAll(".moreProjects");
+const projectsSection = document.querySelector("#projects");
+moreProjectsButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    !AllProjectsDisplayed && apiProjects({ getAll: true });
+    AllProjectsDisplayed = true;
+    // const projectsCount = [...projectsContainer.querySelectorAll(".project")].length
+    projectsSection.classList.toggle("open");
+  });
 });
 const form = document.querySelector("form");
 const inputs = document.querySelectorAll("form .input");

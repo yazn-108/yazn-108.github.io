@@ -694,6 +694,11 @@ video {
   z-index: 50;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .my-28 {
   margin-top: 7rem;
   margin-bottom: 7rem;
@@ -1257,8 +1262,16 @@ html {
   }
 }
 
-.projectsContainer.open {
+#projects.open .projectsContainer {
   height: 100%;
+}
+
+#projects.open .moreProjectsButton {
+  display: none;
+}
+
+#projects.open .hideProjectsButton {
+  display: block;
 }
 
 .placeholder\:text-white::-moz-placeholder {

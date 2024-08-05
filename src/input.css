@@ -30,6 +30,10 @@
   .title {
     @apply text-xl mb-3;
   }
+  ::selection {
+    background-color: var(--primary-color);
+    color: white;
+  }
 }
 html {
   scrollbar-width: none;

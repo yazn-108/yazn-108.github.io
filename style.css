@@ -494,6 +494,16 @@ video {
   line-height: 1.75rem;
 }
 
+::-moz-selection {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+::selection {
+  background-color: var(--primary-color);
+  color: white;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;

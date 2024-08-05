@@ -95,7 +95,12 @@ skillsData.map((info) => {
 `;
   skillsBox.innerHTML = allSkills;
 });
-// console.log(window.innerWidth < 640);
+const initialProjectsCount =
+  window.innerWidth < 768
+    ? 2
+    : (window.innerWidth >= 768) & (window.innerWidth < 1280)
+    ? 4
+    : window.innerWidth >= 1280 && 6;
 const apiProjects = async ({ getAll }) => {
   const container = document.querySelector(".projectsContainer");
   let projects = "";
@@ -103,7 +108,7 @@ const apiProjects = async ({ getAll }) => {
     const api = await fetch(
       getAll
         ? `https://api.github.com/users/yazn-108/repos?sort=created`
-        : `https://api.github.com/users/yazn-108/repos?per_page=6&sort=created`
+        : `https://api.github.com/users/yazn-108/repos?per_page=${initialProjectsCount}&sort=created`
     );
     const data = await api.json();
     for (const loop in data) {

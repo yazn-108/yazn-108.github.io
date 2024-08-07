@@ -111,3 +111,12 @@ html {
 #projects.open .hideProjectsButton {
   display: block;
 }
+nav.hide {
+  transform: translateY(-100%);
+}
+.language.hide {
+  transform: translateX(calc(-100% - 0.5rem));
+}
+.theme.hide {
+  transform: translateX(calc(+100% + 0.5rem));
+}

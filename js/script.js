@@ -1,13 +1,15 @@
 "use strict";
-const header = document.querySelector("nav");
+const hideOnScroll = document.querySelectorAll(["nav", ".language", ".theme"]);
 let scrollValue = window.scrollY;
-const HeaderTransform = (element) => () => {
-  window.scrollY > scrollValue
-    ? (element.style.transform = `translateY(-100%)`)
-    : (element.style.transform = `translateY(0%)`);
+const HeaderTransform = (elements) => {
+  elements.forEach((element) => {
+    window.scrollY > scrollValue
+      ? element.classList.add("hide")
+      : element.classList.remove("hide");
+  });
   scrollValue = window.scrollY;
 };
-window.addEventListener("scroll", HeaderTransform(header));
+window.addEventListener("scroll", () => HeaderTransform(hideOnScroll));
 const menuIcon = document.querySelector(".menu-icon");
 const menu = document.querySelector(".menu");
 menuIcon.addEventListener("click", function (e) {
@@ -31,8 +33,8 @@ sectionLinks.forEach((section) => {
     });
   });
 });
-const theme = document.querySelector(".theme");
-theme.addEventListener("click", () => {
+const themeButton = document.querySelector(".theme");
+themeButton.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   document
     .querySelector('[name="theme-color"]')

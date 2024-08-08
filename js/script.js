@@ -90,7 +90,7 @@ skillsData.map((info) => {
   allSkills += `
   <div class="flex justify-center items-center flex-col gap-3">
     <div class="border border-primary bg-[#e8eef4] shadow-[4px_4px_6px_var(--primary-color)] p-[10px] rounded-[10px] grid place-items-center">
-        <img width="45" height="45" class="duration-500 hover:scale-[1.2]" src="${info.languageIcon}" alt="">
+        <img width="45" height="45" class="duration-500 hover:scale-[1.2]" src="${info.languageIcon}" alt="${info.languageName}">
     </div>
     <p style="background-color:${info.languageColor};" class="text-white px-[10px] rounded-[25px]">${info.languageName}</p>
   </div>
@@ -123,7 +123,7 @@ const apiProjects = async ({ getAll }) => {
         projects += hasImage
           ? `
             <div class="font-Alkatra w-full h-[300px] grid grid-cols-1 grid-rows-[1fr_15%]">
-                <div class="group rounded-t-3xl bg-cover bg-center" style="background-image: url(https://raw.githubusercontent.com/yazn-108/${data[loop].name}/main/siteBanner.png);">
+                <div class="group rounded-t-3xl bg-cover bg-center" style="background-image: url('https://raw.githubusercontent.com/yazn-108/${data[loop].name}/main/siteBanner.png');">
                     <p class="opacity-0 duration-500 group-hover:opacity-100 grid place-items-center text-white px-9 h-full w-full rounded-t-3xl backdrop-blur-md backdrop-brightness-75 text-center">
                     ${data[loop].description}
                     </p>
@@ -171,7 +171,7 @@ const apiProjects = async ({ getAll }) => {
         </div>`;
   }
 };
-apiProjects({ getAll: false });
+window.addEventListener("load", () => apiProjects({ getAll: false }));
 let AllProjectsDisplayed = false;
 const moreProjectsButtons = document.querySelectorAll(".moreProjects");
 const projectsSection = document.querySelector("#projects");

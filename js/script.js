@@ -179,7 +179,6 @@ moreProjectsButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     !AllProjectsDisplayed && apiProjects({ getAll: true });
     AllProjectsDisplayed = true;
-    // const projectsCount = [...projectsContainer.querySelectorAll(".project")].length
     projectsSection.classList.toggle("open");
   });
 });

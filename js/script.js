@@ -61,7 +61,7 @@ const translation = () => {
   languageType = languageType === "en" ? "ar" : "en";
   sessionStorage.setItem("languageType", languageType);
   text.forEach((e) => {
-    e.innerHTML = translationFile[languageType][e.dataset.text];
+    e.textContent = translationFile[languageType][e.dataset.text];
   });
   mainContainer.dir = elementsDirection("rtl", "ltr");
   navOptions.dir = elementsDirection("rtl", "ltr");
@@ -188,84 +188,47 @@ const sendButton = document.querySelector("form button");
 const regex = new RegExp(
   "^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$"
 );
+const serviceID = "default_service";
+const templateID = "template_5ffcrsw";
 sendButton.addEventListener("click", async (e) => {
   e.preventDefault();
-  const serviceID = "default_service";
-  const templateID = "template_5ffcrsw";
+  const showToast = (icon, title) => {
+    Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      },
+    }).fire({ icon, title });
+  };
   if (
     [...inputs].every((input) => input.value.trim() !== "") &&
     regex.test(inputs[1].value)
   ) {
-    const Toast = Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.onmouseenter = Swal.stopTimer;
-        toast.onmouseleave = Swal.resumeTimer;
-      },
-    });
-    Toast.fire({
-      icon: "info",
-      title: elementsDirection("....جار الارسال", "sending...."),
-    });
+    showToast("info", elementsDirection("....جار الارسال", "sending...."));
     try {
       await emailjs.sendForm(serviceID, templateID, form);
       inputs.forEach((input) => (input.value = ""));
-      const Toast = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.onmouseenter = Swal.stopTimer;
-          toast.onmouseleave = Swal.resumeTimer;
-        },
-      });
-      Toast.fire({
-        icon: "success",
-        title: elementsDirection("تم الارسال بنجاح", "sent successfully"),
-      });
+      showToast(
+        "success",
+        elementsDirection("تم الارسال بنجاح", "sent successfully")
+      );
     } catch (error) {
-      const Toast = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.onmouseenter = Swal.stopTimer;
-          toast.onmouseleave = Swal.resumeTimer;
-        },
-      });
-      Toast.fire({
-        icon: "error",
-        title: error,
-      });
+      showToast("error", error);
     }
   } else {
     const emptyField = [...inputs].find((input) => input.value.trim() === "");
     [...inputs].forEach((input) => input === emptyField && emptyField.focus());
-    const Toast = Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.onmouseenter = Swal.stopTimer;
-        toast.onmouseleave = Swal.resumeTimer;
-      },
-    });
-    Toast.fire({
-      icon: "warning",
-      title: elementsDirection("املأ هذا الحقل", "Fill in this field"),
-    });
+    showToast(
+      "warning",
+      elementsDirection("املأ هذا الحقل", "Fill in this field")
+    );
   }
 });
 emailjs.init("moFv9CUybtNEEmMkC");
 const copyright = document.querySelector("footer .copyright .year");
-copyright.innerHTML = new Date().getFullYear();
+copyright.textContent = new Date().getFullYear();

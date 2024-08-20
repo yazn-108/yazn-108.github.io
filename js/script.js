@@ -222,10 +222,20 @@ sendButton.addEventListener("click", async (e) => {
     }
   } else {
     const emptyField = [...inputs].find((input) => input.value.trim() === "");
-    [...inputs].forEach((input) => input === emptyField && emptyField.focus());
+    if (inputs[1].value !== "" && !regex.test(inputs[1].value)) {
+      inputs[1].focus();
+      showToast(
+        "warning",
+        elementsDirection("ادخل بريد الكتروني صحيح", "Enter A Valid Email")
+      );
+      return;
+    }
+    [...inputs].forEach((input) => {
+      input === emptyField && emptyField.focus();
+    });
     showToast(
       "warning",
-      elementsDirection("املأ هذا الحقل", "Fill in this field")
+      elementsDirection("املأ هذا الحقل", "Fill In This Field")
     );
   }
 });

@@ -58,12 +58,12 @@
                     alt="logo"
                 >
             </a>
-            <label class="menu-icon md:hidden">
+            <button class="menu-icon md:hidden">
                 <svg viewBox="0 0 32 32">
                     <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
                     <path class="line" d="M7 16 27 16"></path>
                 </svg>
-            </label>
+            </button>
             <div class="menu
             hidden md:flex gap-10 py-8 md:py-0 max-md:absolute left-2/4 -translate-x-2/4 md:translate-x-0 top-[115%] bg-bodyColor w-[95%] md:w-fit h-fit
             border md:border-0 border-primary rounded-xl font-bold text-black dark:text-primary
@@ -239,19 +239,29 @@
             <div class="w-full md:w-[500px]">
                 <h3 class="title mb-3" data-text="contact with me">contact with me</h3>
                 <form class="rtl:font-Alkatra flex flex-col justify-center items-center gap-5 caret-white">
+                    <label for="from_name" class="sr-only">your name</label>
                     <input
                         type="text"
+                        id="from_name"
                         name="from_name"
                         placeholder="your name"
                         class="input border-2 border-white placeholder:duration-300 focus:placeholder:opacity-0 p-[10px] w-full bg-transparent outline-none placeholder:text-white"
                     >
+                    <label for="reply_to" class="sr-only">your email</label>
                     <input
                         type="email"
+                        id="reply_to"
                         name="reply_to"
                         placeholder="your email"
                         class="input font-Alkatra border-2 border-white placeholder:duration-300 focus:placeholder:opacity-0 p-[10px] w-full bg-transparent outline-none placeholder:text-white"
                     >
-                    <textarea name="message" placeholder="your message" class="input border-2 border-white placeholder:duration-300 focus:placeholder:opacity-0 p-[10px] w-full bg-transparent outline-none placeholder:text-white"></textarea>
+                    <label for="message" class="sr-only">your message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="your message"
+                        class="input border-2 border-white placeholder:duration-300 focus:placeholder:opacity-0 p-[10px] w-full bg-transparent outline-none placeholder:text-white"
+                    ></textarea>
                     <button data-text="send" class="w-full p-[10px] border-2 border-white placeholder:duration-300 focus:placeholder:opacity-0">send</button>
                 </form>
             </div>

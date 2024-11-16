@@ -1532,6 +1532,10 @@ nav.hide {
   }
 }
 
+.rtl\:flex:where([dir="rtl"], [dir="rtl"] *) {
+  display: flex;
+}
+
 .rtl\:gap-8:where([dir="rtl"], [dir="rtl"] *) {
   gap: 2rem;
 }

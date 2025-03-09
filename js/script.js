@@ -34,18 +34,20 @@ sectionLinks.forEach((section) => {
   });
 });
 const themeButton = document.querySelector(".theme");
+const themeMeta = document.querySelector('[name="theme-color"]');
+const body = document.body;
+function updateTheme(isDark) {
+  body.classList.toggle("dark", isDark);
+  themeMeta.setAttribute("content", isDark ? "#1f242d" : "");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+}
+window.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme") === "dark";
+  updateTheme(savedTheme);
+});
 themeButton.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  document
-    .querySelector('[name="theme-color"]')
-    .setAttribute(
-      "content",
-      document.body.classList.contains("dark") ? "#1f242d" : ""
-    );
-  localStorage.setItem(
-    "theme",
-    document.body.classList.contains("dark") ? "dark" : ""
-  );
+  const isDark = !body.classList.contains("dark");
+  updateTheme(isDark);
 });
 const cv = document.getElementById("cv");
 cv.addEventListener("click", () =>
@@ -80,11 +82,6 @@ const translation = () => {
 };
 languageButton.addEventListener("click", translation);
 window.addEventListener("DOMContentLoaded", () => {
-  const themeType = localStorage.getItem("theme") === "dark";
-  document.body.classList.toggle("dark", themeType);
-  document
-    .querySelector('[name="theme-color"]')
-    .setAttribute("content", themeType ? "#1f242d" : "");
   sessionStorage.getItem("languageType") === "ar" && translation();
 });
 const skillsBox = document.querySelector(".skillsBox");

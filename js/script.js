@@ -167,7 +167,7 @@ const apiProjects = async ({ getAll }) => {
         <div class="text-primary text-center absolute left-2/4 -translate-x-2/4 top-6">
           <p data-text="An error occurred calling projects">An error occurred calling projects</p>
             <a href="/">
-              <button class="bg-[#03b7f9]/20 p-2 rounded-sm text-textColor" data-text="Reload the page">Reload the page</button>
+              <button class="bg-[#03b7f9]/20 p-2 rounded-xs text-textColor" data-text="Reload the page">Reload the page</button>
             </a>
         </div>`;
   }

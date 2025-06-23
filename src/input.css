@@ -1,6 +1,49 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+html {
+  scrollbar-width: none;
+}
+:root {
+  --primary-color: #03b7f9;
+  --secondary-color: #004991;
+  --body-color: #e8eef4;
+  --text-color: #1f242d;
+}
+.dark {
+  transition: all 1s;
+  --primary-color: #03b7f9;
+  --secondary-color: #004991;
+  --body-color: #1f242d;
+  --text-color: white;
+}
+@theme {
+  --color-primary: var(--primary-color);
+  --color-secondaryColor: var(--secondary-color);
+  --color-bodyColor: var(--body-color);
+  --color-textColor: var(--text-color);
+  --font-Alkatra: Alkatra, Trebuchet MS;
+}
+@utility container {
+  margin-inline: auto;
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 640px) {
+    max-width: 640px;
+  }
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+  @media (width >= 1280px) {
+    max-width: 1280px;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
 @layer base {
   @font-face {
     font-family: "Alkatra";
@@ -35,22 +78,7 @@
     color: white;
   }
 }
-html {
-  scrollbar-width: none;
-}
-:root {
-  --primary-color: #03b7f9;
-  --secondary-color: #004991;
-  --body-color: #e8eef4;
-  --text-color: #1f242d;
-}
-.dark {
-  transition: all 1s;
-  --primary-color: #03b7f9;
-  --secondary-color: #004991;
-  --body-color: #1f242d;
-  --text-color: white;
-}
+
 .ar::after {
   top: 50% !important;
 }
@@ -112,7 +140,10 @@ html {
   display: block;
 }
 nav.hide {
-  transform: translateY(-100%);
+  top: 1%;
+  width: 99%;
+  border-radius: 10px;
+  border-width: 1px;
 }
 .language.hide {
   transform: translateX(calc(-100% - 0.5rem));

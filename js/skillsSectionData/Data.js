@@ -40,16 +40,6 @@ export const skillsData = [
     languageColor: "#ffb50d",
   },
   {
-    languageName: "redux",
-    languageIcon: "../js/skillsSectionData/redux.svg",
-    languageColor: "#764ABC",
-  },
-  {
-    languageName: "toolkit",
-    languageIcon: "../js/skillsSectionData/redux.svg",
-    languageColor: "#764ABC",
-  },
-  {
     languageName: "next.js",
     languageIcon: "../js/skillsSectionData/next-js.svg",
     languageColor: "black",
@@ -62,6 +52,11 @@ export const skillsData = [
   {
     languageName: "framer-motion",
     languageIcon: "../js/skillsSectionData/framer-motion.svg",
+    languageColor: "#00aaff",
+  },
+  {
+    languageName: "typescript",
+    languageIcon: "../js/skillsSectionData/ts.svg",
     languageColor: "#00aaff",
   },
 ];

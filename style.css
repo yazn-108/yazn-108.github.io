@@ -995,6 +995,9 @@ html {
     top: 115%;
   }
 }
+button {
+  cursor: pointer;
+}
 .menu-icon {
   width: 3rem;
   height: 100px;

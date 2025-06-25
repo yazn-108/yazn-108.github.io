@@ -90,7 +90,7 @@ let allSkills = "";
 skillsData.map((info) => {
   allSkills += `
   <div class="flex justify-center items-center flex-col gap-3">
-    <div class="border border-primary bg-[#e8eef4] shadow-[4px_4px_6px_var(--primary-color)] p-[10px] rounded-[10px] grid place-items-center">
+    <div class="border border-[var(--primary-color)] bg-[#e8eef4] shadow-[4px_4px_6px_var(--primary-color)] p-[10px] rounded-[10px] grid place-items-center">
         <img width="45" height="45" class="duration-500 hover:scale-[1.2]" src="${info.languageIcon}" alt="${info.languageName}">
     </div>
     <p style="background-color:${info.languageColor};" class="text-white px-[10px] rounded-[25px]">${info.languageName}</p>
@@ -164,10 +164,10 @@ const apiProjects = async ({ getAll }) => {
     document.querySelector(".moreProjects").style.display = "none";
     container.style.height = "100px";
     container.innerHTML = `
-        <div class="text-primary text-center absolute left-2/4 -translate-x-2/4 top-6">
+        <div class="text-[var(--primary-color)] text-center absolute left-2/4 -translate-x-2/4 top-6">
           <p data-text="An error occurred calling projects">An error occurred calling projects</p>
             <a href="/">
-              <button class="bg-[#03b7f9]/20 p-2 rounded-xs text-textColor" data-text="Reload the page">Reload the page</button>
+              <button class="bg-[#03b7f9]/20 p-2 rounded-xs text-[var(--text-color)]" data-text="Reload the page">Reload the page</button>
             </a>
         </div>`;
   }

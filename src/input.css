@@ -17,10 +17,10 @@ html {
   --text-color: white;
 }
 @theme {
-  --color-primary: var(--primary-color);
+  /* --color-primary: var(--primary-color);
   --color-secondaryColor: var(--secondary-color);
   --color-bodyColor: var(--body-color);
-  --color-textColor: var(--text-color);
+  --color-textColor: var(--text-color); */
   --font-Alkatra: Alkatra, Trebuchet MS;
 }
 @utility container {

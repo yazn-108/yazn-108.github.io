@@ -872,6 +872,11 @@
       position: absolute;
     }
   }
+  .max-md\:bg-\[var\(--body-color\)\] {
+    @media (width < 48rem) {
+      background-color: var(--body-color);
+    }
+  }
   .sm\:gap-\[3px\] {
     @media (width >= 40rem) {
       gap: 3px;

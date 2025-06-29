@@ -50,13 +50,23 @@ export const skillsData = [
     languageColor: "#44a8b3",
   },
   {
-    languageName: "framer-motion",
+    languageName: "motion",
     languageIcon: "../js/skillsSectionData/framer-motion.svg",
     languageColor: "#00aaff",
   },
   {
-    languageName: "typescript",
+    languageName: "typeScript",
     languageIcon: "../js/skillsSectionData/ts.svg",
-    languageColor: "#00aaff",
+    languageColor: "#3178c6",
+  },
+  {
+    languageName: "tanStack",
+    languageIcon: "../js/skillsSectionData/tanStack.png",
+    languageColor: "#008799",
+  },
+  {
+    languageName: "shadcn/ui",
+    languageIcon: "../js/skillsSectionData/shadcn-ui.svg",
+    languageColor: "#000000",
   },
 ];

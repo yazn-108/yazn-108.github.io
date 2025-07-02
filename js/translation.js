@@ -8,6 +8,7 @@ export const translationFile = {
     "I'm Yazn, a front-end website developer from Syria. I seek professionalism in the field of website interface development. Here I display my latest work on an ongoing basis":
       "I'm Yazn, a front-end website developer from Syria. I seek professionalism in the field of website interface development. Here I display my latest work on an ongoing basis",
     "view my": "view my",
+    "my articles": "my articles",
     "Follow me on social media": "Follow me on social media",
     twitter: "twitter",
     linkedin: "linkedin",
@@ -32,6 +33,7 @@ export const translationFile = {
     "I'm Yazn, a front-end website developer from Syria. I seek professionalism in the field of website interface development. Here I display my latest work on an ongoing basis":
       "أنا يزن، مطور مواقع فرونت اند من سوريا. أسعى إلى الاحتراف في مجال تطوير واجهات المواقع. هنا اقوم بعرض احدث اعمالي بشكل مستمر",
     "view my": "عرض الـ",
+    "my articles": "مقالاتي",
     "Follow me on social media": "تابعني عبر وسائل التواصل الاجتماعي",
     twitter: "تويتر",
     linkedin: "لنكيدإن",

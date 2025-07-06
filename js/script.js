@@ -49,10 +49,6 @@ themeButton.addEventListener("click", () => {
   const isDark = !body.classList.contains("dark");
   updateTheme(isDark);
 });
-const cv = document.getElementById("cv");
-cv.addEventListener("click", () =>
-  open("/yazn_108-cv.pdf", window.innerWidth > 768 ? "_blank" : "_self")
-);
 import { translationFile } from "./translation.js";
 const languageButton = document.querySelector(".language");
 const mainContainer = document.querySelector(".container");

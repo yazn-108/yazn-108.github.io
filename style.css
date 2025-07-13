@@ -20,7 +20,6 @@
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
-    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --blur-md: 12px;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -207,6 +206,9 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-2\/4 {
+    top: calc(2/4 * 100%);
+  }
   .top-6 {
     top: calc(var(--spacing) * 6);
   }
@@ -334,6 +336,9 @@
   .h-64 {
     height: calc(var(--spacing) * 64);
   }
+  .h-\[40px\] {
+    height: 40px;
+  }
   .h-\[50px\] {
     height: 50px;
   }
@@ -361,6 +366,9 @@
   .w-\[120px\] {
     width: 120px;
   }
+  .w-\[calc\(100\%\+40px\)\] {
+    width: calc(100% + 40px);
+  }
   .w-fit {
     width: fit-content;
   }
@@ -375,6 +383,10 @@
   }
   .-translate-x-2\/4 {
     --tw-translate-x: calc(calc(2/4 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-y-\[70\%\] {
+    --tw-translate-y: calc(70% * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-rotate-90 {
@@ -1046,6 +1058,22 @@ nav.hide {
 }
 .theme.hide {
   transform: translateX(calc(+100% + 0.5rem));
+}
+.title-line-icon path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+.title-line-icon.show path {
+  animation: strokeAnimation 1.3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+@keyframes strokeAnimation {
+  0% {
+    stroke-dashoffset: 1;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 @property --tw-translate-x {
   syntax: "*";

@@ -4,7 +4,8 @@ let scrollValue = window.scrollY;
 const HeaderTransform = (elements) => {
   elements.forEach((element) => {
     window.scrollY > scrollValue
-      ? element.classList.add("hide")
+      ? element.classList.add("hide") &
+        document.querySelector(".title-line-icon").classList.add("show")
       : element.classList.remove("hide");
   });
   scrollValue = window.scrollY;
@@ -94,6 +95,7 @@ skillsData.map((info) => {
 `;
   skillsBox.innerHTML = allSkills;
 });
+const TemporaryAdditionalProject = 1;
 const initialProjectsCount =
   window.innerWidth < 768
     ? 2
@@ -107,7 +109,9 @@ const apiProjects = async ({ getAll }) => {
     const api = await fetch(
       getAll
         ? `https://api.github.com/users/yazn-108/repos?sort=created`
-        : `https://api.github.com/users/yazn-108/repos?per_page=${initialProjectsCount}&sort=created`
+        : `https://api.github.com/users/yazn-108/repos?per_page=${
+            initialProjectsCount + TemporaryAdditionalProject
+          }&sort=created`
     );
     const data = await api.json();
     for (const loop in data) {

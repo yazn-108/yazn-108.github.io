@@ -4,8 +4,7 @@ let scrollValue = window.scrollY;
 const HeaderTransform = (elements) => {
   elements.forEach((element) => {
     window.scrollY > scrollValue
-      ? element.classList.add("hide") &
-        document.querySelector(".title-line-icon").classList.add("show")
+      ? element.classList.add("hide")
       : element.classList.remove("hide");
   });
   scrollValue = window.scrollY;

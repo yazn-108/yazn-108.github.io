@@ -166,3 +166,6 @@ nav.hide {
     stroke-dashoffset: 0;
   }
 }
+.description-container:hover .description {
+  opacity: 1;
+}

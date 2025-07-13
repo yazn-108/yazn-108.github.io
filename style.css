@@ -686,13 +686,6 @@
       }
     }
   }
-  .group-hover\:opacity-100 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        opacity: 100%;
-      }
-    }
-  }
   .placeholder\:text-white {
     &::placeholder {
       color: var(--color-white);
@@ -1071,6 +1064,9 @@ nav.hide {
   100% {
     stroke-dashoffset: 0;
   }
+}
+.description-container:hover .description {
+  opacity: 1;
 }
 @property --tw-translate-x {
   syntax: "*";

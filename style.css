@@ -652,11 +652,6 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
-  .transition-colors {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
@@ -664,20 +659,6 @@
   .duration-500 {
     --tw-duration: 500ms;
     transition-duration: 500ms;
-  }
-  .group-hover\:bg-\[var\(--secondary-color\)\] {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        background-color: var(--secondary-color);
-      }
-    }
-  }
-  .group-hover\:text-white {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        color: var(--color-white);
-      }
-    }
   }
   .placeholder\:text-white {
     &::placeholder {
@@ -757,13 +738,6 @@
     &:hover {
       @media (hover: hover) {
         scale: 1.2;
-      }
-    }
-  }
-  .hover\:text-\[var\(--primary-color\)\] {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--primary-color);
       }
     }
   }
@@ -911,15 +885,6 @@
       }
     }
   }
-  .dark\:hover\:text-\[var\(--text-color\)\] {
-    &:is(.dark *) {
-      &:hover {
-        @media (hover: hover) {
-          color: var(--text-color);
-        }
-      }
-    }
-  }
 }
 html {
   scrollbar-width: none;
@@ -1045,6 +1010,18 @@ nav.hide {
 .theme.hide {
   transform: translateX(calc(+100% + 0.5rem));
 }
+.menu button {
+  text-transform: capitalize;
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  &:hover {
+    color: var(--primary-color);
+  }
+  &:is(.dark *):hover {
+    color: var(--text-color);
+  }
+}
 .title-line-icon path {
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
@@ -1058,15 +1035,15 @@ nav.hide {
     stroke-dashoffset: 0;
   }
 }
-.description-container:hover .description {
-  opacity: 1;
+.social-media-link:hover p {
+  background-color: var(--secondary-color);
+  color: var(--color-white);
 }
 .skill:hover .skill-image {
   scale: 1.2;
 }
-.social-media-link:hover p {
-  background-color: var(--secondary-color);
-  color: var(--color-white);
+.description-container:hover .description {
+  opacity: 1;
 }
 @property --tw-translate-x {
   syntax: "*";

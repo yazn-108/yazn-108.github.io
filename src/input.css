@@ -153,6 +153,15 @@ nav.hide {
 .theme.hide {
   transform: translateX(calc(+100% + 0.5rem));
 }
+.menu button {
+  @apply capitalize transition-colors;
+  &:hover {
+    color: var(--primary-color);
+  }
+  &:is(.dark *):hover {
+    color: var(--text-color);
+  }
+}
 .title-line-icon path {
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
@@ -166,13 +175,13 @@ nav.hide {
     stroke-dashoffset: 0;
   }
 }
-.description-container:hover .description {
-  opacity: 1;
+.social-media-link:hover p {
+  background-color: var(--secondary-color);
+  color: var(--color-white);
 }
 .skill:hover .skill-image {
   scale: 1.2;
 }
-.social-media-link:hover p {
-  background-color: var(--secondary-color);
-  color: var(--color-white);
+.description-container:hover .description {
+  opacity: 1;
 }

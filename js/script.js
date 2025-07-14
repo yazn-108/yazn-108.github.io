@@ -85,9 +85,9 @@ import { skillsData } from "./skillsSectionData/Data.js";
 let allSkills = "";
 skillsData.map((info) => {
   allSkills += `
-  <div class="flex justify-center items-center flex-col gap-3">
+  <div class="skill cursor-pointer flex justify-center items-center flex-col gap-3">
     <div class="size-[66px] border border-[var(--primary-color)] bg-[#e8eef4] shadow-[4px_4px_6px_var(--primary-color)] p-[10px] rounded-[10px] grid place-items-center">
-        <img width="45" height="45" class="duration-500 hover:scale-[1.2]" src="${info.languageIcon}" alt="${info.languageName}">
+        <img width="45" height="45" class="duration-500 skill-image" src="${info.languageIcon}" alt="${info.languageName}">
     </div>
     <p style="background-color:${info.languageColor};" class="text-white w-[85px] text-center rounded-[25px]">${info.languageName}</p>
   </div>

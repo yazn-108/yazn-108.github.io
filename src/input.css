@@ -169,3 +169,10 @@ nav.hide {
 .description-container:hover .description {
   opacity: 1;
 }
+.skill:hover .skill-image {
+  scale: 1.2;
+}
+.social-media-link:hover p {
+  background-color: var(--secondary-color);
+  color: var(--color-white);
+}

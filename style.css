@@ -665,13 +665,6 @@
     --tw-duration: 500ms;
     transition-duration: 500ms;
   }
-  .group-hover\:rounded-md {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        border-radius: var(--radius-md);
-      }
-    }
-  }
   .group-hover\:bg-\[var\(--secondary-color\)\] {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -1067,6 +1060,13 @@ nav.hide {
 }
 .description-container:hover .description {
   opacity: 1;
+}
+.skill:hover .skill-image {
+  scale: 1.2;
+}
+.social-media-link:hover p {
+  background-color: var(--secondary-color);
+  color: var(--color-white);
 }
 @property --tw-translate-x {
   syntax: "*";

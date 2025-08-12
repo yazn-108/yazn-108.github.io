@@ -93,7 +93,7 @@ skillsData.map((info) => {
   </div>
 `;
   skillsBox.innerHTML = allSkills;
-  ScrollReveal({ reset: true }).reveal(".skill img", {
+  ScrollReveal({ reset: false }).reveal(".skill img", {
     duration: 2000,
     delay: 0,
     rotate: { x: 0, y: 0, z: 90 },

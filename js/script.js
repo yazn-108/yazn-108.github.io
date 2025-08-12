@@ -93,6 +93,13 @@ skillsData.map((info) => {
   </div>
 `;
   skillsBox.innerHTML = allSkills;
+  ScrollReveal({ reset: false }).reveal(".skill", {
+    duration: 2000,
+    delay: 0,
+    rotate: { x: 0, y: 0, z: 90 },
+    origin: "bottom",
+    distance: "50px",
+  });
 });
 const TemporaryAdditionalProject = 1;
 const initialProjectsCount =
@@ -122,7 +129,7 @@ const apiProjects = async ({ getAll }) => {
         const hasImage = data[loop].topics.find((topic) => topic === "image");
         projects += hasImage
           ? `
-            <div class="font-Alkatra w-full h-[300px] grid grid-cols-1 grid-rows-[1fr_15%]">
+            <div class="project font-Alkatra w-full h-[300px] grid grid-cols-1 grid-rows-[1fr_15%]">
                 <div class="description-container rounded-t-3xl bg-cover bg-center" style="background-image: url('https://raw.githubusercontent.com/yazn-108/${data[loop].name}/main/siteBanner.png');">
                     <p class="opacity-0 duration-500 description grid place-items-center text-white px-9 size-full rounded-t-3xl backdrop-blur-md backdrop-brightness-75 text-center">
                     ${data[loop].description}
@@ -138,7 +145,7 @@ const apiProjects = async ({ getAll }) => {
                 </div>
             </div>`
           : `
-            <div class="font-Alkatra w-full h-[300px] grid grid-cols-1 grid-rows-[1fr_15%]">
+            <div class="project font-Alkatra w-full h-[300px] grid grid-cols-1 grid-rows-[1fr_15%]">
                 <div class="description-container rounded-t-3xl bg-cover bg-center relative" style="background-image: url('/imgs/projectsBg.png');">
                   <p class="w-full p-5 rounded-t-3xl flex justify-center items-center text-center absolute text-white">${data[
                     loop
@@ -170,6 +177,7 @@ const apiProjects = async ({ getAll }) => {
             </a>
         </div>`;
   }
+  ScrollReveal({ reset: true }).reveal(".project");
 };
 window.addEventListener("load", () => apiProjects({ getAll: false }));
 let AllProjectsDisplayed = false;

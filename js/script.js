@@ -248,5 +248,29 @@ sendButton.addEventListener("click", async (e) => {
   }
 });
 emailjs.init("moFv9CUybtNEEmMkC");
+ScrollReveal({ reset: true }).reveal("footer .icons a:nth-child(1)", {
+  duration: 1000,
+  delay: 0,
+});
+ScrollReveal({ reset: true }).reveal("footer .icons a:nth-child(2)", {
+  duration: 1000,
+  delay: 100,
+});
+ScrollReveal({ reset: true }).reveal("footer .icons a:nth-child(3)", {
+  duration: 1000,
+  delay: 200,
+});
+ScrollReveal({ reset: true }).reveal("footer .icons a:nth-child(4)", {
+  duration: 1000,
+  delay: 300,
+});
+ScrollReveal({ reset: true }).reveal("footer .icons a:nth-child(5)", {
+  duration: 1000,
+  delay: 400,
+});
+ScrollReveal({ reset: true }).reveal("footer .icons a:nth-child(6)", {
+  duration: 1000,
+  delay: 500,
+});
 const copyright = document.querySelector("footer .copyright .year");
 copyright.textContent = new Date().getFullYear();

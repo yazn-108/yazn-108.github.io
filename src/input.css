@@ -1,26 +1,28 @@
 @import "tailwindcss";
-@custom-variant dark (&:is(.dark *));
+@variant dark (&:where(.dark, .dark *));
+@custom-variant hover (&:hover);
 html {
   scrollbar-width: none;
 }
-:root {
-  --primary-color: #03b7f9;
-  --secondary-color: #004991;
-  --body-color: #e8eef4;
-  --text-color: #1f242d;
+@layer base {
+  :root {
+    --primary-color: #03b7f9;
+    --secondary-color: #004991;
+    --body-color: #e8eef4;
+    --text-color: #1f242d;
+  }
+  .dark {
+    --primary-color: #03b7f9;
+    --secondary-color: #004991;
+    --body-color: #1f242d;
+    --text-color: white;
+  }
 }
-.dark {
-  transition: all 1s;
-  --primary-color: #03b7f9;
-  --secondary-color: #004991;
-  --body-color: #1f242d;
-  --text-color: white;
-}
-@theme {
-  /* --color-primary: var(--primary-color);
+@theme inline {
+  --color-primary: var(--primary-color);
   --color-secondaryColor: var(--secondary-color);
   --color-bodyColor: var(--body-color);
-  --color-textColor: var(--text-color); */
+  --color-textColor: var(--text-color);
   --font-Alkatra: Alkatra, Trebuchet MS;
 }
 @utility container {
@@ -74,8 +76,7 @@ html {
     @apply text-xl mb-3;
   }
   ::selection {
-    background-color: var(--primary-color);
-    color: white;
+    @apply bg-primary text-white;
   }
 }
 .ar::after {
@@ -113,12 +114,12 @@ button {
     transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
     & .line {
       fill: none;
-      stroke: var(--primary-color);
       stroke-linecap: round;
       stroke-linejoin: round;
       stroke-width: 3;
       transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
         stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+      @apply stroke-primary;
     }
   }
 }
@@ -153,15 +154,6 @@ nav.hide {
 .theme.hide {
   transform: translateX(calc(+100% + 0.5rem));
 }
-.menu button {
-  @apply capitalize transition-colors;
-  &:hover {
-    color: var(--primary-color);
-  }
-  &:is(.dark *):hover {
-    color: var(--text-color);
-  }
-}
 .title-line-icon path {
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
@@ -187,13 +179,12 @@ nav.hide {
     margin-top: 0%;
   }
 }
-.social-media-link:hover p {
-  background-color: var(--secondary-color);
-  color: var(--color-white);
+.social-media a:hover p {
+  @apply bg-secondaryColor text-white;
 }
 .skill:hover .skill-image {
-  scale: 1.2;
+  @apply scale-[1.2];
 }
 .description-container:hover .description {
-  opacity: 1;
+  @apply opacity-100;
 }

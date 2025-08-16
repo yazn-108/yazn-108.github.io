@@ -66,11 +66,9 @@
       }
     </script>
   </head>
-  <body
-    class="bg-[var(--body-color)] text-[var(--text-color)] font-Alkatra relative"
-  >
+  <body class="bg-bodyColor text-textColor font-Alkatra relative">
     <nav
-      class="bg-[var(--body-color)] duration-500 fixed top-0 left-2/4 -translate-x-2/4 z-50 h-14 px-3 md:px-10 flex items-center justify-between border-b border-[var(--primary-color)] w-screen transition-all"
+      class="bg-bodyColor duration-500 fixed top-0 left-2/4 -translate-x-2/4 z-50 h-14 px-3 md:px-10 flex items-center justify-between border-b border-primary w-screen transition-all"
     >
       <a href="/" class="w-[120px] h-[50px]">
         <img lazy class="size-full" src="imgs/logo.svg" alt="logo" />
@@ -85,7 +83,7 @@
         </svg>
       </button>
       <div
-        class="menu hidden md:flex gap-10 py-8 md:py-0 max-md:absolute left-2/4 -translate-x-2/4 md:translate-x-0 top-[115%] max-md:bg-[var(--body-color)] w-[95%] md:w-fit h-fit border md:border-0 border-[var(--primary-color)] rounded-xl font-bold text-black dark:text-[var(--primary-color)]"
+        class="menu *:capitalize *:transition-colors *:hover:text-primary *:dark:hover:text-textColor hidden md:flex gap-10 py-8 md:py-0 max-md:absolute left-2/4 -translate-x-2/4 md:translate-x-0 top-[115%] max-md:bg-bodyColor w-[95%] md:w-fit h-fit border md:border-0 border-primary rounded-xl font-bold text-black dark:text-primary"
       >
         <button data-text="about me" data-section="#about-me">about me</button>
         <button data-text="skills" data-section="#skills">skills</button>
@@ -94,31 +92,31 @@
       </div>
     </nav>
     <button
-      class="language duration-500 z-40 fixed top-[46.3vh] left-2 flex justify-between items-center flex-col py-2 h-20 w-8 border border-[var(--primary-color)] bg-[#03b7f9]/20 rounded-md overflow-hidden"
+      class="language duration-500 z-40 fixed top-[46.3vh] left-2 flex justify-between items-center flex-col py-2 h-20 w-8 border border-primary bg-[#03b7f9]/20 rounded-md overflow-hidden"
       aria-label="Change mode"
     >
       <p>en</p>
       <span
-        class="after:content-[''] after:transition-all after:absolute after:top-0 after:left-0 after:bg-[var(--primary-color)] after:w-full after:h-2/4 after:-z-10 after:rounded-xs"
+        class="after:content-[''] after:transition-all after:absolute after:top-0 after:left-0 after:bg-primary after:w-full after:h-2/4 after:-z-10 after:rounded-xs"
       ></span>
       <p>ar</p>
     </button>
     <button
-      class="theme duration-500 z-40 fixed top-[46.3vh] right-2 flex justify-between items-center flex-col py-2 h-20 w-8 border border-[var(--primary-color)] bg-[#03b7f9]/20 rounded-md overflow-hidden"
+      class="theme duration-500 z-40 fixed top-[46.3vh] right-2 flex justify-between items-center flex-col py-2 h-20 w-8 border border-primary bg-[#03b7f9]/20 rounded-md overflow-hidden"
       aria-label="Change mode"
     >
       <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
         <path
-          class="fill-[var(--text-color)]"
+          class="fill-textColor"
           d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z"
         />
         <path
-          class="fill-[var(--text-color)]"
+          class="fill-textColor"
           d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z"
         />
       </svg>
       <span
-        class="after:content-[''] after:transition-all after:absolute after:top-0 after:left-0 after:bg-[var(--primary-color)] after:w-full after:h-2/4 after:-z-10 after:rounded-xs dark:after:top-2/4"
+        class="after:content-[''] after:transition-all after:absolute after:top-0 after:left-0 after:bg-primary after:w-full after:h-2/4 after:-z-10 after:rounded-xs dark:after:top-2/4"
       ></span>
       <svg
         width="16"
@@ -127,11 +125,11 @@
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          class="fill-[var(--text-color)]"
+          class="fill-textColor"
           d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z"
         />
         <path
-          class="fill-[var(--text-color)]"
+          class="fill-textColor"
           d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z"
         />
       </svg>
@@ -139,10 +137,10 @@
     <main class="capitalize mt-20 container px-4 sm:px-0">
       <header
         id="about-me"
-        class="py-10 px-5 h-64 md:h-[21rem] border-b-4 md:border-b-0 md:border-x-4 border-[var(--primary-color)] rounded-2xl flex justify-center items-center bg-[#03b7f9]/20"
+        class="py-10 px-5 h-64 md:h-[21rem] border-b-4 md:border-b-0 md:border-x-4 border-primary rounded-2xl flex justify-center items-center bg-[#03b7f9]/20"
       >
         <div
-          class="text-center text-xl md:w-3/4 xl:w-2/5 flex justify-center items-center flex-col text-[var(--text-color)]"
+          class="text-center text-xl md:w-3/4 xl:w-2/5 flex justify-center items-center flex-col text-textColor"
         >
           <h3 class="font-bold title overflow-hidden h-[25px]">
             <p id="welcome" data-text="welcome" class="m-0">welcome</p>
@@ -231,9 +229,8 @@
             ></path>
           </svg>
         </h3>
-        <div class="flex gap-4 rtl:gap-8">
+        <div class="flex gap-4 rtl:gap-8 social-media *:a:bg-red-400">
           <a
-            class="social-media-link"
             href="https://twitter.com/yazn_108"
             target="_blank"
             rel="noopener noreferrer"
@@ -255,7 +252,6 @@
             </button>
           </a>
           <a
-            class="social-media-link"
             href="https://www.linkedin.com/in/yazn-frontEnd/"
             target="_blank"
             rel="noopener noreferrer"
@@ -277,7 +273,6 @@
             </button>
           </a>
           <a
-            class="social-media-link"
             href="https://t.me/yazn108"
             target="_blank"
             rel="noopener noreferrer"
@@ -299,7 +294,6 @@
             </button>
           </a>
           <a
-            class="social-media-link"
             href="https://github.com/yazn-108"
             target="_blank"
             rel="noopener noreferrer"
@@ -338,13 +332,13 @@
           class="projectsContainer overflow-hidden h-[616px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-[300px] gap-4 relative"
         ></div>
         <button
-          class="moreProjects moreProjectsButton mt-5 bg-[#03b7f9]/20 p-2 rounded-md text-[var(--text-color)] w-fit mx-auto"
+          class="moreProjects moreProjectsButton mt-5 bg-[#03b7f9]/20 p-2 rounded-md text-textColor w-fit mx-auto"
           data-text="more projects"
         >
           more projects
         </button>
         <button
-          class="moreProjects hideProjectsButton mt-5 bg-[#03b7f9]/20 p-2 rounded-md text-[var(--text-color)] w-fit mx-auto hidden"
+          class="moreProjects hideProjectsButton mt-5 bg-[#03b7f9]/20 p-2 rounded-md text-textColor w-fit mx-auto hidden"
           data-text="hide projects"
         >
           hide projects
@@ -353,7 +347,7 @@
     </main>
     <footer
       id="contact"
-      class="capitalize flex flex-col md:flex-row justify-around items-center gap-20 md:gap-0 bg-[var(--secondary-color)] text-white px-5 md:px-0 py-20 text-center relative"
+      class="capitalize flex flex-col md:flex-row justify-around items-center gap-20 md:gap-0 bg-secondaryColor text-white px-5 md:px-0 py-20 text-center relative"
     >
       <div class="w-full md:w-[500px]">
         <h3 class="title mb-3" data-text="contact with me">contact with me</h3>

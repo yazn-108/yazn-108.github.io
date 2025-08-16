@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.12 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -35,7 +35,6 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
-    --font-Alkatra: Alkatra, Trebuchet MS;
   }
 }
 @layer base {
@@ -500,7 +499,7 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 4px;
   }
-  .border-\[var\(--primary-color\)\] {
+  .border-primary {
     border-color: var(--primary-color);
   }
   .border-white {
@@ -515,10 +514,10 @@
   .bg-\[\#e8eef4\] {
     background-color: #e8eef4;
   }
-  .bg-\[var\(--body-color\)\] {
+  .bg-bodyColor {
     background-color: var(--body-color);
   }
-  .bg-\[var\(--secondary-color\)\] {
+  .bg-secondaryColor {
     background-color: var(--secondary-color);
   }
   .bg-slate-600 {
@@ -533,7 +532,7 @@
   .bg-center {
     background-position: center;
   }
-  .fill-\[var\(--text-color\)\] {
+  .fill-textColor {
     fill: var(--text-color);
   }
   .fill-white {
@@ -591,7 +590,7 @@
     text-align: center;
   }
   .font-Alkatra {
-    font-family: var(--font-Alkatra);
+    font-family: Alkatra, Trebuchet MS;
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -607,14 +606,14 @@
   .text-\[\#e8eef4\] {
     color: #e8eef4;
   }
-  .text-\[var\(--primary-color\)\] {
-    color: var(--primary-color);
-  }
-  .text-\[var\(--text-color\)\] {
-    color: var(--text-color);
-  }
   .text-black {
     color: var(--color-black);
+  }
+  .text-primary {
+    color: var(--primary-color);
+  }
+  .text-textColor {
+    color: var(--text-color);
   }
   .text-white {
     color: var(--color-white);
@@ -665,6 +664,18 @@
   .duration-500 {
     --tw-duration: 500ms;
     transition-duration: 500ms;
+  }
+  .\*\:capitalize {
+    :is(& > *) {
+      text-transform: capitalize;
+    }
+  }
+  .\*\:transition-colors {
+    :is(& > *) {
+      transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+      transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+      transition-duration: var(--tw-duration, var(--default-transition-duration));
+    }
   }
   .placeholder\:text-white {
     &::placeholder {
@@ -719,7 +730,7 @@
       border-radius: var(--radius-xs);
     }
   }
-  .after\:bg-\[var\(--primary-color\)\] {
+  .after\:bg-primary {
     &::after {
       content: var(--tw-content);
       background-color: var(--primary-color);
@@ -742,8 +753,13 @@
   }
   .hover\:scale-\[1\.2\] {
     &:hover {
-      @media (hover: hover) {
-        scale: 1.2;
+      scale: 1.2;
+    }
+  }
+  .\*\:hover\:text-primary {
+    :is(& > *) {
+      &:hover {
+        color: var(--primary-color);
       }
     }
   }
@@ -759,7 +775,7 @@
       position: absolute;
     }
   }
-  .max-md\:bg-\[var\(--body-color\)\] {
+  .max-md\:bg-bodyColor {
     @media (width < 48rem) {
       background-color: var(--body-color);
     }
@@ -875,19 +891,28 @@
   }
   .rtl\:font-Alkatra {
     &:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
-      font-family: var(--font-Alkatra);
+      font-family: Alkatra, Trebuchet MS;
     }
   }
-  .dark\:text-\[var\(--primary-color\)\] {
-    &:is(.dark *) {
+  .dark\:text-primary {
+    &:where(.dark, .dark *) {
       color: var(--primary-color);
     }
   }
   .dark\:after\:top-2\/4 {
-    &:is(.dark *) {
+    &:where(.dark, .dark *) {
       &::after {
         content: var(--tw-content);
         top: calc(2/4 * 100%);
+      }
+    }
+  }
+  .\*\:dark\:hover\:text-textColor {
+    :is(& > *) {
+      &:where(.dark, .dark *) {
+        &:hover {
+          color: var(--text-color);
+        }
       }
     }
   }
@@ -895,18 +920,19 @@
 html {
   scrollbar-width: none;
 }
-:root {
-  --primary-color: #03b7f9;
-  --secondary-color: #004991;
-  --body-color: #e8eef4;
-  --text-color: #1f242d;
-}
-.dark {
-  transition: all 1s;
-  --primary-color: #03b7f9;
-  --secondary-color: #004991;
-  --body-color: #1f242d;
-  --text-color: white;
+@layer base {
+  :root {
+    --primary-color: #03b7f9;
+    --secondary-color: #004991;
+    --body-color: #e8eef4;
+    --text-color: #1f242d;
+  }
+  .dark {
+    --primary-color: #03b7f9;
+    --secondary-color: #004991;
+    --body-color: #1f242d;
+    --text-color: white;
+  }
 }
 @layer base {
   @font-face {
@@ -939,7 +965,7 @@ html {
   }
   ::selection {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--color-white);
   }
 }
 .ar::after {
@@ -977,11 +1003,11 @@ button {
     transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
     & .line {
       fill: none;
-      stroke: var(--primary-color);
       stroke-linecap: round;
       stroke-linejoin: round;
       stroke-width: 3;
       transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+      stroke: var(--primary-color);
     }
   }
 }
@@ -1016,18 +1042,6 @@ nav.hide {
 .theme.hide {
   transform: translateX(calc(+100% + 0.5rem));
 }
-.menu button {
-  text-transform: capitalize;
-  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
-  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-  transition-duration: var(--tw-duration, var(--default-transition-duration));
-  &:hover {
-    color: var(--primary-color);
-  }
-  &:is(.dark *):hover {
-    color: var(--text-color);
-  }
-}
 .title-line-icon path {
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
@@ -1053,7 +1067,7 @@ nav.hide {
     margin-top: 0%;
   }
 }
-.social-media-link:hover p {
+.social-media a:hover p {
   background-color: var(--secondary-color);
   color: var(--color-white);
 }
@@ -1061,7 +1075,7 @@ nav.hide {
   scale: 1.2;
 }
 .description-container:hover .description {
-  opacity: 1;
+  opacity: 100%;
 }
 @property --tw-translate-x {
   syntax: "*";

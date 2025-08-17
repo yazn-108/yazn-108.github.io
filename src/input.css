@@ -4,19 +4,17 @@
 html {
   scrollbar-width: none;
 }
-@layer base {
-  :root {
-    --primary-color: #03b7f9;
-    --secondary-color: #004991;
-    --body-color: #e8eef4;
-    --text-color: #1f242d;
-  }
-  .dark {
-    --primary-color: #03b7f9;
-    --secondary-color: #004991;
-    --body-color: #1f242d;
-    --text-color: white;
-  }
+:root {
+  --primary-color: #03b7f9;
+  --secondary-color: #004991;
+  --body-color: #e8eef4;
+  --text-color: #1f242d;
+}
+.dark {
+  --primary-color: #03b7f9;
+  --secondary-color: #004991;
+  --body-color: #1f242d;
+  --text-color: white;
 }
 @theme inline {
   --color-primary: var(--primary-color);

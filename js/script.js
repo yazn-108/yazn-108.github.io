@@ -133,7 +133,7 @@ const apiProjects = async ({ getAll }) => {
           ? `
             <div class="project w-full h-[300px] grid grid-cols-1 grid-rows-[1fr_15%]">
                 <div class="description-container rounded-t-3xl bg-cover bg-center" style="background-image: url('https://raw.githubusercontent.com/yazn-108/${data[loop].name}/main/siteBanner.png');">
-                    <p class="opacity-0 duration-500 description grid place-items-center text-white px-9 size-full rounded-t-3xl backdrop-blur-md backdrop-brightness-75 text-center">
+                    <p class="font-Alkatra opacity-0 duration-500 description grid place-items-center text-white px-9 size-full rounded-t-3xl backdrop-blur-md backdrop-brightness-75 text-center">
                     ${data[loop].description}
                     </p>
                 </div>
@@ -152,7 +152,7 @@ const apiProjects = async ({ getAll }) => {
                   <p class="w-full p-5 rounded-t-3xl flex justify-center items-center text-center absolute text-white">${data[
                     loop
                   ].name.replaceAll("-", " ")}</p>
-                  <p class="opacity-0 duration-500 description grid place-items-center text-white px-9 size-full rounded-t-3xl backdrop-blur-md backdrop-brightness-75 text-center">
+                  <p class="font-Alkatra opacity-0 duration-500 description grid place-items-center text-white px-9 size-full rounded-t-3xl backdrop-blur-md backdrop-brightness-75 text-center">
                     ${data[loop].description}
                   </p>
                 </div>

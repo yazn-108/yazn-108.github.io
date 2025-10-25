@@ -91,7 +91,7 @@ skillsData.map((info) => {
     <div class="overflow-hidden size-[66px] border border-primary bg-[#e8eef4] shadow-[4px_4px_6px_var(--primary-color)] p-[10px] rounded-[10px] grid place-items-center">
         <img width="45" height="45" class="duration-500 skill-image" src="${info.languageIcon}" alt="${info.languageName}">
     </div>
-    <p style="background-color:${info.languageColor};" class="text-white w-[85px] text-center font-Alkatra rounded-[25px]">${info.languageName}</p>
+    <p style="background-color:${info.languageColor};" class="text-white w-[85px] text-center rounded-[25px]">${info.languageName}</p>
   </div>
 `;
   skillsBox.innerHTML = allSkills;
@@ -133,16 +133,16 @@ const apiProjects = async ({ getAll }) => {
           ? `
             <div class="project w-full h-[300px] grid grid-cols-1 grid-rows-[1fr_15%]">
                 <div class="description-container rounded-t-3xl bg-cover bg-center" style="background-image: url('https://raw.githubusercontent.com/yazn-108/${data[loop].name}/main/siteBanner.png');">
-                    <p class="font-Alkatra opacity-0 duration-500 description grid place-items-center text-white px-9 size-full rounded-t-3xl backdrop-blur-md backdrop-brightness-75 text-center">
+                    <p class="opacity-0 duration-500 description grid place-items-center text-white px-9 size-full rounded-t-3xl backdrop-blur-md backdrop-brightness-75 text-center">
                     ${data[loop].description}
                     </p>
                 </div>
                 <div class="rounded-b-3xl text-white bg-primary/20 flex items-center justify-between py-4 px-2">
                     <a href="${data[loop].html_url}" target="_blank">
-                        <button data-text="source" class="bg-[#1f242d] text-[#e8eef4] px-8 py-1 rounded-xl">source</button>
+                        <button class="bg-[#1f242d] text-[#e8eef4] px-8 py-1 rounded-xl">source</button>
                     </a>
                     <a href="${data[loop].homepage}" target="_blank">
-                        <button data-text="browse" class="bg-[#e8eef4] text-[#1f242d] px-8 py-1 rounded-xl">browse</button>
+                        <button class="bg-[#e8eef4] text-[#1f242d] px-8 py-1 rounded-xl">browse</button>
                     </a>
                 </div>
             </div>`
@@ -152,16 +152,16 @@ const apiProjects = async ({ getAll }) => {
                   <p class="w-full p-5 rounded-t-3xl flex justify-center items-center text-center absolute text-white">${data[
                     loop
                   ].name.replaceAll("-", " ")}</p>
-                  <p class="font-Alkatra opacity-0 duration-500 description grid place-items-center text-white px-9 size-full rounded-t-3xl backdrop-blur-md backdrop-brightness-75 text-center">
+                  <p class="opacity-0 duration-500 description grid place-items-center text-white px-9 size-full rounded-t-3xl backdrop-blur-md backdrop-brightness-75 text-center">
                     ${data[loop].description}
                   </p>
                 </div>
                 <div class="rounded-b-3xl text-white bg-primary/20 flex items-center justify-between py-4 px-2">
                     <a href="${data[loop].html_url}" target="_blank">
-                        <button data-text="source" class="bg-[#1f242d] text-[#e8eef4] px-8 py-1 rounded-xl">source</button>
+                        <button class="bg-[#1f242d] text-[#e8eef4] px-8 py-1 rounded-xl">source</button>
                     </a>
                     <a href="${data[loop].homepage}" target="_blank">
-                        <button data-text="browse" class="bg-[#e8eef4] text-[#1f242d] px-8 py-1 rounded-xl">browse</button>
+                        <button class="bg-[#e8eef4] text-[#1f242d] px-8 py-1 rounded-xl">browse</button>
                     </a>
                 </div>
             </div>`;

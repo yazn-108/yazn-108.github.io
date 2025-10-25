@@ -139,10 +139,10 @@ const apiProjects = async ({ getAll }) => {
                 </div>
                 <div class="rounded-b-3xl text-white bg-primary/20 flex items-center justify-between py-4 px-2">
                     <a href="${data[loop].html_url}" target="_blank">
-                        <button class="bg-[#1f242d] text-[#e8eef4] px-8 py-1 rounded-xl">source</button>
+                        <button data-text="source" class="bg-[#1f242d] text-[#e8eef4] px-8 py-1 rounded-xl">source</button>
                     </a>
                     <a href="${data[loop].homepage}" target="_blank">
-                        <button class="bg-[#e8eef4] text-[#1f242d] px-8 py-1 rounded-xl">browse</button>
+                        <button data-text="browse" class="bg-[#e8eef4] text-[#1f242d] px-8 py-1 rounded-xl">browse</button>
                     </a>
                 </div>
             </div>`
@@ -158,10 +158,10 @@ const apiProjects = async ({ getAll }) => {
                 </div>
                 <div class="rounded-b-3xl text-white bg-primary/20 flex items-center justify-between py-4 px-2">
                     <a href="${data[loop].html_url}" target="_blank">
-                        <button class="bg-[#1f242d] text-[#e8eef4] px-8 py-1 rounded-xl">source</button>
+                        <button data-text="source" class="bg-[#1f242d] text-[#e8eef4] px-8 py-1 rounded-xl">source</button>
                     </a>
                     <a href="${data[loop].homepage}" target="_blank">
-                        <button class="bg-[#e8eef4] text-[#1f242d] px-8 py-1 rounded-xl">browse</button>
+                        <button data-text="browse" class="bg-[#e8eef4] text-[#1f242d] px-8 py-1 rounded-xl">browse</button>
                     </a>
                 </div>
             </div>`;

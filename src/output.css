@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.12 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.16 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-slate-600: oklch(0.446 0.043 257.281);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -189,7 +188,7 @@
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
     white-space: nowrap;
     border-width: 0;
   }
@@ -508,20 +507,20 @@
   .bg-\[\#1f242d\] {
     background-color: #1f242d;
   }
-  .bg-\[\#03b7f9\]\/20 {
-    background-color: color-mix(in oklab, #03b7f9 20%, transparent);
-  }
   .bg-\[\#e8eef4\] {
     background-color: #e8eef4;
   }
   .bg-bodyColor {
     background-color: var(--body-color);
   }
+  .bg-primary\/20 {
+    background-color: var(--primary-color);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--primary-color) 20%, transparent);
+    }
+  }
   .bg-secondaryColor {
     background-color: var(--secondary-color);
-  }
-  .bg-slate-600 {
-    background-color: var(--color-slate-600);
   }
   .bg-transparent {
     background-color: transparent;
@@ -746,7 +745,6 @@
   }
   .after\:content-\[\'\'\] {
     &::after {
-      content: var(--tw-content);
       --tw-content: '';
       content: var(--tw-content);
     }
@@ -879,19 +877,9 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
-  .rtl\:flex {
-    &:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
-      display: flex;
-    }
-  }
   .rtl\:gap-8 {
     &:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
       gap: calc(var(--spacing) * 8);
-    }
-  }
-  .rtl\:font-Alkatra {
-    &:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
-      font-family: Alkatra, Trebuchet MS;
     }
   }
   .dark\:text-primary {
@@ -917,6 +905,23 @@
     }
   }
 }
+@font-face {
+  font-family: "Alkatra";
+  font-display: swap;
+  src: url("/Alkatra.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Fustat";
+  src: url("/Fustat-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Fustat";
+  src: url("/Fustat-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-weight: bold;
+}
 html {
   scrollbar-width: none;
 }
@@ -927,35 +932,16 @@ html {
   --text-color: #1f242d;
 }
 .dark {
-  --primary-color: #03b7f9;
-  --secondary-color: #004991;
   --body-color: #1f242d;
   --text-color: white;
 }
+.left-to-right {
+  font-family: Alkatra, Trebuchet MS;
+}
+.right-to-left {
+  font-family: Fustat, sans-serif;
+}
 @layer base {
-  @font-face {
-    font-family: "Alkatra";
-    font-display: swap;
-    src: url("/Alkatra.ttf") format("truetype");
-  }
-  @font-face {
-    font-family: "Fustat";
-    src: url("/Fustat-Regular.ttf") format("truetype");
-    font-display: swap;
-    font-weight: normal;
-  }
-  @font-face {
-    font-family: "Fustat";
-    src: url("/Fustat-Bold.ttf") format("truetype");
-    font-display: swap;
-    font-weight: bold;
-  }
-  [dir="rtl"], [dir="rtl"] form, [dir="rtl"] form input::placeholder {
-    font-family: "Fustat";
-  }
-  [dir="ltr"] {
-    font-family: "Alkatra";
-  }
   .title {
     margin-bottom: calc(var(--spacing) * 3);
     font-size: var(--text-xl);

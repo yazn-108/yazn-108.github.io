@@ -1,6 +1,23 @@
 @import "tailwindcss";
 @variant dark (&:where(.dark, .dark *));
 @custom-variant hover (&:hover);
+@font-face {
+  font-family: "Alkatra";
+  font-display: swap;
+  src: url("/Alkatra.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Fustat";
+  src: url("/Fustat-Regular.ttf") format("truetype");
+  font-display: swap;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Fustat";
+  src: url("/Fustat-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-weight: bold;
+}
 html {
   scrollbar-width: none;
 }
@@ -11,8 +28,6 @@ html {
   --text-color: #1f242d;
 }
 .dark {
-  --primary-color: #03b7f9;
-  --secondary-color: #004991;
   --body-color: #1f242d;
   --text-color: white;
 }
@@ -22,6 +37,13 @@ html {
   --color-bodyColor: var(--body-color);
   --color-textColor: var(--text-color);
   --font-Alkatra: Alkatra, Trebuchet MS;
+  --font-Fustat: Fustat, sans-serif;
+}
+.left-to-right {
+  @apply font-Alkatra;
+}
+.right-to-left {
+  @apply font-Fustat;
 }
 @utility container {
   margin-inline: auto;
@@ -45,7 +67,7 @@ html {
   }
 }
 @layer base {
-  @font-face {
+  /* @font-face {
     font-family: "Alkatra";
     font-display: swap;
     src: url("/Alkatra.ttf") format("truetype");
@@ -69,7 +91,7 @@ html {
   }
   [dir="ltr"] {
     font-family: "Alkatra";
-  }
+  } */
   .title {
     @apply text-xl mb-3;
   }

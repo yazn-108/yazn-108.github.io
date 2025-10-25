@@ -62,6 +62,8 @@ const translation = () => {
   languageButton.querySelector("span").classList.toggle("ar");
   languageType = languageType === "en" ? "ar" : "en";
   sessionStorage.setItem("languageType", languageType);
+  document.body.classList.toggle("right-to-left");
+  document.body.classList.toggle("left-to-right");
   text.forEach((e) => {
     e.textContent = translationFile[languageType][e.dataset.text];
   });
@@ -129,23 +131,23 @@ const apiProjects = async ({ getAll }) => {
         const hasImage = data[loop].topics.find((topic) => topic === "image");
         projects += hasImage
           ? `
-            <div class="project font-Alkatra w-full h-[300px] grid grid-cols-1 grid-rows-[1fr_15%]">
+            <div class="project w-full h-[300px] grid grid-cols-1 grid-rows-[1fr_15%]">
                 <div class="description-container rounded-t-3xl bg-cover bg-center" style="background-image: url('https://raw.githubusercontent.com/yazn-108/${data[loop].name}/main/siteBanner.png');">
                     <p class="opacity-0 duration-500 description grid place-items-center text-white px-9 size-full rounded-t-3xl backdrop-blur-md backdrop-brightness-75 text-center">
                     ${data[loop].description}
                     </p>
                 </div>
-                <div class="rounded-b-3xl text-white bg-[#03b7f9]/20 flex items-center justify-between py-4 px-2">
+                <div class="rounded-b-3xl text-white bg-primary/20 flex items-center justify-between py-4 px-2">
                     <a href="${data[loop].html_url}" target="_blank">
-                        <button class="bg-[#1f242d] text-[#e8eef4] px-8 py-1 rounded-xl">source</button>
+                        <button data-text="source" class="bg-[#1f242d] text-[#e8eef4] px-8 py-1 rounded-xl">source</button>
                     </a>
                     <a href="${data[loop].homepage}" target="_blank">
-                        <button class="bg-[#e8eef4] text-[#1f242d] px-8 py-1 rounded-xl">browse</button>
+                        <button data-text="browse" class="bg-[#e8eef4] text-[#1f242d] px-8 py-1 rounded-xl">browse</button>
                     </a>
                 </div>
             </div>`
           : `
-            <div class="project font-Alkatra w-full h-[300px] grid grid-cols-1 grid-rows-[1fr_15%]">
+            <div class="project w-full h-[300px] grid grid-cols-1 grid-rows-[1fr_15%]">
                 <div class="description-container rounded-t-3xl bg-cover bg-center relative" style="background-image: url('/imgs/projectsBg.png');">
                   <p class="w-full p-5 rounded-t-3xl flex justify-center items-center text-center absolute text-white">${data[
                     loop
@@ -154,12 +156,12 @@ const apiProjects = async ({ getAll }) => {
                     ${data[loop].description}
                   </p>
                 </div>
-                <div class="rounded-b-3xl text-white bg-[#03b7f9]/20 flex items-center justify-between py-4 px-2">
+                <div class="rounded-b-3xl text-white bg-primary/20 flex items-center justify-between py-4 px-2">
                     <a href="${data[loop].html_url}" target="_blank">
-                        <button class="bg-[#1f242d] text-[#e8eef4] px-8 py-1 rounded-xl">source</button>
+                        <button data-text="source" class="bg-[#1f242d] text-[#e8eef4] px-8 py-1 rounded-xl">source</button>
                     </a>
                     <a href="${data[loop].homepage}" target="_blank">
-                        <button class="bg-[#e8eef4] text-[#1f242d] px-8 py-1 rounded-xl">browse</button>
+                        <button data-text="browse" class="bg-[#e8eef4] text-[#1f242d] px-8 py-1 rounded-xl">browse</button>
                     </a>
                 </div>
             </div>`;
@@ -173,13 +175,15 @@ const apiProjects = async ({ getAll }) => {
         <div class="text-primary text-center absolute left-2/4 -translate-x-2/4 top-6">
           <p data-text="An error occurred calling projects">An error occurred calling projects</p>
             <a href="/">
-              <button class="bg-[#03b7f9]/20 p-2 rounded-xs text-textColor" data-text="Reload the page">Reload the page</button>
+              <button class="bg-primary/20 p-2 rounded-xs text-textColor" data-text="Reload the page">Reload the page</button>
             </a>
         </div>`;
   }
   ScrollReveal({ reset: true }).reveal(".project");
 };
-window.addEventListener("load", () => apiProjects({ getAll: false }));
+window.addEventListener("DOMContentLoaded", () =>
+  apiProjects({ getAll: false })
+);
 let AllProjectsDisplayed = false;
 const moreProjectsButtons = document.querySelectorAll(".moreProjects");
 const projectsSection = document.querySelector("#projects");

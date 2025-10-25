@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://yazn-108.github.io" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Front End Web Developer" />
-    <meta property="og:site_name" content="@yazn_108">
+    <meta property="og:site_name" content="@yazn_108" />
     <meta
       property="og:description"
       content="I am Yazn, a front-end web developer from Syria. I seek professionalism in the field of website interface development. This is an exhibition of my work in which I present my new works on an ongoing basis"
@@ -67,7 +67,7 @@
       }
     </script>
   </head>
-  <body class="bg-bodyColor text-textColor font-Alkatra relative">
+  <body class="left-to-right bg-bodyColor text-textColor relative">
     <nav
       class="bg-bodyColor duration-500 fixed top-0 left-2/4 -translate-x-2/4 z-50 h-14 px-3 md:px-10 flex items-center justify-between border-b border-primary w-screen transition-all"
     >
@@ -93,7 +93,7 @@
       </div>
     </nav>
     <button
-      class="language duration-500 z-40 fixed top-[46.3vh] left-2 flex justify-between items-center flex-col py-2 h-20 w-8 border border-primary bg-[#03b7f9]/20 rounded-md overflow-hidden"
+      class="language font-Alkatra duration-500 z-40 fixed top-[46.3vh] left-2 flex justify-between items-center flex-col py-2 h-20 w-8 border border-primary bg-primary/20 rounded-md overflow-hidden"
       aria-label="Change mode"
     >
       <p>en</p>
@@ -103,7 +103,7 @@
       <p>ar</p>
     </button>
     <button
-      class="theme duration-500 z-40 fixed top-[46.3vh] right-2 flex justify-between items-center flex-col py-2 h-20 w-8 border border-primary bg-[#03b7f9]/20 rounded-md overflow-hidden"
+      class="theme duration-500 z-40 fixed top-[46.3vh] right-2 flex justify-between items-center flex-col py-2 h-20 w-8 border border-primary bg-primary/20 rounded-md overflow-hidden"
       aria-label="Change mode"
     >
       <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
@@ -138,7 +138,7 @@
     <main class="capitalize mt-20 container px-4 sm:px-0">
       <header
         id="about-me"
-        class="py-10 px-5 h-64 md:h-[21rem] border-b-4 md:border-b-0 md:border-x-4 border-primary rounded-2xl flex justify-center items-center bg-[#03b7f9]/20"
+        class="py-10 px-5 h-64 md:h-[21rem] border-b-4 md:border-b-0 md:border-x-4 border-primary rounded-2xl flex justify-center items-center bg-primary/20"
       >
         <div
           class="text-center text-xl md:w-3/4 xl:w-2/5 flex justify-center items-center flex-col text-textColor"
@@ -158,12 +158,9 @@
       <div class="mb-20 mt-10 flex justify-center items-center gap-4 flex-col">
         <a href="/yazn-ahmed-cv.pdf" target="_blank" rel="noopener noreferrer">
           <button
-            class="cursor-pointer capitalize h-8 bg-[#03b7f9]/20 px-4 flex place-items-center gap-2 rounded-xs"
+            class="cursor-pointer capitalize h-8 bg-primary/20 px-4 flex place-items-center gap-2 rounded-xs"
           >
-            <p class="rtl:flex">
-              <span data-text="view my">view my</span>
-              <span class="font-Alkatra">cv</span>
-            </p>
+            <span data-text="view my cv">view my cv</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -186,7 +183,7 @@
           rel="noopener noreferrer"
         >
           <button
-            class="cursor-pointer capitalize h-8 w-48 bg-[#03b7f9]/20 px-4 flex justify-center items-center gap-2 rounded-xs"
+            class="cursor-pointer capitalize h-8 w-48 bg-primary/20 px-4 flex justify-center items-center gap-2 rounded-xs"
           >
             <p data-text="my articles">my articles</p>
             <svg
@@ -321,25 +318,22 @@
         <h3 data-text="my skills" class="title">my skills</h3>
         <img class="size-[200px]" src="imgs/Launch.svg" alt="skills" />
         <div
-          dir="ltr"
-          class="skillsBox font-Alkatra max-w-lg pt-8 flex flex-wrap justify-center items-center gap-3"
+          class="skillsBox max-w-lg pt-8 flex flex-wrap justify-center items-center gap-3"
         ></div>
       </div>
       <div id="projects" class="w-full my-28 text-center">
         <h3 class="text-center title" data-text="my projects">my projects</h3>
-        <!-- info => bg-slate-600 -->
         <div
-          dir="ltr"
           class="projectsContainer overflow-hidden h-[616px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-[300px] gap-4 relative"
         ></div>
         <button
-          class="moreProjects moreProjectsButton mt-5 bg-[#03b7f9]/20 p-2 rounded-md text-textColor w-fit mx-auto"
+          class="moreProjects moreProjectsButton mt-5 bg-primary/20 p-2 rounded-md text-textColor w-fit mx-auto"
           data-text="more projects"
         >
           more projects
         </button>
         <button
-          class="moreProjects hideProjectsButton mt-5 bg-[#03b7f9]/20 p-2 rounded-md text-textColor w-fit mx-auto hidden"
+          class="moreProjects hideProjectsButton mt-5 bg-primary/20 p-2 rounded-md text-textColor w-fit mx-auto hidden"
           data-text="hide projects"
         >
           hide projects
@@ -353,7 +347,7 @@
       <div class="w-full md:w-[500px]">
         <h3 class="title mb-3" data-text="contact with me">contact with me</h3>
         <form
-          class="rtl:font-Alkatra flex flex-col justify-center items-center gap-5 caret-white"
+          class="flex flex-col justify-center items-center gap-5 caret-white"
         >
           <label for="from_name" class="sr-only">your name</label>
           <input
@@ -369,7 +363,7 @@
             id="reply_to"
             name="reply_to"
             placeholder="your email"
-            class="input font-Alkatra border-2 border-white placeholder:duration-300 focus:placeholder:opacity-0 p-[10px] w-full bg-transparent outline-hidden placeholder:text-white"
+            class="input border-2 border-white placeholder:duration-300 focus:placeholder:opacity-0 p-[10px] w-full bg-transparent outline-hidden placeholder:text-white"
           />
           <label for="message" class="sr-only">your message</label>
           <textarea
@@ -386,7 +380,10 @@
           </button>
         </form>
       </div>
-      <div dir="ltr" class="flex flex-col justify-center items-center">
+      <div
+        dir="ltr"
+        class="flex flex-col justify-center items-center font-Alkatra"
+      >
         <h3 class="title">@yazn_108</h3>
         <div class="icons flex gap-3 items-center">
           <a
@@ -501,11 +498,15 @@
           rel="noopener noreferrer"
           aria-label="contact with me"
         >
-          <button aria-label="contact with me" dir="ltr" class="underline">
+          <button
+            dir="ltr"
+            aria-label="contact with me"
+            class="underline font-Alkatra"
+          >
             @yazn_108
           </button>
         </a>
-        <span class="year" dir="ltr"></span>
+        <span class="year font-Alkatra"></span>
       </p>
     </footer>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
@@ -517,7 +518,3 @@
     <script src="js/script.js" type="module"></script>
   </body>
 </html>
-
-
-
-

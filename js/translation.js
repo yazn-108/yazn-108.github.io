@@ -5,8 +5,8 @@ export const translationFile = {
     projects: "projects",
     contact: "contact",
     welcome: "welcome",
-    "I'm Yazn, a front-end website developer from Syria. I seek professionalism in the field of website interface development. Here I display my latest work on an ongoing basis":
-      "I'm Yazn, a front-end website developer from Syria. I seek professionalism in the field of website interface development. Here I display my latest work on an ongoing basis",
+    "I'm Yazn, a web developer who loves precision and organization. I design professional systems that combine clean code with a sophisticated visual experience....":
+      "I'm Yazn, a web developer who loves precision and organization. I design professional systems that combine clean code with a sophisticated visual experience....",
     "view my cv": "view my cv",
     "my articles": "my articles",
     "Follow me on social media": "Follow me on social media",
@@ -34,8 +34,8 @@ export const translationFile = {
     projects: "مشاريعي",
     contact: "تواصل معي",
     welcome: "اهلابك",
-    "I'm Yazn, a front-end website developer from Syria. I seek professionalism in the field of website interface development. Here I display my latest work on an ongoing basis":
-      "أنا يزن، مطور مواقع فرونت اند من سوريا. أسعى إلى الاحتراف في مجال تطوير واجهات المواقع. هنا اقوم بعرض احدث اعمالي بشكل مستمر",
+    "I'm Yazn, a web developer who loves precision and organization. I design professional systems that combine clean code with a sophisticated visual experience....":
+      "انا يزن مطور مواقع الكترونية محب للدقة والتنظم، اصمم أنظمة احترافية تجمع بين الكود النظيف والتجربة البصرية الراقية....",
     "view my cv": "السيرة الذاتية",
     "my articles": "مقالاتي",
     "Follow me on social media": "تابعني عبر وسائل التواصل الاجتماعي",

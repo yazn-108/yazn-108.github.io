@@ -187,11 +187,11 @@ nav.hide {
     stroke-dashoffset: 0;
   }
 }
-#welcome {
-  animation: welcome 1s 0s ease-in-out 1;
+#about-me-title {
+  animation: about-me-title 1s 0s ease-in-out 1;
   margin-top: 0%;
 }
-@keyframes welcome {
+@keyframes about-me-title {
   0% {
     margin-top: 100%;
   }

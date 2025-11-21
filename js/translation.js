@@ -4,7 +4,7 @@ export const translationFile = {
     skills: "skills",
     projects: "projects",
     contact: "contact",
-    welcome: "welcome",
+    "Who am I?": "Who am I?",
     "I'm Yazn, a web developer who loves precision and organization. I design professional systems that combine clean code with a sophisticated visual experience....":
       "I'm Yazn, a web developer who loves precision and organization. I design professional systems that combine clean code with a sophisticated visual experience....",
     "view my cv": "view my cv",
@@ -33,7 +33,7 @@ export const translationFile = {
     skills: "مهاراتي",
     projects: "مشاريعي",
     contact: "تواصل معي",
-    welcome: "اهلابك",
+    "Who am I?": "من أنا؟",
     "I'm Yazn, a web developer who loves precision and organization. I design professional systems that combine clean code with a sophisticated visual experience....":
       "انا يزن مطور مواقع الكترونية محب للدقة والتنظم، اصمم أنظمة احترافية تجمع بين الكود النظيف والتجربة البصرية الراقية....",
     "view my cv": "السيرة الذاتية",

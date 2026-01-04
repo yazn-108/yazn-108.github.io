@@ -49,6 +49,7 @@ themeButton.addEventListener("click", () => {
   const isDark = !body.classList.contains("dark");
   updateTheme(isDark);
 });
+import { skillsData } from "./skillsSectionData/Data.js";
 import { translationFile } from "./translation.js";
 const languageButton = document.querySelector(".language");
 const mainContainer = document.querySelector(".container");
@@ -82,8 +83,25 @@ languageButton.addEventListener("click", translation);
 window.addEventListener("DOMContentLoaded", () => {
   sessionStorage.getItem("languageType") === "ar" && translation();
 });
+//
+const productsContact = document.querySelector("#products-contact");
+const productsContactPopup = document.querySelector("#products-contact-popup");
+const popupForm = document.querySelector("#popup-form");
+const productsContactPopupCloseButton = document.querySelector(
+  "#products-contact-popup #close-button"
+);
+productsContact.addEventListener("click", () => {
+  productsContactPopup.style.display = "flex";
+});
+popupForm.addEventListener("click", (e) => e.stopPropagation());
+productsContactPopup.addEventListener("click", () => {
+  productsContactPopup.style.display = "none";
+});
+productsContactPopupCloseButton.addEventListener("click", () => {
+  productsContactPopup.style.display = "none";
+});
+//
 const skillsBox = document.querySelector(".skillsBox");
-import { skillsData } from "./skillsSectionData/Data.js";
 let allSkills = "";
 skillsData.map((info) => {
   allSkills += `

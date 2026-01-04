@@ -9,6 +9,11 @@ export const translationFile = {
       "I'm Yazn, a web developer who loves precision and organization. I design professional systems that combine clean code with a sophisticated visual experience....",
     "view my cv": "view my cv",
     "my articles": "my articles",
+    "my products": "my products",
+    "shopping store": "shopping store",
+    preview: "preview",
+    "Welcome! You can contact me to discuss the details of the online store.":
+      "Welcome! You can contact me to discuss the details of the online store.",
     "Follow me on social media": "Follow me on social media",
     twitter: "twitter",
     linkedin: "linkedin",
@@ -38,6 +43,11 @@ export const translationFile = {
       "انا يزن مطور مواقع الكترونية محب للدقة والتنظم، اصمم أنظمة احترافية تجمع بين الكود النظيف والتجربة البصرية الراقية....",
     "view my cv": "السيرة الذاتية",
     "my articles": "مقالاتي",
+    "my products": "منتجاتي",
+    "shopping store": "متجر تسوق",
+    preview: "معاينة",
+    "Welcome! You can contact me to discuss the details of the online store.":
+      "اهلابك، يمكنك التواصل معي لمناقشة تفاصيل المتجر الالكتروني ",
     "Follow me on social media": "تابعني عبر وسائل التواصل الاجتماعي",
     twitter: "تويتر",
     linkedin: "لنكيدإن",

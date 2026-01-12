@@ -591,17 +591,8 @@
   .bg-\[\#e8eef4\] {
     background-color: #e8eef4;
   }
-  .bg-amber-600 {
-    background-color: var(--color-amber-600);
-  }
-  .bg-amber-600\! {
-    background-color: var(--color-amber-600) !important;
-  }
   .bg-black {
     background-color: var(--color-black);
-  }
-  .bg-black\! {
-    background-color: var(--color-black) !important;
   }
   .bg-black\/35 {
     background-color: color-mix(in srgb, #000 35%, transparent);
@@ -817,6 +808,14 @@
       width: calc(var(--spacing) * 80);
     }
   }
+  .\*\:scale-110 {
+    :is(& > *) {
+      --tw-scale-x: 110%;
+      --tw-scale-y: 110%;
+      --tw-scale-z: 110%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
   .\*\:flex-col {
     :is(& > *) {
       flex-direction: column;
@@ -942,22 +941,6 @@
       content: var(--tw-content);
     }
   }
-  .hover\:scale-110\! {
-    &:hover {
-      --tw-scale-x: 110% !important;
-      --tw-scale-y: 110% !important;
-      --tw-scale-z: 110% !important;
-      scale: var(--tw-scale-x) var(--tw-scale-y) !important;
-    }
-  }
-  .hover\:scale-125\! {
-    &:hover {
-      --tw-scale-x: 125% !important;
-      --tw-scale-y: 125% !important;
-      --tw-scale-z: 125% !important;
-      scale: var(--tw-scale-x) var(--tw-scale-y) !important;
-    }
-  }
   .hover\:scale-\[1\.2\] {
     &:hover {
       scale: 1.2;
@@ -969,6 +952,16 @@
         --tw-scale-x: 105%;
         --tw-scale-y: 105%;
         --tw-scale-z: 105%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .hover\:\*\:scale-110 {
+    &:hover {
+      :is(& > *) {
+        --tw-scale-x: 110%;
+        --tw-scale-y: 110%;
+        --tw-scale-z: 110%;
         scale: var(--tw-scale-x) var(--tw-scale-y);
       }
     }
@@ -1102,6 +1095,18 @@
   .\*\:md\:hover\:scale-110 {
     :is(& > *) {
       @media (width >= 48rem) {
+        &:hover {
+          --tw-scale-x: 110%;
+          --tw-scale-y: 110%;
+          --tw-scale-z: 110%;
+          scale: var(--tw-scale-x) var(--tw-scale-y);
+        }
+      }
+    }
+  }
+  .md\:\*\:hover\:scale-110 {
+    @media (width >= 48rem) {
+      :is(& > *) {
         &:hover {
           --tw-scale-x: 110%;
           --tw-scale-y: 110%;

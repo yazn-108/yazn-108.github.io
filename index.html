@@ -67,7 +67,7 @@
       }
     </script>
   </head>
-  <body class="left-to-right bg-bodyColor text-textColor relative">
+  <body class="left-to-right bg-bodyColor text-textColor relative test!">
     <nav
       class="bg-bodyColor duration-500 fixed top-0 left-2/4 -translate-x-2/4 z-50 h-14 px-3 md:px-10 flex items-center justify-between border-b border-primary w-screen transition-all"
     >
@@ -87,16 +87,16 @@
         class="menu *:capitalize *:transition-colors *:hover:text-primary *:dark:hover:text-textColor hidden md:flex gap-10 py-8 md:py-0 max-md:absolute left-2/4 -translate-x-2/4 md:translate-x-0 top-[115%] max-md:bg-bodyColor w-[95%] md:w-fit h-fit border md:border-0 border-primary rounded-xl font-bold text-black dark:text-primary"
       >
         <button data-text="about me" data-section="#about-me">about me</button>
+        <button data-text="my services" data-section="#my-services">
+          my services
+        </button>
         <button data-text="skills" data-section="#skills">skills</button>
         <button data-text="projects" data-section="#projects">projects</button>
-        <button data-text="my products" data-section="#my-products">
-          my products
-        </button>
         <button data-text="contact" data-section="#contact">contact</button>
       </div>
     </nav>
     <button
-      class="language font-Alkatra duration-500 z-40 fixed top-[46.3vh] left-2 flex justify-between items-center flex-col py-2 h-20 w-8 border border-primary bg-primary/20 rounded-md overflow-hidden"
+      class="language duration-500 z-40 fixed top-[46.3vh] left-2 flex justify-between items-center flex-col py-2 h-20 w-8 border border-primary bg-primary/20 rounded-md overflow-hidden"
       aria-label="Change mode"
     >
       <p>en</p>
@@ -319,17 +319,82 @@
           </a>
         </div>
       </div>
+      <section id="my-services" class="my-28">
+        <h3 data-text="my services" class="text-center title mb-8">
+          my services
+        </h3>
+        <div
+          class="flex justify-center items-center flex-wrap *:bg-primary/35 *:rounded-md *:h-96 *:w-80 *:p-8 *:flex *:flex-col *:justify-between *:gap-4 *:[&_h4]:text-center *:[&_button]:bg-servicesColor *:[&_button]:rounded-sm *:[&_button]:text-white"
+        >
+          <div id="personal-website">
+            <h4 data-text="personal website">personal website</h4>
+            <p
+              data-text="I design and build personal websites that clearly present your skills, work, and online presence making it easy for others to understand who you are and contact you."
+            >
+              I design and build personal websites that clearly present your
+              skills, work, and online presence making it easy for others to
+              understand who you are and contact you.
+            </p>
+            <a
+              href="https://wa.me/+905545622330"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block"
+              ><button class="w-full" data-text="request service">
+                request service
+              </button></a
+            >
+          </div>
+          <div id="e-commerce" class="scale-105 md:scale-110 z-30">
+            <h4 data-text="E-Commerce Development">E-Commerce Development</h4>
+            <p
+              data-text="I build fast, user-friendly online stores with clear product flows and smooth checkout experiences, focused on usability and performance."
+            >
+              I build fast, user-friendly online stores with clear product flows
+              and smooth checkout experiences, focused on usability and
+              performance.
+            </p>
+            <a
+              href="https://wa.me/+905545622330"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block"
+              ><button class="w-full" data-text="request service">
+                request service
+              </button></a
+            >
+          </div>
+          <div id="website-optimization">
+            <h4 data-text="website optimization">website optimization</h4>
+            <p
+              data-text="Improving existing websites by fixing UI issues, refactoring front-end code, and optimizing performance and usability."
+            >
+              Improving existing websites by fixing UI issues, refactoring
+              front-end code, and optimizing performance and usability.
+            </p>
+            <a
+              href="https://wa.me/+905545622330"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block"
+              ><button class="w-full" data-text="request service">
+                request service
+              </button></a
+            >
+          </div>
+        </div>
+      </section>
       <div dir="ltr" id="skills" class="grid place-items-center mt-28">
         <h3 data-text="my skills" class="title">my skills</h3>
         <img class="size-[200px]" src="imgs/Launch.svg" alt="skills" />
         <div
-          class="skillsBox font-Alkatra! max-w-lg pt-8 flex flex-wrap justify-center items-center gap-3"
+          class="skillsBox max-w-lg pt-8 flex flex-wrap justify-center items-center gap-3"
         ></div>
       </div>
       <div dir="ltr" id="projects" class="w-full my-28 text-center">
         <h3 class="text-center title" data-text="my projects">my projects</h3>
         <div
-          class="projectsContainer font-Alkatra! overflow-hidden h-[616px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-[300px] gap-4 relative"
+          class="projectsContainer overflow-hidden h-[616px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-[300px] gap-4 relative"
         ></div>
         <button
           class="moreProjects moreProjectsButton mt-5 bg-primary/20 p-2 rounded-md text-textColor w-fit mx-auto"
@@ -344,7 +409,7 @@
           hide projects
         </button>
       </div>
-      <section id="my-products" class="mb-28">
+      <!-- <section id="my-products" class="mb-28">
         <h3 data-text="my products" class="text-center title">my products</h3>
         <div
           id="products-contact-popup"
@@ -427,7 +492,7 @@
             </span>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
     <footer
       id="contact"
@@ -469,10 +534,7 @@
           </button>
         </form>
       </div>
-      <div
-        dir="ltr"
-        class="flex flex-col justify-center items-center font-Alkatra"
-      >
+      <div dir="ltr" class="flex flex-col justify-center items-center">
         <h3 class="title">@yazn_108</h3>
         <div class="icons flex gap-3 items-center">
           <a
@@ -587,15 +649,11 @@
           rel="noopener noreferrer"
           aria-label="contact with me"
         >
-          <button
-            dir="ltr"
-            aria-label="contact with me"
-            class="underline font-Alkatra"
-          >
+          <button dir="ltr" aria-label="contact with me" class="underline">
             @yazn_108
           </button>
         </a>
-        <span class="year font-Alkatra"></span>
+        <span class="year"></span>
       </p>
     </footer>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>

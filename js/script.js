@@ -83,24 +83,6 @@ languageButton.addEventListener("click", translation);
 window.addEventListener("DOMContentLoaded", () => {
   sessionStorage.getItem("languageType") === "ar" && translation();
 });
-//
-const productsContact = document.querySelector("#products-contact");
-const productsContactPopup = document.querySelector("#products-contact-popup");
-const popupForm = document.querySelector("#popup-form");
-const productsContactPopupCloseButton = document.querySelector(
-  "#products-contact-popup #close-button"
-);
-productsContact.addEventListener("click", () => {
-  productsContactPopup.style.display = "flex";
-});
-popupForm.addEventListener("click", (e) => e.stopPropagation());
-productsContactPopup.addEventListener("click", () => {
-  productsContactPopup.style.display = "none";
-});
-productsContactPopupCloseButton.addEventListener("click", () => {
-  productsContactPopup.style.display = "none";
-});
-//
 const skillsBox = document.querySelector(".skillsBox");
 let allSkills = "";
 skillsData.map((info) => {
@@ -296,3 +278,21 @@ ScrollReveal({ reset: true }).reveal("footer .icons a:nth-child(6)", {
 });
 const copyright = document.querySelector("footer .copyright .year");
 copyright.textContent = new Date().getFullYear();
+ScrollReveal({ reset: true }).reveal("#personal-website", {
+  duration: 1000,
+  delay: 0,
+  origin: "top",
+  distance: "50px",
+});
+ScrollReveal({ reset: true }).reveal("#e-commerce", {
+  duration: 1000,
+  delay: 0,
+  origin: "bottom",
+  distance: "50px",
+});
+ScrollReveal({ reset: true }).reveal("#website-optimization", {
+  duration: 1000,
+  delay: 0,
+  origin: "top",
+  distance: "50px",
+});

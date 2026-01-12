@@ -9,12 +9,18 @@ export const translationFile = {
       "I'm Yazn, a web developer who loves precision and organization. I design professional systems that combine clean code with a sophisticated visual experience....",
     "view my cv": "view my cv",
     "my articles": "my articles",
-    "my products": "my products",
-    "shopping store": "shopping store",
-    preview: "preview",
-    "Welcome! You can contact me to discuss the details of the online store.":
-      "Welcome! You can contact me to discuss the details of the online store.",
+    "my services": "my services",
     "Follow me on social media": "Follow me on social media",
+    "personal website": "personal website",
+    "I design and build personal websites that clearly present your skills, work, and online presence making it easy for others to understand who you are and contact you.":
+      "I design and build personal websites that clearly present your skills, work, and online presence making it easy for others to understand who you are and contact you.",
+    "E-Commerce Development": "E-Commerce Development",
+    "I build fast, user-friendly online stores with clear product flows and smooth checkout experiences, focused on usability and performance.":
+      "I build fast, user-friendly online stores with clear product flows and smooth checkout experiences, focused on usability and performance.",
+    "website optimization": "website optimization",
+    "Improving existing websites by fixing UI issues, refactoring front-end code, and optimizing performance and usability.":
+      "Improving existing websites by fixing UI issues, refactoring front-end code, and optimizing performance and usability.",
+    "request service": "request service",
     twitter: "twitter",
     linkedin: "linkedin",
     telegram: "telegram",
@@ -43,12 +49,18 @@ export const translationFile = {
       "انا يزن مطور مواقع الكترونية محب للدقة والتنظم، اصمم أنظمة احترافية تجمع بين الكود النظيف والتجربة البصرية الراقية....",
     "view my cv": "السيرة الذاتية",
     "my articles": "مقالاتي",
-    "my products": "منتجاتي",
-    "shopping store": "متجر تسوق",
-    preview: "معاينة",
-    "Welcome! You can contact me to discuss the details of the online store.":
-      "اهلابك، يمكنك التواصل معي لمناقشة تفاصيل المتجر الالكتروني ",
+    "my services": "خدماتي",
     "Follow me on social media": "تابعني عبر وسائل التواصل الاجتماعي",
+    "personal website": "موقع شخصي",
+    "I design and build personal websites that clearly present your skills, work, and online presence making it easy for others to understand who you are and contact you.":
+      "تصميم وبرمجة مواقع شخصية تعرض مهاراتك وأعمالك وحضورك الرقمي بوضوح، وتسهّل على الآخرين فهمك والتواصل معك.",
+    "E-Commerce Development": "برمجة المتاجر الإلكترونية",
+    "I build fast, user-friendly online stores with clear product flows and smooth checkout experiences, focused on usability and performance.":
+      "برمجة متاجر إلكترونية سريعة وسهلة الاستخدام، مع تدفّق واضح للمنتجات وتجربة شراء سلسة، مع التركيز على الأداء وسهولة الاستخدام.",
+    "website optimization": "تحسين المواقع الإلكترونية",
+    "Improving existing websites by fixing UI issues, refactoring front-end code, and optimizing performance and usability.":
+      "تحسين المواقع الإلكترونية الحالية من خلال إصلاح مشاكل واجهة المستخدم، إعادة هيكلة كود الواجهة الأمامية، وتحسين الأداء وسهولة الاستخدام.",
+    "request service": "طلب الخدمة",
     twitter: "تويتر",
     linkedin: "لنكيدإن",
     telegram: "تلجرام",

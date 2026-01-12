@@ -26,6 +26,7 @@ html {
   --secondary-color: #004991;
   --body-color: #e8eef4;
   --text-color: #1f242d;
+  --services-color: #0cbc8b;
 }
 .dark {
   --body-color: #1f242d;
@@ -36,14 +37,10 @@ html {
   --color-secondaryColor: var(--secondary-color);
   --color-bodyColor: var(--body-color);
   --color-textColor: var(--text-color);
-  --font-Alkatra: Alkatra, Trebuchet MS;
-  --font-Fustat: Fustat, sans-serif;
+  --color-servicesColor: var(--services-color);
 }
-.left-to-right {
-  @apply font-Alkatra;
-}
-.right-to-left {
-  @apply font-Fustat;
+* {
+  font-family: Alkatra, Trebuchet MS, Fustat, sans-serif;
 }
 @utility container {
   margin-inline: auto;
@@ -67,33 +64,11 @@ html {
   }
 }
 @layer base {
-  /* @font-face {
-    font-family: "Alkatra";
-    font-display: swap;
-    src: url("/Alkatra.ttf") format("truetype");
-  }
-  @font-face {
-    font-family: "Fustat";
-    src: url("/Fustat-Regular.ttf") format("truetype");
-    font-display: swap;
-    font-weight: normal;
-  }
-  @font-face {
-    font-family: "Fustat";
-    src: url("/Fustat-Bold.ttf") format("truetype");
-    font-display: swap;
-    font-weight: bold;
-  }
-  [dir="rtl"],
-  [dir="rtl"] form,
-  [dir="rtl"] form input::placeholder {
-    font-family: "Fustat";
-  }
-  [dir="ltr"] {
-    font-family: "Alkatra";
-  } */
   .title {
     @apply text-xl mb-3;
+  }
+  ::-moz-selection {
+    @apply bg-primary text-white;
   }
   ::selection {
     @apply bg-primary text-white;
@@ -104,6 +79,7 @@ html {
 }
 .showMenu {
   display: grid;
+  -webkit-animation: menu 0.3s 0s ease-in-out 1;
   animation: menu 0.3s 0s ease-in-out 1;
 }
 @-webkit-keyframes menu {
@@ -177,7 +153,17 @@ nav.hide {
 .title-line-icon path {
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
+  -webkit-animation: strokeAnimation 1.3s 0.5s cubic-bezier(0.65, 0, 0.35, 1)
+    forwards;
   animation: strokeAnimation 1.3s 0.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+@-webkit-keyframes strokeAnimation {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 @keyframes strokeAnimation {
   0% {
@@ -188,8 +174,17 @@ nav.hide {
   }
 }
 #about-me-title {
+  -webkit-animation: about-me-title 1s 0s ease-in-out 1;
   animation: about-me-title 1s 0s ease-in-out 1;
   margin-top: 0%;
+}
+@-webkit-keyframes about-me-title {
+  0% {
+    margin-top: 100%;
+  }
+  100% {
+    margin-top: 0%;
+  }
 }
 @keyframes about-me-title {
   0% {

@@ -5,6 +5,11 @@ export const skillsData = [
     languageColor: "#000000",
   },
   {
+    languageName: "actions",
+    languageIcon: "../js/skillsSectionData/GitHub-Actions.svg",
+    languageColor: "#2088ff",
+  },
+  {
     languageName: "html",
     languageIcon: "../js/skillsSectionData/html.svg",
     languageColor: "#E44D26",

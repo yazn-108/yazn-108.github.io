@@ -74,9 +74,4 @@ export const skillsData = [
     languageIcon: "../js/skillsSectionData/shadcn-ui.svg",
     languageColor: "#000000",
   },
-  {
-    languageName: "MongoDB",
-    languageIcon: "../js/skillsSectionData/MongoDB.svg",
-    languageColor: "#00684a",
-  },
 ];

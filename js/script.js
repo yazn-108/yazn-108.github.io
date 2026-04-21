@@ -75,7 +75,7 @@ const translation = () => {
   footerInputs[0].placeholder = elementsDirection("اسمك", "your name");
   footerInputs[1].placeholder = elementsDirection(
     "بريدك الالكتروني",
-    "your email"
+    "your email",
   );
   footerInputs[2].placeholder = elementsDirection("رسالتك", "your message");
 };
@@ -89,7 +89,7 @@ skillsData.map((info) => {
   allSkills += `
   <div class="skill cursor-pointer flex justify-center items-center flex-col gap-3">
     <div class="overflow-hidden size-[66px] border border-primary bg-[#e8eef4] shadow-[4px_4px_6px_var(--primary-color)] p-[10px] rounded-[10px] grid place-items-center">
-        <img width="45" height="45" class="duration-500 skill-image" src="${info.languageIcon}" alt="${info.languageName}">
+        <img width="45" height="45" class="duration-500 skill-image size-[45px]" src="${info.languageIcon}" alt="${info.languageName}">
     </div>
     <p style="background-color:${info.languageColor};" class="text-white w-[85px] text-center rounded-[25px]">${info.languageName}</p>
   </div>
@@ -108,8 +108,8 @@ const initialProjectsCount =
   window.innerWidth < 768
     ? 2
     : (window.innerWidth >= 768) & (window.innerWidth < 1280)
-    ? 4
-    : window.innerWidth >= 1280 && 6;
+      ? 4
+      : window.innerWidth >= 1280 && 6;
 const apiProjects = async ({ getAll }) => {
   const container = document.querySelector(".projectsContainer");
   let projects = "";
@@ -119,7 +119,7 @@ const apiProjects = async ({ getAll }) => {
         ? `https://api.github.com/users/yazn-108/repos?sort=created`
         : `https://api.github.com/users/yazn-108/repos?per_page=${
             initialProjectsCount + TemporaryAdditionalProject
-          }&sort=created`
+          }&sort=created`,
     );
     const data = await api.json();
     for (const loop in data) {
@@ -182,7 +182,7 @@ const apiProjects = async ({ getAll }) => {
   ScrollReveal({ reset: true }).reveal(".project");
 };
 window.addEventListener("DOMContentLoaded", () =>
-  apiProjects({ getAll: false })
+  apiProjects({ getAll: false }),
 );
 let AllProjectsDisplayed = false;
 const moreProjectsButtons = document.querySelectorAll(".moreProjects");
@@ -198,7 +198,7 @@ const form = document.querySelector("form");
 const inputs = document.querySelectorAll("form .input");
 const sendButton = document.querySelector("form button");
 const regex = new RegExp(
-  "^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$"
+  "^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$",
 );
 const serviceID = "default_service";
 const templateID = "template_5ffcrsw";
@@ -227,7 +227,7 @@ sendButton.addEventListener("click", async (e) => {
       inputs.forEach((input) => (input.value = ""));
       showToast(
         "success",
-        elementsDirection("تم الارسال بنجاح", "sent successfully")
+        elementsDirection("تم الارسال بنجاح", "sent successfully"),
       );
     } catch (error) {
       showToast("error", error);
@@ -238,7 +238,7 @@ sendButton.addEventListener("click", async (e) => {
       inputs[1].focus();
       showToast(
         "warning",
-        elementsDirection("ادخل بريد الكتروني صحيح", "Enter A Valid Email")
+        elementsDirection("ادخل بريد الكتروني صحيح", "Enter A Valid Email"),
       );
       return;
     }
@@ -247,7 +247,7 @@ sendButton.addEventListener("click", async (e) => {
     });
     showToast(
       "warning",
-      elementsDirection("املأ هذا الحقل", "Fill In This Field")
+      elementsDirection("املأ هذا الحقل", "Fill In This Field"),
     );
   }
 });

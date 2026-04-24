@@ -26,7 +26,6 @@ html {
   --secondary-color: #004991;
   --body-color: #e8eef4;
   --text-color: #1f242d;
-  --services-color: #0cbc8b;
 }
 .dark {
   --body-color: #1f242d;
@@ -37,10 +36,13 @@ html {
   --color-secondaryColor: var(--secondary-color);
   --color-bodyColor: var(--body-color);
   --color-textColor: var(--text-color);
-  --color-servicesColor: var(--services-color);
 }
 * {
-  font-family: Alkatra, Trebuchet MS, Fustat, sans-serif;
+  font-family:
+    Alkatra,
+    Trebuchet MS,
+    Fustat,
+    sans-serif;
 }
 @utility container {
   margin-inline: auto;
@@ -101,6 +103,10 @@ html {
 button {
   cursor: pointer;
 }
+.menu {
+  direction: rtl;
+  text-align: center;
+}
 .menu-icon {
   width: 3rem;
   height: 100px;
@@ -113,7 +119,8 @@ button {
       stroke-linecap: round;
       stroke-linejoin: round;
       stroke-width: 3;
-      transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      transition:
+        stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
         stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
       @apply stroke-primary;
     }

@@ -1,5 +1,6 @@
 export const translationFile = {
   en: {
+    "start your page": "start your page",
     "about me": "about me",
     skills: "skills",
     projects: "projects",
@@ -40,6 +41,7 @@ export const translationFile = {
     "All rights reserved to": "All rights reserved to",
   },
   ar: {
+    "start your page": "أنشئ صفحتك",
     "about me": "عني",
     skills: "مهاراتي",
     projects: "مشاريعي",

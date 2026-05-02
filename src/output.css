@@ -307,9 +307,6 @@
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
-  .mt-28 {
-    margin-top: calc(var(--spacing) * 28);
-  }
   .mr-\[9px\] {
     margin-right: 9px;
   }
@@ -1149,17 +1146,23 @@ button {
 #projects.open .hideProjectsButton {
   display: block;
 }
-nav.hide {
-  top: 1%;
+nav.in-view {
+  top: 0.5%;
   width: 99%;
   border-radius: 10px;
   border-width: 1px;
 }
-.language.hide {
+.language {
   transform: translateX(calc(-100% - 0.5rem));
 }
-.theme.hide {
+.theme {
   transform: translateX(calc(+100% + 0.5rem));
+}
+.language.in-view {
+  transform: translateX(0);
+}
+.theme.in-view {
+  transform: translateX(0);
 }
 .title-line-icon path {
   opacity: 0;

@@ -1,15 +1,21 @@
 "use strict";
-const hideOnScroll = document.querySelectorAll(["nav", ".language", ".theme"]);
+const changeElementsOnScroll = document.querySelectorAll([
+  "nav",
+  ".language",
+  ".theme",
+]);
 let scrollValue = window.scrollY;
-const HeaderTransform = (elements) => {
+const ElementsTransform = (elements) => {
   elements.forEach((element) => {
     window.scrollY > scrollValue
-      ? element.classList.add("hide")
-      : element.classList.remove("hide");
+      ? element.classList.add("in-view")
+      : element.classList.remove("in-view");
   });
   scrollValue = window.scrollY;
 };
-window.addEventListener("scroll", () => HeaderTransform(hideOnScroll));
+window.addEventListener("scroll", () =>
+  ElementsTransform(changeElementsOnScroll),
+);
 const menuIcon = document.querySelector(".menu-icon");
 const menu = document.querySelector(".menu");
 menuIcon.addEventListener("click", function (e) {
@@ -93,12 +99,10 @@ const observer = new IntersectionObserver(
   },
   {
     threshold: 0,
-    rootMargin: "-50% 0px -50% 0px",
+    rootMargin: "0px 0px -300px 0px",
   },
 );
-document.querySelectorAll(".title-line-icon path").forEach((el) => {
-  observer.observe(el);
-});
+observer.observe(document.querySelector(".title-line-icon path"));
 const skillsBox = document.querySelector(".skillsBox");
 let allSkills = "";
 skillsData.map((info) => {

@@ -123,13 +123,13 @@ skillsData.map((info) => {
     distance: "50px",
   });
 });
-const TemporaryAdditionalProject = 1;
+const TemporaryAdditionalProject = 2;
 const initialProjectsCount =
   window.innerWidth < 768
-    ? 2
+    ? 3
     : (window.innerWidth >= 768) & (window.innerWidth < 1280)
-      ? 4
-      : window.innerWidth >= 1280 && 6;
+      ? 5
+      : window.innerWidth >= 1280 && 7;
 const apiProjects = async ({ getAll }) => {
   const container = document.querySelector(".projectsContainer");
   let projects = "";
@@ -298,21 +298,3 @@ ScrollReveal({ reset: true }).reveal("footer .icons a:nth-child(6)", {
 });
 const copyright = document.querySelector("footer .copyright .year");
 copyright.textContent = new Date().getFullYear();
-ScrollReveal({ reset: true }).reveal("#personal-website", {
-  duration: 1000,
-  delay: 0,
-  origin: "top",
-  distance: "50px",
-});
-ScrollReveal({ reset: true }).reveal("#e-commerce", {
-  duration: 1000,
-  delay: 0,
-  origin: "bottom",
-  distance: "50px",
-});
-ScrollReveal({ reset: true }).reveal("#website-optimization", {
-  duration: 1000,
-  delay: 0,
-  origin: "top",
-  distance: "50px",
-});

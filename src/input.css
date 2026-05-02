@@ -191,8 +191,8 @@ nav.in-view {
   }
 }
 #about-me-title {
-  -webkit-animation: about-me-title 1s 0s ease-in-out 1;
-  animation: about-me-title 1s 0s ease-in-out 1;
+  -webkit-animation: about-me-title 1s 0.3s ease-in-out 1;
+  animation: about-me-title 1s 0.3s ease-in-out 1;
   margin-top: 0%;
 }
 @-webkit-keyframes about-me-title {

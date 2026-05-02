@@ -83,6 +83,22 @@ languageButton.addEventListener("click", translation);
 window.addEventListener("DOMContentLoaded", () => {
   sessionStorage.getItem("languageType") === "ar" && translation();
 });
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+      }
+    });
+  },
+  {
+    threshold: 0,
+    rootMargin: "-50% 0px -50% 0px",
+  },
+);
+document.querySelectorAll(".title-line-icon path").forEach((el) => {
+  observer.observe(el);
+});
 const skillsBox = document.querySelector(".skillsBox");
 let allSkills = "";
 skillsData.map((info) => {

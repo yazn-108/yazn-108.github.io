@@ -4,6 +4,7 @@ const changeElementsOnScroll = document.querySelectorAll([
   ".language",
   ".theme",
 ]);
+const contact = document.querySelector("#contact");
 let scrollValue = window.scrollY;
 const ElementsTransform = (elements) => {
   elements.forEach((element) => {
@@ -12,10 +13,23 @@ const ElementsTransform = (elements) => {
       : element.classList.remove("in-view");
   });
   scrollValue = window.scrollY;
+  const rect1 = contact.getBoundingClientRect();
+  const rect2 = elements[1].getBoundingClientRect();
+  if (
+    !(
+      rect1.right < rect2.left ||
+      rect1.left > rect2.right ||
+      rect1.bottom < rect2.top ||
+      rect1.top > rect2.bottom
+    )
+  ) {
+    elements[1].classList.remove("in-view");
+    elements[2].classList.remove("in-view");
+  }
 };
-window.addEventListener("scroll", () =>
-  ElementsTransform(changeElementsOnScroll),
-);
+window.addEventListener("scroll", () => {
+  ElementsTransform(changeElementsOnScroll);
+});
 const menuIcon = document.querySelector(".menu-icon");
 const menu = document.querySelector(".menu");
 menuIcon.addEventListener("click", function (e) {

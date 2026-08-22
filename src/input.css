@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 @custom-variant hover (&:hover);
 @font-face {
   font-family: "Alkatra";
@@ -191,8 +191,8 @@ nav.in-view {
   }
 }
 #about-me-title {
-  -webkit-animation: about-me-title 1s 0.3s ease-in-out 1;
-  animation: about-me-title 1s 0.3s ease-in-out 1;
+  -webkit-animation: about-me-title 1s 0s ease-in-out both;
+  animation: about-me-title 1s 0s ease-in-out both;
   margin-top: 0%;
 }
 @-webkit-keyframes about-me-title {
@@ -209,6 +209,27 @@ nav.in-view {
   }
   100% {
     margin-top: 0%;
+  }
+}
+#about-me-subtitle {
+  -webkit-animation: about-me-subtitle 0.7s 0.3s ease-in-out both;
+  animation: about-me-subtitle 0.7s 0.3s ease-in-out both;
+  transform: translateY(0%);
+}
+@-webkit-keyframes about-me-subtitle {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes about-me-subtitle {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
 .social-media a:hover p {

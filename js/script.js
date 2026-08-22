@@ -69,6 +69,25 @@ themeButton.addEventListener("click", () => {
   const isDark = !body.classList.contains("dark");
   updateTheme(isDark);
 });
+ScrollReveal({ reset: false }).reveal("#benefits", {
+  delay: 0,
+  viewOffset: {
+    bottom: 300,
+  },
+  afterReveal: (el) => {
+    el.querySelector(".benefits-title").classList.add("after:w-full");
+  },
+});
+ScrollReveal({ reset: true }).reveal("#benefits .benefits-container > div", {
+  duration: 1000,
+  delay: 300,
+  interval: 300,
+  viewOffset: {
+    bottom: 300,
+  },
+  origin: "left",
+  distance: "50px",
+});
 import { skillsData } from "./skillsSectionData/Data.js";
 import { translationFile } from "./translation.js";
 const languageButton = document.querySelector(".language");
@@ -107,7 +126,8 @@ const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
+        entry.target.id === "title-line-icon" &&
+          entry.target.querySelector("path").classList.add("in-view");
       }
     });
   },
@@ -116,7 +136,7 @@ const observer = new IntersectionObserver(
     rootMargin: "0px 0px -300px 0px",
   },
 );
-observer.observe(document.querySelector(".title-line-icon path"));
+observer.observe(document.querySelector("#title-line-icon"));
 const skillsBox = document.querySelector(".skillsBox");
 let allSkills = "";
 skillsData.map((info) => {

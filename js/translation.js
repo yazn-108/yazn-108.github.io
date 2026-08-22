@@ -2,7 +2,23 @@ export const translationFile = {
   en: {
     "start your page": "start your page",
     "about me": "about me",
-    skills: "skills",
+    Benefits: "Benefits",
+    "I am not just an implementer; I am your technical partner.":
+      "I am not just an implementer; I am your technical partner.",
+    "What is the benefit of creating a website?":
+      "What is the benefit of creating a website?",
+    "Responsibility is not borne by artificial intelligence, but rather by your technical partner.":
+      "Responsibility is not borne by artificial intelligence, but rather by your technical partner.",
+    "Build Trust": "Build Trust",
+    "A website gives your business a professional presence and makes your information and services clearly accessible.":
+      "A website gives your business a professional presence and makes your information and services clearly accessible.",
+    "Reach Customers": "Reach Customers",
+    "Instead of searching for you across different platforms, customers can find your services and contact information in one place, at any time.":
+      "Instead of searching for you across different platforms, customers can find your services and contact information in one place, at any time.",
+    "Convert Visitors": "Convert Visitors",
+    "A website does more than showcase your services. It guides visitors toward taking action, whether that means requesting a service, contacting you, or making a purchase.":
+      "A website does more than showcase your services. It guides visitors toward taking action, whether that means requesting a service, contacting you, or making a purchase.",
+    "Technologies I Use": "Technologies I Use",
     projects: "projects",
     contact: "contact",
     "Who am I?": "Who am I?",
@@ -43,7 +59,22 @@ export const translationFile = {
   ar: {
     "start your page": "أنشئ صفحتك",
     "about me": "عني",
-    skills: "مهاراتي",
+    Benefits: "النتائج",
+    "I am not just an implementer; I am your technical partner.":
+      "انا لست منفذ، انا شريك تقني لك.",
+    "What is the benefit of creating a website?": "ما الفائدة من انشاء موقع؟",
+    "Responsibility is not borne by artificial intelligence, but rather by your technical partner.":
+      "المسؤولية ما يتحملها ذكاء اصطناعي لكن يتحملها شريكك التقني.",
+    "Build Trust": "بناء الثقة",
+    "A website gives your business a professional presence and makes your information and services clearly accessible.":
+      "يمنح موقع الويب نشاطك حضورًا احترافيًا، ويجعل معلوماتك وخدماتك متاحة للعملاء بشكل واضح.",
+    "Reach Customers": "الوصول إلى العملاء",
+    "Instead of searching for you across different platforms, customers can find your services and contact information in one place, at any time.":
+      "بدلًا من البحث عنك عبر منصات مختلفة، يستطيع العملاء العثور على خدماتك ومعلومات التواصل معك في مكان واحد، وفي أي وقت.",
+    "Convert Visitors": "تحويل الزوار",
+    "A website does more than showcase your services. It guides visitors toward taking action, whether that means requesting a service, contacting you, or making a purchase.":
+      "الموقع لا يقتصر على عرض خدماتك، بل يوجّه الزوار نحو اتخاذ خطوة فعلية، سواء بطلب خدمة، أو التواصل معك، أو إتمام عملية شراء.",
+    "Technologies I Use": "التقنيات التي أستخدمها",
     projects: "مشاريعي",
     contact: "تواصل معي",
     "Who am I?": "من أنا؟",
@@ -67,7 +98,7 @@ export const translationFile = {
     linkedin: "لنكيدإن",
     telegram: "تلجرام",
     github: "جيتهب",
-    "my skills": "مهاراتي",
+    "Technologies I Use": "التقنيات التي أستخدمها",
     "my projects": "مشاريعي",
     all: "الكل",
     featured: "المميزة",

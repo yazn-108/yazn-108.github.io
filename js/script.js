@@ -75,6 +75,7 @@ ScrollReveal({ reset: false }).reveal("#benefits", {
     bottom: 300,
   },
   afterReveal: (el) => {
+    el.style.visibility = "visible";
     el.querySelector(".benefits-title").classList.add("after:w-full");
   },
 });

@@ -1,7 +1,7 @@
 "use strict";
 const changeElementsOnScroll = document.querySelectorAll([
   "nav",
-  ".language",
+  ".languageButton",
   ".theme",
 ]);
 const contact = document.querySelector("#contact");
@@ -91,7 +91,7 @@ ScrollReveal({ reset: true }).reveal("#benefits .benefits-container > div", {
 });
 import { skillsData } from "./skillsSectionData/Data.js";
 import { translationFile } from "./translation.js";
-const languageButton = document.querySelector(".language");
+const languageButton = document.querySelector(".languageButton");
 const mainContainer = document.querySelector(".container");
 const navOptions = document.querySelector("nav .menu");
 const footer = document.querySelector("footer");
@@ -102,9 +102,8 @@ const translation = () => {
   const text = document.querySelectorAll("[data-text]");
   languageButton.querySelector("span").classList.toggle("ar");
   languageType = languageType === "en" ? "ar" : "en";
+  document.documentElement.lang = languageType;
   sessionStorage.setItem("languageType", languageType);
-  document.body.classList.toggle("right-to-left");
-  document.body.classList.toggle("left-to-right");
   text.forEach((e) => {
     e.textContent = translationFile[languageType][e.dataset.text];
   });

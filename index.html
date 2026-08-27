@@ -10,6 +10,13 @@
       name="description"
       content="I am Yazn, a front-end web developer from Syria. I seek professionalism in the field of website interface development. This is an exhibition of my work in which I present my new works on an ongoing basis"
     />
+    <link
+      rel="preload"
+      href="/Alkatra.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
     <link rel="stylesheet" href="src/output.css" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="alternate icon" type="image/png" href="favicon.png" />
@@ -67,7 +74,7 @@
       }
     </script>
   </head>
-  <body class="left-to-right bg-bodyColor text-textColor relative">
+  <body class="bg-bodyColor text-textColor relative">
     <nav
       class="bg-bodyColor duration-500 fixed top-0 left-2/4 -translate-x-2/4 z-50 h-14 px-3 md:px-10 flex items-center border-b border-primary w-screen transition-all"
     >
@@ -116,7 +123,7 @@
       </div>
     </nav>
     <button
-      class="language duration-500 z-40 fixed top-[46.3vh] left-2 flex justify-between items-center flex-col py-2 h-20 w-8 border border-primary bg-primary/20 rounded-md overflow-hidden"
+      class="force-english languageButton duration-500 z-40 fixed top-[46.3vh] left-2 flex justify-between items-center flex-col py-2 h-20 w-8 border border-primary bg-primary/20 rounded-md overflow-hidden"
       aria-label="Change mode"
     >
       <p>en</p>
@@ -488,13 +495,13 @@
         <h3 data-text="Technologies I Use" class="title">Technologies I Use</h3>
         <!-- <div class="h-[200px] w-full bg-gray-300 rounded-2xl"></div> -->
         <div
-          class="skillsBox w-full pt-8 flex flex-wrap justify-center items-center gap-3"
+          class="force-english skillsBox w-full pt-8 flex flex-wrap justify-center items-center gap-3"
         ></div>
       </div>
       <div dir="ltr" id="projects" class="w-full my-28 text-center">
         <h3 class="text-center title" data-text="my projects">my projects</h3>
         <div
-          class="projectsContainer overflow-hidden h-[616px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-[300px] gap-4 relative"
+          class="force-english projectsContainer overflow-hidden h-[616px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 auto-rows-[300px] gap-4 relative"
         ></div>
         <button
           class="moreProjects moreProjectsButton mt-5 bg-primary/20 p-2 rounded-md text-textColor w-fit mx-auto"
@@ -550,7 +557,10 @@
           </button>
         </form>
       </div>
-      <div dir="ltr" class="flex flex-col justify-center items-center">
+      <div
+        dir="ltr"
+        class="force-english flex flex-col justify-center items-center"
+      >
         <h3 class="title">@yazn_108</h3>
         <div class="icons flex gap-3 items-center">
           <a
@@ -665,11 +675,15 @@
           rel="noopener noreferrer"
           aria-label="contact with me"
         >
-          <button dir="ltr" aria-label="contact with me" class="underline">
+          <button
+            dir="ltr"
+            aria-label="contact with me"
+            class="force-english underline"
+          >
             @yazn_108
           </button>
         </a>
-        <span class="year"></span>
+        <span class="force-english year"></span>
       </p>
     </footer>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>

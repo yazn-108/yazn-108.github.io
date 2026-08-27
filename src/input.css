@@ -21,6 +21,15 @@
 html {
   scrollbar-width: none;
 }
+html[lang="en"] body {
+  font-family: "Alkatra", sans-serif;
+}
+html[lang="ar"] body {
+  font-family: "Fustat", sans-serif;
+}
+.force-english {
+  font-family: "Alkatra", sans-serif;
+}
 :root {
   --primary-color: #03b7f9;
   --secondary-color: #004991;
@@ -36,13 +45,6 @@ html {
   --color-secondaryColor: var(--secondary-color);
   --color-bodyColor: var(--body-color);
   --color-textColor: var(--text-color);
-}
-* {
-  font-family:
-    Alkatra,
-    Trebuchet MS,
-    Fustat,
-    sans-serif;
 }
 @utility container {
   margin-inline: auto;
@@ -151,13 +153,13 @@ nav.in-view {
   border-radius: 10px;
   border-width: 1px;
 }
-.language {
+.languageButton {
   transform: translateX(calc(-100% - 0.5rem));
 }
 .theme {
   transform: translateX(calc(+100% + 0.5rem));
 }
-.language.in-view {
+.languageButton.in-view {
   transform: translateX(0);
 }
 .theme.in-view {

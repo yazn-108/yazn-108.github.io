@@ -171,9 +171,8 @@ const apiProjects = async ({ getAll }) => {
     const api = await fetch(
       getAll
         ? `https://api.github.com/users/yazn-108/repos?sort=created`
-        : `https://api.github.com/users/yazn-108/repos?per_page=${
-            initialProjectsCount + TemporaryAdditionalProject
-          }&sort=created`,
+        : `https://api.github.com/users/yazn-108/repos?per_page=${initialProjectsCount + TemporaryAdditionalProject
+        }&sort=created`,
     );
     const data = await api.json();
     for (const loop in data) {
@@ -204,8 +203,8 @@ const apiProjects = async ({ getAll }) => {
             <div class="project w-full h-[300px] grid grid-cols-1 grid-rows-[1fr_15%]">
                 <div class="description-container rounded-t-3xl bg-cover bg-center relative" style="background-image: url('/imgs/projectsBg.png');">
                   <p class="w-full p-5 rounded-t-3xl flex justify-center items-center text-center absolute text-white">${data[
-                    loop
-                  ].name.replaceAll("-", " ")}</p>
+            loop
+          ].name.replaceAll("-", " ")}</p>
                   <p class="opacity-0 duration-500 description grid place-items-center text-white px-9 size-full rounded-t-3xl backdrop-blur-md backdrop-brightness-75 text-center">
                     ${data[loop].description}
                   </p>
@@ -325,10 +324,6 @@ ScrollReveal({ reset: true }).reveal("footer .icons a:nth-child(4)", {
 ScrollReveal({ reset: true }).reveal("footer .icons a:nth-child(5)", {
   duration: 1000,
   delay: 400,
-});
-ScrollReveal({ reset: true }).reveal("footer .icons a:nth-child(6)", {
-  duration: 1000,
-  delay: 500,
 });
 const copyright = document.querySelector("footer .copyright .year");
 copyright.textContent = new Date().getFullYear();

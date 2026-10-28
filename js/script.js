@@ -328,31 +328,31 @@ ScrollReveal({ reset: true }).reveal("footer .icons a:nth-child(5)", {
 const isMobile = window.matchMedia("(max-width: 767px)").matches;
 const revealActions = () => {
   const isRTL = sessionStorage.getItem("languageType") === "ar";
-  ScrollReveal({ reset: true }).reveal("#actions-line-1", {
+  ScrollReveal({ reset: false }).reveal("#actions-line-1", {
     duration: 1000,
     delay: isMobile ? 1000 : 0,
     origin: isMobile ? "top" : "",
     distance: isMobile ? "50px" : "",
   });
-  ScrollReveal({ reset: true }).reveal("#actions-line-2", {
+  ScrollReveal({ reset: false }).reveal("#actions-line-2", {
     duration: 1000,
     delay: isMobile ? 1100 : 100,
     origin: isMobile ? "top" : isRTL ? "right" : "left",
     distance: "50px",
   });
-  ScrollReveal({ reset: true }).reveal("#actions-line-3", {
+  ScrollReveal({ reset: false }).reveal("#actions-line-3", {
     duration: 1000,
     delay: isMobile ? 1200 : 200,
     origin: isMobile ? "top" : "",
     distance: isMobile ? "50px" : "",
   });
-  ScrollReveal({ reset: true }).reveal("#actions-line-4", {
+  ScrollReveal({ reset: false }).reveal("#actions-line-4", {
     duration: 1000,
     delay: isMobile ? 1300 : 300,
     origin: isMobile ? "top" : isRTL ? "right" : "left",
     distance: "50px",
   });
-  ScrollReveal({ reset: true }).reveal("#actions-line-5", {
+  ScrollReveal({ reset: false }).reveal("#actions-line-5", {
     duration: 1000,
     delay: isMobile ? 1400 : 400,
   });

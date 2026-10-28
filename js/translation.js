@@ -27,6 +27,9 @@ export const translationFile = {
     "view my cv": "view my cv",
     "my articles": "my articles",
     "my services": "my services",
+    "WhatsApp (Turkey)": "WhatsApp (Turkey)",
+    "WhatsApp (Saudi Arabia)": "WhatsApp (Saudi Arabia)",
+    "email me": "email me",
     "Follow me on social media": "Follow me on social media",
     "personal website": "personal website",
     "I design and build personal websites that clearly present your skills, work, and online presence making it easy for others to understand who you are and contact you.":
@@ -83,6 +86,9 @@ export const translationFile = {
     "view my cv": "السيرة الذاتية",
     "my articles": "مقالاتي",
     "my services": "خدماتي",
+    "WhatsApp (Turkey)": "واتساب (تركيا)",
+    "WhatsApp (Saudi Arabia)": "واتساب (السعودية)",
+    "email me": "راسلني عبر البريد",
     "Follow me on social media": "تابعني عبر وسائل التواصل الاجتماعي",
     "personal website": "موقع شخصي",
     "I design and build personal websites that clearly present your skills, work, and online presence making it easy for others to understand who you are and contact you.":

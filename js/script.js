@@ -325,5 +325,51 @@ ScrollReveal({ reset: true }).reveal("footer .icons a:nth-child(5)", {
   duration: 1000,
   delay: 400,
 });
+const isMobile = window.matchMedia("(max-width: 767px)").matches;
+const revealActions = () => {
+  const isRTL = sessionStorage.getItem("languageType") === "ar";
+  ScrollReveal({ reset: true }).reveal("#actions-line-1", {
+    duration: 1000,
+    delay: isMobile ? 1000 : 0,
+    origin: isMobile ? "top" : "",
+    distance: isMobile ? "50px" : "",
+  });
+  ScrollReveal({ reset: true }).reveal("#actions-line-2", {
+    duration: 1000,
+    delay: isMobile ? 1100 : 100,
+    origin: isMobile ? "top" : isRTL ? "right" : "left",
+    distance: "50px",
+  });
+  ScrollReveal({ reset: true }).reveal("#actions-line-3", {
+    duration: 1000,
+    delay: isMobile ? 1200 : 200,
+    origin: isMobile ? "top" : "",
+    distance: isMobile ? "50px" : "",
+  });
+  ScrollReveal({ reset: true }).reveal("#actions-line-4", {
+    duration: 1000,
+    delay: isMobile ? 1300 : 300,
+    origin: isMobile ? "top" : isRTL ? "right" : "left",
+    distance: "50px",
+  });
+  ScrollReveal({ reset: true }).reveal("#actions-line-5", {
+    duration: 1000,
+    delay: isMobile ? 1400 : 400,
+  });
+};
+languageButton.addEventListener("click", revealActions);
+revealActions();
+const contactPopupButton = document.querySelector(".contact-popup-button")
+const contactPopup = document.querySelector(".contact-popup")
+const closePopupButton = document.querySelector(".close-popup-button")
+contactPopupButton.addEventListener("click", () => {
+  contactPopup.style.display = "block"
+})
+closePopupButton.addEventListener("click", () => {
+  contactPopup.style.display = "none"
+})
+document.addEventListener("scroll", () => {
+  contactPopup.style.display = "none"
+})
 const copyright = document.querySelector("footer .copyright .year");
 copyright.textContent = new Date().getFullYear();

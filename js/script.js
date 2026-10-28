@@ -363,7 +363,7 @@ const contactPopupButton = document.querySelector(".contact-popup-button")
 const contactPopup = document.querySelector(".contact-popup")
 const closePopupButton = document.querySelector(".close-popup-button")
 contactPopupButton.addEventListener("click", () => {
-  contactPopup.style.display = "block"
+  contactPopup.style.display = "flex"
 })
 closePopupButton.addEventListener("click", () => {
   contactPopup.style.display = "none"

@@ -1332,6 +1332,9 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+  .rtl\:hidden:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
+    display: none;
+  }
   .rtl\:gap-8:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
     gap: calc(var(--spacing) * 8);
   }

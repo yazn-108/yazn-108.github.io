@@ -423,6 +423,12 @@
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
+  .w-44 {
+    width: calc(var(--spacing) * 44);
+  }
+  .w-48 {
+    width: calc(var(--spacing) * 48);
+  }
   .w-\[85px\] {
     width: 85px;
   }
@@ -649,8 +655,14 @@
   .fill-white {
     fill: var(--color-white);
   }
+  .stroke-primary {
+    stroke: var(--primary-color);
+  }
   .stroke-textColor {
     stroke: var(--text-color);
+  }
+  .\[stroke-width\:2px\] {
+    stroke-width: 2px;
   }
   .stroke-3 {
     stroke-width: 3;

@@ -1,7 +1,7 @@
 {
   "name": "yazn-108.github.io",
   "version": "1.0.0",
-  "main": "script.js",
+  "main": "js/script.js",
   "scripts": {
     "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
   },

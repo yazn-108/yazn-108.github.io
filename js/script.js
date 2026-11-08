@@ -166,12 +166,8 @@ const translation = () => {
   navOptions.dir = elementsDirection("rtl", "ltr");
   footer.dir = elementsDirection("rtl", "ltr");
   const footerInputs = footer.querySelectorAll("form .input");
-  footerInputs[0].placeholder = elementsDirection("اسمك", "your name");
-  footerInputs[1].placeholder = elementsDirection(
-    "بريدك الالكتروني",
-    "your email",
-  );
-  footerInputs[2].placeholder = elementsDirection("رسالتك", "your message");
+  footerInputs[0].placeholder = elementsDirection("عنوان الرسالة", "title of message");
+  footerInputs[1].placeholder = elementsDirection("رسالتك", "your message");
 };
 languageButton.addEventListener("click", translation);
 window.addEventListener("DOMContentLoaded", () => {
@@ -302,64 +298,17 @@ moreProjectsButtons.forEach((button) => {
     projectsSection.classList.toggle("open");
   });
 });
-const form = document.querySelector("form");
+// const form = document.querySelector("form");
 const inputs = document.querySelectorAll("form .input");
 const sendButton = document.querySelector("form button");
-const regex = new RegExp(
-  "^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$",
-);
-const serviceID = "default_service";
-const templateID = "template_5ffcrsw";
 sendButton.addEventListener("click", async (e) => {
   e.preventDefault();
-  const showToast = (icon, title) => {
-    Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.onmouseenter = Swal.stopTimer;
-        toast.onmouseleave = Swal.resumeTimer;
-      },
-    }).fire({ icon, title });
-  };
-  if (
-    [...inputs].every((input) => input.value.trim() !== "") &&
-    regex.test(inputs[1].value)
-  ) {
-    showToast("info", elementsDirection("....جار الارسال", "sending...."));
-    try {
-      await emailjs.sendForm(serviceID, templateID, form);
-      inputs.forEach((input) => (input.value = ""));
-      showToast(
-        "success",
-        elementsDirection("تم الارسال بنجاح", "sent successfully"),
-      );
-    } catch (error) {
-      showToast("error", error);
-    }
-  } else {
-    const emptyField = [...inputs].find((input) => input.value.trim() === "");
-    if (inputs[1].value !== "" && !regex.test(inputs[1].value)) {
-      inputs[1].focus();
-      showToast(
-        "warning",
-        elementsDirection("ادخل بريد الكتروني صحيح", "Enter A Valid Email"),
-      );
-      return;
-    }
-    [...inputs].forEach((input) => {
-      input === emptyField && emptyField.focus();
-    });
-    showToast(
-      "warning",
-      elementsDirection("املأ هذا الحقل", "Fill In This Field"),
-    );
-  }
+  const email = "yazn_108@outlook.sa";
+  const subject = inputs[0].value;
+  const body = inputs[1].value;
+  const mailto = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailto;
 });
-emailjs.init("moFv9CUybtNEEmMkC");
 ScrollReveal({ reset: true }).reveal("footer .icons a:nth-child(1)", {
   duration: 1000,
   delay: 0,

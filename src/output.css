@@ -807,12 +807,6 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
-  .delay-100 {
-    transition-delay: 100ms;
-  }
-  .delay-1000 {
-    transition-delay: 1000ms;
-  }
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
@@ -820,10 +814,6 @@
   .duration-500 {
     --tw-duration: 500ms;
     transition-duration: 500ms;
-  }
-  .duration-1000 {
-    --tw-duration: 1000ms;
-    transition-duration: 1000ms;
   }
   :is(.\*\:flex > *) {
     display: flex;
@@ -1082,9 +1072,6 @@
     .xl\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-  }
-  .rtl\:hidden:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
-    display: none;
   }
   .rtl\:gap-8:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
     gap: calc(var(--spacing) * 8);

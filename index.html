@@ -900,20 +900,12 @@
         <form
           class="flex flex-col justify-center items-center gap-5 caret-white"
         >
-          <label for="from_name" class="sr-only">your name</label>
+          <label for="title_of_message" class="sr-only">title of message</label>
           <input
             type="text"
-            id="from_name"
-            name="from_name"
-            placeholder="your name"
-            class="input border-2 border-white placeholder:duration-300 focus:placeholder:opacity-0 p-[10px] w-full bg-transparent outline-hidden placeholder:text-white"
-          />
-          <label for="reply_to" class="sr-only">your email</label>
-          <input
-            type="email"
-            id="reply_to"
-            name="reply_to"
-            placeholder="your email"
+            id="title_of_message"
+            name="title_of_message"
+            placeholder="title of message"
             class="input border-2 border-white placeholder:duration-300 focus:placeholder:opacity-0 p-[10px] w-full bg-transparent outline-hidden placeholder:text-white"
           />
           <label for="message" class="sr-only">your message</label>
@@ -1044,11 +1036,6 @@
       </p>
     </footer>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/script.js" type="module"></script>
   </body>
 </html>
